@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fanfic 13 | Gran Biblioteca</title>
+    <meta name="description" content="Capítulo 13 de nuestra historia." />
+    <meta name="theme-color" content="#8a0000" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%238a0000' d='M23.6 3.6c-2.9 0-5.4 1.8-7.6 4.4-2.2-2.6-4.7-4.4-7.6-4.4C3.8 3.6 0 7.5 0 12.1c0 7.4 9.4 12.5 16 16 6.6-3.5 16-8.6 16-16 0-4.6-3.8-8.5-8.4-8.5z'/%3E%3C/svg%3E">
+
+    <!-- Styles & Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Raleway:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Custom CSS (Relative path specific for sub-subfolder) -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { 'gothic-black': '#050005', 'gothic-darker': '#0a0a0a', 'gothic-red': '#4a0404', 'gothic-red-bright': '#8a0000', 'gothic-purple': '#240046', 'gothic-purple-light': '#5a189a', 'gothic-text': '#e0e0e0', 'gothic-muted': '#9ca3af', 'gothic-gold': '#d4af37' }, fontFamily: { 'gothic-title': ['"UnifrakturMaguntia"', 'cursive'], 'cinzel': ['"Cinzel"', 'serif'], 'crimson': ['"Crimson Text"', 'serif'], 'raleway': ['"Raleway"', 'sans-serif'] }, backgroundImage: { 'dark-texture': "url('https://www.transparenttextures.com/patterns/dark-matter.png')" }, animation: { 'float': 'float 6s ease-in-out infinite' } } } }
+    </script>
+</head>
+
+<body class="bg-gothic-black text-gothic-text overflow-x-hidden selection:bg-gothic-red selection:text-white">
+    <!-- Background Effects -->
+    <div class="fixed inset-0 z-[-1] pointer-events-none">
+        <div class="absolute inset-0 bg-dark-texture opacity-40 mix-blend-overlay"></div>
+        <div
+            class="absolute top-[20%] right-[-10%] w-[400px] h-[400px] bg-gothic-purple/20 rounded-full blur-[100px] mix-blend-screen">
+        </div>
+        <div
+            class="absolute bottom-[10%] left-[-10%] w-[400px] h-[400px] bg-gothic-red/10 rounded-full blur-[100px] mix-blend-screen">
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav
+        class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md border-b border-white/5 bg-gothic-black/80">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a class="text-2xl md:text-3xl font-gothic-title text-gothic-text hover:text-gothic-red-bright transition-all duration-300 text-glow hover:scale-105"
+                href="../../index.html">Gran Biblioteca</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn"
+                class="lg:hidden text-gothic-text focus:outline-none hover:text-gothic-red-bright transition-colors relative z-50">
+                <i class="bi bi-list text-3xl"></i>
+            </button>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:block">
+                <ul class="flex items-center gap-8">
+                    <li><a href="../galeria.html"
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-images text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Visuales</span></a></li>
+
+                    <!-- Historia Dropdown -->
+                    <li class="relative group">
+                        <button
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-hourglass-split text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Historia</span><i
+                                class="bi bi-chevron-down text-xs ml-1"></i></button>
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-gothic-black/95 border border-gothic-red/30 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                            <a href="../tiempo_juntos.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-clock-history mr-2 text-gothic-red-bright"></i> Cronología</a>
+                            <a href="../sobre_nosotros.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel"><i
+                                    class="bi bi-journal-richtext mr-2 text-gothic-red-bright"></i> Leyenda</a>
+                        </div>
+                    </li>
+
+                    <!-- Escritos Dropdown -->
+                    <li class="relative group">
+                        <button class="flex items-center gap-2 text-white transition-colors duration-300"><i
+                                class="bi bi-feather text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide border-b border-gothic-red-bright">Escritos</span><i
+                                class="bi bi-chevron-down text-xs ml-1"></i></button>
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-gothic-black/95 border border-gothic-red/30 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                            <a href="../cartas.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-envelope-paper-heart mr-2 text-gothic-red-bright"></i> Cartas</a>
+                            <a href="../dedicatorias.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-stars mr-2 text-gothic-red-bright"></i> Dedicatorias</a>
+                            <a href="../biblioteca_fanfics.html"
+                                class="block px-4 py-3 text-sm text-white bg-gothic-red/10 transition-colors font-cinzel"><i
+                                    class="bi bi-book-half mr-2 text-gothic-red-bright"></i> Fanfics</a>
+                        </div>
+                    </li>
+
+                    <li><a href="../contacto.html"
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-chat-heart text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Buzón</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Simplified for sub-page) -->
+        <div id="mobile-menu"
+            class="hidden fixed top-0 right-0 h-screen w-72 bg-gothic-black/95 border-l border-white/10 z-50 p-6 flex-col gap-4 shadow-2xl backdrop-blur-xl">
+            <div class="flex justify-end"><button id="mobile-menu-close"><i
+                        class="bi bi-x-lg text-2xl text-white"></i></button></div>
+            <a href="../../index.html" class="text-gothic-gold font-cinzel text-lg">Inicio</a>
+            <a href="../galeria.html" class="text-white font-cinzel text-lg">Visuales</a>
+            <a href="../biblioteca_fanfics.html" class="text-white font-cinzel text-lg">Volver a Fanfics</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pt-32 pb-20 max-w-4xl min-h-screen flex flex-col">
+
+        <!-- Back Button -->
+        <div class="mb-8" data-aos="fade-right">
+            <a href="../biblioteca_fanfics.html"
+                class="inline-flex items-center gap-2 text-gothic-muted hover:text-gothic-red-bright transition-colors font-cinzel group">
+                <i class="bi bi-arrow-left group-hover:-translate-x-1 transition-transform"></i> Volver a la Biblioteca
+            </a>
+        </div>
+
+        <!-- Header -->
+        <header class="text-center mb-12" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-gothic-title text-gothic-gold mb-4 text-glow">
+                Fanfic Capítulo 13
+            </h1>
+            <div class="h-1 w-32 bg-gradient-to-r from-transparent via-gothic-red-bright to-transparent mx-auto"></div>
+        </header>
+
+        <!-- Writing Area (Editable) -->
+        <article
+            class="bg-gothic-darker/60 backdrop-blur-md rounded-lg p-8 md:p-12 border border-white/5 shadow-[0_0_30px_rgba(0,0,0,0.5)] min-h-[500px]"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="prose prose-invert prose-lg max-w-none font-crimson text-gray-300 leading-relaxed">
+                <h2 class="text-3xl text-gothic-gold font-cinzel text-center mb-2">AMOR EN EL MUSEO - LA MUSA ETERNA
+                </h2>
+                <h3 class="text-xl text-gothic-red-bright font-cinzel text-center mb-8">Fanfic 13: La Colección
+                    Prohibida - Edición Extendida</h3>
+                <div class="my-6 p-6 bg-black/40 border border-gothic-purple-light/40 rounded-md shadow-[0_0_20px_rgba(90,24,154,0.2)]">
+                    <p class="italic text-gothic-muted">En cada universo donde la noche guarda secretos, dos almas se buscan. Francisco —viajero obstinado de la sombra— y Aranza —guardiana de la belleza en lo oscuro— trenzan sus destinos bajo lunas antiguas. Lo que sigue es un pliegue de ese pacto: romance feroz, promesas en voz baja y el latido gótico de un amor que no aprende a morir.</p>
+                </div>
+                <h4 class="text-2xl text-gothic-text font-cinzel mt-12 mb-6 text-center">MUSEO DEL LOUVRE, PABELLÓN
+                    OCULTO</h4>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">I. El Retrato sin Firma</h5>
+                <p>El Louvre de noche no pertenece a los turistas ni a los flashes. Pertenece a las sombras, a los ecos
+                    de pisadas reales y a la historia que respira en la oscuridad. Aranza, la Curadora Jefa de Arte
+                    Renacentista del museo, caminaba por los pasillos con la seguridad de quien posee las llaves de un
+                    reino sagrado. Su taconeo resonaba rítmicamente en la Gran Galería vacía, una melodía solitaria.</p>
+                <p>En el Sótano -3, un nivel de seguridad que ni siquiera aparecía en los planos oficiales, Francisco de
+                    Mora estaba trabajando. El mejor restaurador de arte de Europa, conocido por sus manos de cirujano y
+                    su mal genio, acababa de limpiar una pulgada de barniz oxidado de un lienzo desconocido del siglo
+                    XVI recuperado de un monasterio italiano.</p>
+                <p>"Debería irse a casa, De Mora," dijo Aranza desde la puerta blindada. "Los fantasmas cobran extra
+                    después de la medianoche, y no tengo presupuesto para horas extras paranormales."</p>
+                <p>Francisco no se giró. Estaba hipnotizado, con la luz ultravioleta en una mano y un hisopo de algodón
+                    en la otra. "Mire esto, Aranza. Venga aquí y dígame que estoy loco. La técnica... es *sfumato*, pero
+                    no es de Leonardo. Es más suave. Más íntimo."</p>
+                <p>Aranza suspiró y se acercó, el aroma de su perfume antiguo mezclándose con el olor químico de los
+                    disolventes. Sus ojos azules se fijaron en el rostro que emergía de la neblina del tiempo bajo la
+                    luz UV. Era una mujer. Joven, etérea, con una gargantilla de perlas negras y una mirada de infinita,
+                    insondable melancolía.</p>
+                <p>Aranza dejó de respirar.</p>
+                <p>Era ella.</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">II. La Teoría de la Inmortalidad</h5>
+                <p>Durante las semanas siguientes, la obsesión de Francisco creció como una fiebre. Descubrió más: un
+                    boceto en carboncillo de 1793 firmado por un revolucionario francés antes de la guillotina. Un óleo
+                    impresionista de 1880 de un amante de Renoir. Una fotografía daguerrotipo borrosa de 1850 tomada en
+                    Crimea. Todas estaban en la colección privada no catalogada del museo. Todas mostraban a la misma
+                    mujer.</p>
+                <p>Aranza intentó disuadirlo, inventando excusas académicas. "Es una coincidencia genética, Francisco.
+                    Una modelo popular en diferentes linajes. O una idealización arquetípica de la belleza."</p>
+                <p>"Nadie tiene la misma cicatriz minúscula en forma de media luna en el lóbulo de la oreja izquierda
+                    durante cuatro siglos," replicó Francisco una noche de lluvia, acorralándola suavemente entre los
+                    estantes polvorientos del archivo. "Dígame la verdad. No me mienta. ¿recuerda haber posado para
+                    esto?" Le mostró el daguerrotipo.</p>
+                <p>Aranza cerró los ojos, y el peso de los siglos pareció caer sobre sus hombros, rompiendo su postura
+                    perfecta. "Su nombre era Henri. Era soldado. Murió dos días después de tomar esa foto."</p>
+                <p>"Aranza..."</p>
+                <p>"Un alquimista en Florencia, 1502. Un elixir que prometía salud perfecta para una niña moribunda. No
+                    me dio solo salud. Me dio tiempo. Demasiado tiempo. Todo el tiempo del mundo."</p>
+                <p>Francisco retrocedió un paso, procesando la imposibilidad. Pero era un hombre de ciencia que
+                    trabajaba con milagros pigmentados todos los días. Aceptaba lo improbable si la evidencia estaba
+                    frente a sus ojos.</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">III. El Último Lienzo</h5>
+                <p>"Te he visto morir mil veces en estos cuadros," dijo Francisco una semana después, mientras barnizaba
+                    el marco del daguerrotipo con reverencia. "En cada uno, tus ojos se ven un poco más tristes. Como si
+                    estuvieras despidiéndote del artista antes de que empezara a pintar."</p>
+                <p>"Cada artista que me pintó fue alguien a quien amé. Y a quien tuve que ver envejecer y morir mientras
+                    yo seguía igual," confesó Aranza, sentada en un taburete alto, mirando sus propias manos inmutables.
+                    "Por eso dejé de posar hace cien años. No quería más despedidas. Me convertí en la guardiana del
+                    arte para estar cerca de ellos sin tener que perderlos de nuevo."</p>
+                <p>Francisco dejó el pincel. Se limpió las manos en un trapo y tomó un lienzo en blanco que tenía
+                    preparado, algo que nunca usaba.</p>
+                <p>"Siéntate allí," ordenó suavemente, señalando el diván de terciopelo rojo bajo el tragaluz.</p>
+                <p>"No, Francisco. No voy a..."</p>
+                <p>"Siéntate, Aranza. No voy a pintarte como una despedida. No voy a pintarte como una memoria
+                    melancólica. Voy a pintarte como una bienvenida."</p>
+                <p>Aranza lo miró, sorprendida por la ferocidad en su voz. Se sentó. Y Francisco pintó. No usó óleos
+                    clásicos ni técnicas antiguas. Usó acrílicos rápidos, vibrantes, modernos. Pintó con los dedos, con
+                    espátulas, con pasión. Pintó el fuego desafiante en sus ojos, no la tristeza. Pintó la fuerza de sus
+                    hombros que cargaban la historia, no su peso.</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">IV. La Obra Maestra Viva</h5>
+                <p>Cuando terminó, al amanecer, con los primeros rayos de sol de París entrando por el cristal, Aranza
+                    se acercó al caballete. No vio a una reliquia histórica atrapada en ámbar. Vio a una mujer viva. Vio
+                    futuro. Vio esperanza.</p>
+                <p>"Es... diferente," susurró, tocando la tela aún húmeda con la yema del dedo.</p>
+                <p>"Es real," dijo Francisco, abrazándola por detrás, sus manos manchadas de azul cobalto y oro
+                    descansando en la cintura de ella. "No eres una pieza de museo, Aranza. No eres una exhibición. Eres
+                    la curadora de tu propia vida. Y creo que necesitas un asistente permanente. Alguien que no tenga
+                    miedo al tiempo."</p>
+                <p>Aranza se giró en sus brazos, mirándolo con una vulnerabilidad nueva. Por primera vez en
+                    cuatrocientos años, sintió que la eternidad no era una maldición, sino un regalo, un lienzo en
+                    blanco infinito.</p>
+                <p>"El puesto requiere dedicación exclusiva," advirtió ella con una sonrisa traviesa que no había
+                    mostrado en décadas. "¿Estás listo para una carrera muy, muy larga, Sr. De Mora?"</p>
+                <p>"Tengo toda una vida, Aranza. Sea lo que sea que eso signifique. Y planeo usar cada segundo contigo,"
+                    prometió él antes de besarla.</p>
+                <p>El cuadro de Francisco nunca se colgó en el Louvre. Quedó en el dormitorio que compartieron en
+                    Montmartre, el único retrato donde la Musa Eterna no miraba al pasado, sino que sonreía, desafiante
+                    y enamorada, directamente al futuro.</p>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gothic-black/90 border-t border-gothic-red/20 py-8 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p class="font-cinzel text-gothic-muted text-sm">Creado con infinito amor por <span
+                    class="text-gothic-red-bright">Franxito</span></p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+    </script>
+</body>
+
+</html>

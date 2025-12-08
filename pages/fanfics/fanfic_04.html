@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fanfic 4 | Gran Biblioteca</title>
+    <meta name="description" content="Capítulo 4 de nuestra historia." />
+    <meta name="theme-color" content="#8a0000" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%238a0000' d='M23.6 3.6c-2.9 0-5.4 1.8-7.6 4.4-2.2-2.6-4.7-4.4-7.6-4.4C3.8 3.6 0 7.5 0 12.1c0 7.4 9.4 12.5 16 16 6.6-3.5 16-8.6 16-16 0-4.6-3.8-8.5-8.4-8.5z'/%3E%3C/svg%3E">
+
+    <!-- Styles & Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Raleway:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Custom CSS (Relative path specific for sub-subfolder) -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { 'gothic-black': '#050005', 'gothic-darker': '#0a0a0a', 'gothic-red': '#4a0404', 'gothic-red-bright': '#8a0000', 'gothic-purple': '#240046', 'gothic-purple-light': '#5a189a', 'gothic-text': '#e0e0e0', 'gothic-muted': '#9ca3af', 'gothic-gold': '#d4af37' }, fontFamily: { 'gothic-title': ['"UnifrakturMaguntia"', 'cursive'], 'cinzel': ['"Cinzel"', 'serif'], 'crimson': ['"Crimson Text"', 'serif'], 'raleway': ['"Raleway"', 'sans-serif'] }, backgroundImage: { 'dark-texture': "url('https://www.transparenttextures.com/patterns/dark-matter.png')" }, animation: { 'float': 'float 6s ease-in-out infinite' } } } }
+    </script>
+</head>
+
+<body class="bg-gothic-black text-gothic-text overflow-x-hidden selection:bg-gothic-red selection:text-white">
+    <!-- Background Effects -->
+    <div class="fixed inset-0 z-[-1] pointer-events-none">
+        <div class="absolute inset-0 bg-dark-texture opacity-40 mix-blend-overlay"></div>
+        <div
+            class="absolute top-[20%] right-[-10%] w-[400px] h-[400px] bg-gothic-purple/20 rounded-full blur-[100px] mix-blend-screen">
+        </div>
+        <div
+            class="absolute bottom-[10%] left-[-10%] w-[400px] h-[400px] bg-gothic-red/10 rounded-full blur-[100px] mix-blend-screen">
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav
+        class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md border-b border-white/5 bg-gothic-black/80">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a class="text-2xl md:text-3xl font-gothic-title text-gothic-text hover:text-gothic-red-bright transition-all duration-300 text-glow hover:scale-105"
+                href="../../index.html">Gran Biblioteca</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn"
+                class="lg:hidden text-gothic-text focus:outline-none hover:text-gothic-red-bright transition-colors relative z-50">
+                <i class="bi bi-list text-3xl"></i>
+            </button>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:block">
+                <ul class="flex items-center gap-8">
+                    <li><a href="../galeria.html"
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-images text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Visuales</span></a></li>
+
+                    <!-- Historia Dropdown -->
+                    <li class="relative group">
+                        <button
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-hourglass-split text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Historia</span><i
+                                class="bi bi-chevron-down text-xs ml-1"></i></button>
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-gothic-black/95 border border-gothic-red/30 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                            <a href="../tiempo_juntos.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-clock-history mr-2 text-gothic-red-bright"></i> Cronología</a>
+                            <a href="../sobre_nosotros.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel"><i
+                                    class="bi bi-journal-richtext mr-2 text-gothic-red-bright"></i> Leyenda</a>
+                        </div>
+                    </li>
+
+                    <!-- Escritos Dropdown -->
+                    <li class="relative group">
+                        <button class="flex items-center gap-2 text-white transition-colors duration-300"><i
+                                class="bi bi-feather text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide border-b border-gothic-red-bright">Escritos</span><i
+                                class="bi bi-chevron-down text-xs ml-1"></i></button>
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-gothic-black/95 border border-gothic-red/30 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                            <a href="../cartas.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-envelope-paper-heart mr-2 text-gothic-red-bright"></i> Cartas</a>
+                            <a href="../dedicatorias.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-stars mr-2 text-gothic-red-bright"></i> Dedicatorias</a>
+                            <a href="../biblioteca_fanfics.html"
+                                class="block px-4 py-3 text-sm text-white bg-gothic-red/10 transition-colors font-cinzel"><i
+                                    class="bi bi-book-half mr-2 text-gothic-red-bright"></i> Fanfics</a>
+                        </div>
+                    </li>
+
+                    <li><a href="../contacto.html"
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-chat-heart text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Buzón</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Simplified for sub-page) -->
+        <div id="mobile-menu"
+            class="hidden fixed top-0 right-0 h-screen w-72 bg-gothic-black/95 border-l border-white/10 z-50 p-6 flex-col gap-4 shadow-2xl backdrop-blur-xl">
+            <div class="flex justify-end"><button id="mobile-menu-close"><i
+                        class="bi bi-x-lg text-2xl text-white"></i></button></div>
+            <a href="../../index.html" class="text-gothic-gold font-cinzel text-lg">Inicio</a>
+            <a href="../galeria.html" class="text-white font-cinzel text-lg">Visuales</a>
+            <a href="../biblioteca_fanfics.html" class="text-white font-cinzel text-lg">Volver a Fanfics</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pt-32 pb-20 max-w-4xl min-h-screen flex flex-col">
+
+        <!-- Back Button -->
+        <div class="mb-8" data-aos="fade-right">
+            <a href="../biblioteca_fanfics.html"
+                class="inline-flex items-center gap-2 text-gothic-muted hover:text-gothic-red-bright transition-colors font-cinzel group">
+                <i class="bi bi-arrow-left group-hover:-translate-x-1 transition-transform"></i> Volver a la Biblioteca
+            </a>
+        </div>
+
+        <!-- Header -->
+        <header class="text-center mb-12" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-gothic-title text-gothic-gold mb-4 text-glow">
+                Fanfic Capítulo 4
+            </h1>
+            <div class="h-1 w-32 bg-gradient-to-r from-transparent via-gothic-red-bright to-transparent mx-auto"></div>
+        </header>
+
+        <!-- Writing Area (Editable) -->
+        <article
+            class="bg-gothic-darker/60 backdrop-blur-md rounded-lg p-8 md:p-12 border border-white/5 shadow-[0_0_30px_rgba(0,0,0,0.5)] min-h-[500px]"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="prose prose-invert prose-lg max-w-none font-crimson text-gray-300 leading-relaxed">
+                <h2 class="text-3xl text-gothic-gold font-cinzel text-center mb-2">FANTASÍA MEDIEVAL - EL REINO PERDIDO
+                </h2>
+                <h3 class="text-xl text-gothic-red-bright font-cinzel text-center mb-8">Fanfic 4</h3>
+                <div class="my-6 p-6 bg-black/40 border border-gothic-purple-light/40 rounded-md shadow-[0_0_20px_rgba(90,24,154,0.2)]">
+                    <p class="italic text-gothic-muted">En cada universo donde la noche guarda secretos, dos almas se buscan. Francisco —viajero obstinado de la sombra— y Aranza —guardiana de la belleza en lo oscuro— trenzan sus destinos bajo lunas antiguas. Lo que sigue es un pliegue de ese pacto: romance feroz, promesas en voz baja y el latido gótico de un amor que no aprende a morir.</p>
+                </div>
+                <h4 class="text-2xl text-gothic-text font-cinzel mt-12 mb-6 text-center">PARTE I: EL BOSQUE ENCANTADO
+                </h4>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">Capítulo 1: La Princesa en la Torre</h5>
+                <p>En el reino de Aeldryn, donde las montañas tocaban el cielo y los bosques antiguos guardaban secretos
+                    que remontaban milenios, había una princesa que había vivido toda su vida en un castillo.</p>
+                <p>No por su propia elección.</p>
+                <p>El castillo de Valdecross se elevaba en lo alto del pico de la Montaña del Espíritu Blanco, rodeado
+                    por un bosque tan antiguo y tan mágico que los humanos no se atrevían a cruzarlo. El castillo en sí
+                    era hermoso: torres de mármol blanco, banderas de plata que ondulaban en el viento, jardines que
+                    supuestamente florecían en primavera eterna.</p>
+                <p>Pero era una prisión.</p>
+                <p>Aranza, Princesa de los Elfos Nocturnos del Bosque del Norte, había estado encerrada en ese castillo
+                    durante trescientos años. Su delito: haber nacido. Su sentencia: la maldición de Thrazathul, un
+                    antiguo dios oscuro cuyo nombre no era seguro incluso susurrar en voz baja.</p>
+                <p>La maldición fue colocada sobre ella en el momento de su nacimiento por una bruja que su madre había
+                    rechazado años antes. "Si sale de su castillo," había pronunciado la bruja, "la Sombra Antigua la
+                    consumirá. Su forma se desintegrará. Su alma será atrapada en el vacío por la eternidad."</p>
+                <p>Su padre, el Rey Vetharian, había intentado romper la maldición. Su madre, la Reina Lenara, había
+                    pasado años buscando un remedio. Pero la magia de la bruja era antigua, más antigua que cualquier
+                    magia en el reino. Era imposible romper.</p>
+                <p>Así que Aranza se había quedado. Viviendo en su hermoso castillo, rodeada de servidores de confianza
+                    que eran sordos a los hechizos de la bruja. Esperando.</p>
+                <p>Siempre esperando.</p>
+                <p>Su apariencia era la de una princesa de cuento de hadas. Piel del color de la porcelana, luminosa y
+                    sin manchas. Cabello negro como la medianoche, cayendo en ondas perfectas hasta la cintura. Sus ojos
+                    eran de un azul tan profundo que parecían contener toda la tristeza de un mundo. Sus labios eran del
+                    color de las amapolas rojas. Vestida en brocados de plata y azul, con coronas de plata en su
+                    cabello, parecía un ser de otro mundo.</p>
+                <p>Lo cual, técnicamente, lo era.</p>
+                <p>Los elfos nocturnos, su pueblo, eran seres de magia pura. Existían en el umbral entre el mundo físico
+                    y el mundo espiritual. Eran capaces de ver en la oscuridad, de comunicarse con los animales, de
+                    canalizar la magia de la noche misma.</p>
+                <p>Aranza podría haber sido la más poderosa de su raza. Pero en lugar de eso, era una prisionera.</p>
+                <p>Pasaba sus días en la biblioteca del castillo, leyendo todo lo que podía sobre magia antigua, sobre
+                    la bruja que la había maldecido, sobre cualquier posible remedio. Pasaba sus noches tocando el arpa
+                    en la torre más alta, una música tan triste y hermosa que incluso los lobos grises del bosque se
+                    detenían para escuchar.</p>
+                <p>Fue en una de esas noches, una noche de lluvia donde el cielo estaba turbio y el viento aullaba a
+                    través de las torres, cuando escuchó algo diferente.</p>
+                <p>Pasos. De un humano. Un humano, en el bosque Encantado, donde ningún humano había entrado en siglos.
+                </p>
+                <p>Aranza dejó su arpa cuidadosamente en su soporte y fue a la ventana de su torre. Mirando hacia abajo,
+                    a través de la lluvia, vio a una figura a caballo, luchando contra el camino a través del bosque.
+                </p>
+                <p>El corazón de Aranza se aceleró. No por miedo, sino por curiosidad. ¿Quién era lo suficientemente
+                    valiente, o lo suficientemente tonto, para entrar en el Bosque Encantado? ¿Quién era lo
+                    suficientemente fuerte para resistir la magia protectora que rodeaba el castillo?</p>
+                <p>Ella observó mientras el humano bajaba de su caballo, atando la bestia a un árbol cercano. Observó
+                    mientras corría hacia el castillo, buscando refugio de la tormenta.</p>
+                <p>Observó mientras desaparecía en las puertas principales.</p>
+                <p>Su instinto fue mantener la distancia. Había vivido durante trescientos años sin ver a otro ser vivo
+                    que no fuera sus servidores. El contacto con los humanos era peligroso. Impredecible.</p>
+                <p>Pero algo en ella, algo que había estado dormido durante siglos, despertó.</p>
+                <p>Bajó de su torre y entró en el castillo principal.</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">Capítulo 2: El Caballero Errante</h5>
+                <p>Francisco de Mora se había considerado a sí mismo un caballero experimentado. Había visto batallas.
+                    Había viajado a tierras lejanas. Había enfrentado monstruos que habrían hecho que hombres menores se
+                    volvieran locos de miedo.</p>
+                <p>Pero nada lo había preparado para el Bosque Encantado.</p>
+                <p>Era como si atravesara un velo, y de repente estaba en un mundo completamente diferente. Los árboles
+                    eran más altos, sus troncos más gruesos, sus ramas retorciéndose en patrones imposibles. Las flores
+                    que crecían en el sotobosque brillaban con una luz interior. Los animales que lo observaban mientras
+                    pasaba eran demasiado grandes, demasiado inteligentes, demasiado antiguos.</p>
+                <p>Estaba perdido en media hora.</p>
+                <p>La tormenta no ayudó. La lluvia caía en ángulos imposibles, como si tuviera una mente propia. El
+                    viento lo empujaba y jalaba. Sus brújula no funcionaba, girando sin rumbo en su caja.</p>
+                <p>Y luego, milagrosamente, vio luz. Una estructura de mármol blanco, inmenso y hermoso, elevándose a
+                    través de los árboles como si fuera una aparición.</p>
+                <p>El castillo.</p>
+                <p>Francisco vio que lo único que podía hacer era buscar refugio. Abandonó su caballo en un árbol donde
+                    podría ser visto por cualquiera que lo estuviera buscando, y corrió hacia las puertas principales
+                    del castillo.</p>
+                <p>Esperaba que estarían cerradas. O que sería atacado por guardias.</p>
+                <p>Pero cuando las puertas se abrieron, no vio nada más que oscuridad.</p>
+                <p>Entró de todas formas.</p>
+                <p>Fue cuando sus ojos se ajustaron a la oscuridad que vio el interior del castillo. Era hermoso de una
+                    manera que lo hizo olvidar temporalmente que estaba completamente perdido. Las paredes estaban de
+                    mármol blanco translúcido, que brillaba suavemente con una luz de origen desconocido. El piso era de
+                    granito pulido. Las columnas que soportaban el techo eran tan delgadas como juncos pero parecían
+                    inquebrantables.</p>
+                <p>Esto no era el trabajo de humanos. Esto era magia.</p>
+                <p>"Bienvenido," dijo una voz desde las sombras.</p>
+                <p>Francisco giró rápidamente, su mano instintivamente moviendo hacia la espada que llevaba.</p>
+                <p>De la penumbra, una mujer emergió.</p>
+                <p>Y Francisco olvidó cómo respirar.</p>
+                <p>Nunca había visto nada tan bello. Su piel brillaba como perlas. Su cabello caía como una cortina de
+                    medianoche. Sus ojos eran de un azul tan profundo que Francisco sintió como si estuviera cayendo en
+                    ellos. Vestida en brocados de plata y azul, parecía una princesa de un sueño que había tenido.</p>
+                <p>"¿Eres real?" preguntó, sin poder evitarlo.</p>
+                <p>Una sonrisa leve cruzó su rostro.</p>
+                <p>"Tan real como el castillo en el que estás de pie. Soy Aranza, Princesa de los Elfos Nocturnos. Este
+                    es mi castillo. Y tú, caballero, estás en el lugar más peligroso que podrías haber entrado
+                    accidentalmente."</p>
+                <p>"¿Peligroso?" preguntó Francisco. "No me siento en peligro."</p>
+                <p>"Eso es porque aún no he decidido si eres una amenaza," respondió ella. "Pero antes de tomar esa
+                    decisión, me gustaría saber: ¿Quién eres? ¿Cuál es tu nombre? ¿De dónde vienes?"</p>
+                <p>"Soy Francisco de Mora, un caballero errante de las tierras bajas. Estaba viajando a través de este
+                    reino cuando fui atrapado por la tormenta. Busqué refugio. No tenía intención de intruir en tu
+                    hogar."</p>
+                <p>"¿Un caballero errante," repetió ella, sus ojos estudiándolo con intensidad. "¿Y de qué quieres,
+                    Francisco? ¿Aventura? ¿Riqueza? ¿Poder?"</p>
+                <p>"No," respondió Francisco honestamente. "Lo único que quería es estar vivo. Es curioso. Aprender
+                    nuevas cosas. Conocer gente que desafía lo que creo que es posible."</p>
+                <p>Aranza inclinó su cabeza, como si lo estuviera considerando.</p>
+                <p>"Puedes quedarte la noche," dijo finalmente. "La tormenta se calmará hacia el amanece. Luego te
+                    guiaré fuera de mi castillo. Pero te advierto: no debes salir de tu habitación después del
+                    anochecer. Hay fuerzas en este castillo que pueden hacerte daño si no tienes cuidado."</p>
+                <p>"¿Y tú?" preguntó Francisco. "¿Serás uno de esos peligros?"</p>
+                <p>"No," respondió ella. "Yo no. Pero otros son menos amables."</p>
+                <p>Ella le mostró a su habitación, una suite de lujo que claramente no había sido usada en años. Había
+                    un fuego en la chimenea que se encendió al entrar. Había comida en la mesa, caliente y fresca. Había
+                    ropa limpia esperando.</p>
+                <p>Cuando se fue, Francisco se preguntó si ella era real o si la tormenta lo había conducido a la
+                    locura.</p>
+                <p>Pero en la noche, escuchó música. Un arpa, tocada por manos de maestro, emitiendo una melodía tan
+                    hermosa que hizo que sus ojos se llenaran de lágrimas.</p>
+                <p>Sabía instintivamente que era ella.</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">Capítulo 3: La Maldición Revelada</h5>
+                <p>No dejó al castillo al amanecimiento.</p>
+                <p>Francisco supo que debería. Supo que la princesa le había dicho que se fuera. Pero cuando fue a la
+                    puerta principal, encontró que no podía obligarse a cruzarla. Así que quedó.</p>
+                <p>Pasó los días siguientes explorando el castillo. Descubrió la biblioteca, llena de libros que
+                    remontaban siglos. Encontró los jardines interiores, donde crecían flores de un tipo que nunca había
+                    visto, en colores que no tenían nombre. Encontró la galería de arte, donde los cuadros parecían
+                    vivos, sus súbditos moviéndose sutilmente cuando no miraba directamente.</p>
+                <p>Pero lo que más lo fascinó fue encontrarse con Aranza.</p>
+                <p>Ella parecía sorprendida, y luego complacida, de que él se hubiera quedado. Gradualmente, ella dejó
+                    de evitarlo. Comenzaron a pasar tiempo juntos. Ella lo llevó a través de la biblioteca, mostrándole
+                    libros, compartiendo el conocimiento que había acumulado durante trescientos años. Él le contó
+                    historias de sus viajes, de las tierras más allá del Bosque Encantado, de un mundo que ella solo
+                    había visto a través de ventanas y libros.</p>
+                <p>Fue durante una de estas conversaciones, mientras caminaban por uno de los pasillos del castillo, que
+                    Francisco le preguntó la pregunta que había estado quemando en su mente.</p>
+                <p>"¿Por qué estás aquí? En este castillo. Eres una princesa. Deberías estar gobernando tu reino.
+                    Deberías estar viajando. Deberías estar viviendo."</p>
+                <p>Aranza se detuvo. Su expresión se volvió lejana.</p>
+                <p>"Sí," dijo suavemente. "Debería. Pero no puedo."</p>
+                <p>"¿Por qué no?"</p>
+                <p>"Porque estoy maldita," respondió ella. "Cuando nací, una bruja que mi madre había rechazado años
+                    antes vino a su venganza. Pronunció una maldición sobre mí: si alguna vez salgo de este castillo,
+                    una entidad antigua llamada la Sombra me consumirá. Mi forma se desintegrará. Mi alma será atrapada
+                    en el vacío."</p>
+                <p>"¿Y nadie ha podido romper la maldición?" preguntó Francisco.</p>
+                <p>"Muchos lo han intentado. Magos antiguos. Clérigos. Gente que ha vivido durante siglos. Pero la magia
+                    de la bruja es más antigua que cualquier magia conocida. Es imposible de romper."</p>
+                <p>Francisco la miró, viendo la tristeza en sus ojos azules, y supo que tenía que ayudarla. Sabía que
+                    era una búsqueda imposible. Pero tenía que intentarlo.</p>
+                <p>"Llevaré la maldición si es necesario," dijo. "Viajaré a través del reino. Buscaré a la bruja.
+                    Buscaré a los magos antiguos. Encontraré una forma de romper la maldición, Aranza. Te lo prometo."
+                </p>
+                <p>Ella lo miró con expresión incrédula.</p>
+                <p>"¿Harías eso? Por mí? Apenas me conoces."</p>
+                <p>"No," acordó Francisco. "Apenas te conozco. Pero creo que podría amarte. Y no estoy dispuesto a
+                    permitir que una maldición me impida conocerte completamente."</p>
+                <p>Aranza lo besó entonces. Fue un beso largo, suave, que contenía en su profundidad una promesa.</p>
+                <p>"Entonces ve," dijo ella. "Viaja. Busca. Pero promete que regresarás."</p>
+                <p>"Prometo," dijo Francisco. "No importa cuánto tiempo tarde. Regresaré."</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">Capítulo 4: La Búsqueda de la Cura</h5>
+                <p>Lo que siguió fue años de viajes.</p>
+                <p>Francisco viajó a través de reinos, cada uno más peligroso que el último. Fue a las Montañas de
+                    Fuego, donde los dragones dormían. Viajó a las Cavernas Profundas, donde criaturas antiguas que
+                    predataban a la humanidad moraban en la oscuridad. Fue a la Torre de los Magos Eternos, donde los
+                    hechiceros más poderosos del mundo guardaban sus secretos.</p>
+                <p>En cada lugar, hizo pactos. Sacrificó cosas de valor. Negoció con seres que habrían destruido a
+                    hombres menores.</p>
+                <p>Y lentamente, pieza por pieza, reunió el conocimiento que necesitaba.</p>
+                <p>Aprendió que la maldición no podía ser rota. Pero podía ser transformada.</p>
+                <p>La Sombra Antigua no era malvada. Era solo antiguo, tan antiguo que ni siquiera comprendía
+                    completamente su propio poder. Si podía comunicarse con él, si podía hacerle entender que Aranza no
+                    era una amenaza, entonces posiblemente permitiría que ella saliera del castillo sin consumirla.</p>
+                <p>Pero requeriría un sacrificio. El viajero que negociaba con la Sombra tendría que ofrecer una parte
+                    de su propia esencia. Su propia vida.</p>
+                <p>Francisco lo aceptó sin vacilar.</p>
+                <p>Regresó al castillo después de tres años de ausencia. Aranza estaba en su torre, tocando el arpa,
+                    cuando él llegó. Lo escuchó antes de verlo.</p>
+                <p>Cuando lo vio, la música se detuvo. Se levantó, corriendo hacia él.</p>
+                <p>"Creí que habías muerto," susurró contra su pecho.</p>
+                <p>"Casi lo hago," respondió Francisco, sosteniéndola. "Pero no. Porque necesitaba regresar. Necesitaba
+                    hacer esto."</p>
+                <p>Le contó lo que había aprendido. Le contó sobre el ritual que necesitaban realizar. Le explicó lo que
+                    le costaría.</p>
+                <p>"No," dijo ella, sus ojos llenos de lágrimas. "No voy a permitir que sacrifiques tu vida."</p>
+                <p>"Mi vida fue tuya desde el momento en que entré en tu castillo," respondió Francisco. "Vivir sin ti,
+                    sabiendo que podría salvarte pero eligiendo no hacerlo, no sería vivir. Sería solo existir."</p>
+                <p>Así que realizaron el ritual. En la cúspide del Bosque Encantado, bajo una luna llena, Francisco se
+                    abrió a la Sombra Antigua. Ofreció una parte de su esencia, su vitalidad, su fuerza.</p>
+                <p>Y la Sombra lo tomó. Pero con los ecos de su antiguo poder, también vino el conocimiento. La
+                    comprensión de que Aranza no era una amenaza. La aceptación de que ella era libre.</p>
+                <p>La maldición se disolvió como el humo.</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">Capítulo 5: Libre Bajo el Cielo</h5>
+                <p>Por primera vez en trescientos años, Aranza caminó fuera de su castillo.</p>
+                <p>El bosque fue lo primero que experimentó. Los árboles antiguos saludándola. Los animales emergiendo
+                    de la maleza para verla. El aire, tan fresco y tan lleno de vida, llenó sus pulmones.</p>
+                <p>Francisco caminaba a su lado, aunque ahora parecía mayor. El sacrificio lo había envejecido años en
+                    cuestión de horas. Pero su sonrisa era radiante.</p>
+                <p>"Lo hicimos," dijo ella. "Realmente lo hicimos."</p>
+                <p>"Sí," respondió Francisco. "Ahora el mundo es tuyo, Aranza. Puedes ir donde quieras. Hacer lo que
+                    quieras."</p>
+                <p>"Hay solo un lugar donde quiero ir," respondió ella, tomando su mano. "Y es contigo."</p>
+                <p>Así que viajaron juntos. El caballero envejecido y la princesa elf, saliendo del Bosque Encantado
+                    hacia el mundo más allá. Ella experimentó el sol por primera vez en siglos. Él la mostró montañas
+                    más allá de las montañas, ciudades más allá de las ciudades.</p>
+                <p>Y en la noche, bajo las estrellas, él la sostenía, y ella lo sostenía, y ambos sabían que había
+                    valido la pena. Cada sacrificio. Cada año de separación.</p>
+                <p>Porque finalmente, estaban juntos.</p>
+                <p>Y eso era todo lo que importaba.</p>
+                <p class="text-center font-bold text-gothic-white mt-12 mb-4">FIN</p>
+
+                <div class="border-t border-gothic-red/30 mt-12 pt-8">
+                    <p class="font-bold text-gothic-gold mb-2">Notas del autor Franxito:</p>
+                    <p class="italic text-sm text-gothic-muted">Los cuentos de hadas clásicos tienen un poder único.
+                        Quise tomar el tropo de la "princesa en la torre" y darle un giro donde el rescate no es una
+                        batalla de espadas, sino un acto de sacrificio compartido.</p>
+                    <p class="italic text-sm text-gothic-muted mt-2">Aranza no necesitaba ser salvada de un dragón, sino
+                        de la soledad. Y Francisco no es un caballero de brillante armadura perfecto, sino un hombre
+                        dispuesto a dar parte de sí mismo. La magia real es esa voluntad de compartir la carga.</p>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gothic-black/90 border-t border-gothic-red/20 py-8 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p class="font-cinzel text-gothic-muted text-sm">Creado con infinito amor por <span
+                    class="text-gothic-red-bright">Franxito</span></p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+    </script>
+</body>
+
+</html>

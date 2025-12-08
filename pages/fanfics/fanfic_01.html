@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fanfic 1 | Gran Biblioteca</title>
+    <meta name="description" content="Capítulo 1 de nuestra historia." />
+    <meta name="theme-color" content="#8a0000" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%238a0000' d='M23.6 3.6c-2.9 0-5.4 1.8-7.6 4.4-2.2-2.6-4.7-4.4-7.6-4.4C3.8 3.6 0 7.5 0 12.1c0 7.4 9.4 12.5 16 16 6.6-3.5 16-8.6 16-16 0-4.6-3.8-8.5-8.4-8.5z'/%3E%3C/svg%3E">
+
+    <!-- Styles & Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Raleway:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Custom CSS (Relative path specific for sub-subfolder) -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { 'gothic-black': '#050005', 'gothic-darker': '#0a0a0a', 'gothic-red': '#4a0404', 'gothic-red-bright': '#8a0000', 'gothic-purple': '#240046', 'gothic-purple-light': '#5a189a', 'gothic-text': '#e0e0e0', 'gothic-muted': '#9ca3af', 'gothic-gold': '#d4af37' }, fontFamily: { 'gothic-title': ['"UnifrakturMaguntia"', 'cursive'], 'cinzel': ['"Cinzel"', 'serif'], 'crimson': ['"Crimson Text"', 'serif'], 'raleway': ['"Raleway"', 'sans-serif'] }, backgroundImage: { 'dark-texture': "url('https://www.transparenttextures.com/patterns/dark-matter.png')" }, animation: { 'float': 'float 6s ease-in-out infinite' } } } }
+    </script>
+</head>
+
+<body class="bg-gothic-black text-gothic-text overflow-x-hidden selection:bg-gothic-red selection:text-white">
+    <!-- Background Effects -->
+    <div class="fixed inset-0 z-[-1] pointer-events-none">
+        <div class="absolute inset-0 bg-dark-texture opacity-40 mix-blend-overlay"></div>
+        <div
+            class="absolute top-[20%] right-[-10%] w-[400px] h-[400px] bg-gothic-purple/20 rounded-full blur-[100px] mix-blend-screen">
+        </div>
+        <div
+            class="absolute bottom-[10%] left-[-10%] w-[400px] h-[400px] bg-gothic-red/10 rounded-full blur-[100px] mix-blend-screen">
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav
+        class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md border-b border-white/5 bg-gothic-black/80">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a class="text-2xl md:text-3xl font-gothic-title text-gothic-text hover:text-gothic-red-bright transition-all duration-300 text-glow hover:scale-105"
+                href="../../index.html">Gran Biblioteca</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn"
+                class="lg:hidden text-gothic-text focus:outline-none hover:text-gothic-red-bright transition-colors relative z-50">
+                <i class="bi bi-list text-3xl"></i>
+            </button>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:block">
+                <ul class="flex items-center gap-8">
+                    <li><a href="../galeria.html"
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-images text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Visuales</span></a></li>
+
+                    <!-- Historia Dropdown -->
+                    <li class="relative group">
+                        <button
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-hourglass-split text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Historia</span><i
+                                class="bi bi-chevron-down text-xs ml-1"></i></button>
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-gothic-black/95 border border-gothic-red/30 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                            <a href="../tiempo_juntos.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-clock-history mr-2 text-gothic-red-bright"></i> Cronología</a>
+                            <a href="../sobre_nosotros.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel"><i
+                                    class="bi bi-journal-richtext mr-2 text-gothic-red-bright"></i> Leyenda</a>
+                        </div>
+                    </li>
+
+                    <!-- Escritos Dropdown -->
+                    <li class="relative group">
+                        <button class="flex items-center gap-2 text-white transition-colors duration-300"><i
+                                class="bi bi-feather text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide border-b border-gothic-red-bright">Escritos</span><i
+                                class="bi bi-chevron-down text-xs ml-1"></i></button>
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-gothic-black/95 border border-gothic-red/30 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                            <a href="../cartas.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-envelope-paper-heart mr-2 text-gothic-red-bright"></i> Cartas</a>
+                            <a href="../dedicatorias.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-stars mr-2 text-gothic-red-bright"></i> Dedicatorias</a>
+                            <a href="../biblioteca_fanfics.html"
+                                class="block px-4 py-3 text-sm text-white bg-gothic-red/10 transition-colors font-cinzel"><i
+                                    class="bi bi-book-half mr-2 text-gothic-red-bright"></i> Fanfics</a>
+                        </div>
+                    </li>
+
+                    <li><a href="../contacto.html"
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-chat-heart text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Buzón</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Simplified for sub-page) -->
+        <div id="mobile-menu"
+            class="hidden fixed top-0 right-0 h-screen w-72 bg-gothic-black/95 border-l border-white/10 z-50 p-6 flex-col gap-4 shadow-2xl backdrop-blur-xl">
+            <div class="flex justify-end"><button id="mobile-menu-close"><i
+                        class="bi bi-x-lg text-2xl text-white"></i></button></div>
+            <a href="../../index.html" class="text-gothic-gold font-cinzel text-lg">Inicio</a>
+            <a href="../galeria.html" class="text-white font-cinzel text-lg">Visuales</a>
+            <a href="../biblioteca_fanfics.html" class="text-white font-cinzel text-lg">Volver a Fanfics</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pt-32 pb-20 max-w-4xl min-h-screen flex flex-col">
+
+        <!-- Back Button -->
+        <div class="mb-8" data-aos="fade-right">
+            <a href="../biblioteca_fanfics.html"
+                class="inline-flex items-center gap-2 text-gothic-muted hover:text-gothic-red-bright transition-colors font-cinzel group">
+                <i class="bi bi-arrow-left group-hover:-translate-x-1 transition-transform"></i> Volver a la Biblioteca
+            </a>
+        </div>
+
+        <!-- Header -->
+        <header class="text-center mb-12" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-gothic-title text-gothic-gold mb-4 text-glow">
+                Fanfic Capítulo 1
+            </h1>
+            <div class="h-1 w-32 bg-gradient-to-r from-transparent via-gothic-red-bright to-transparent mx-auto"></div>
+        </header>
+
+        <!-- Writing Area (Editable) -->
+        <article
+            class="bg-gothic-darker/60 backdrop-blur-md rounded-lg p-8 md:p-12 border border-white/5 shadow-[0_0_30px_rgba(0,0,0,0.5)] min-h-[500px]"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="prose prose-invert prose-lg max-w-none font-crimson text-gray-300 leading-relaxed">
+                <h2 class="text-3xl text-gothic-gold font-cinzel text-center mb-2">LA MANSIÓN DE LA PRINCESA PERDIDA
+                </h2>
+                <h3 class="text-xl text-gothic-red-bright font-cinzel text-center mb-8">Una Historia de Halloween</h3>
+
+                <h4 class="text-2xl text-gothic-muted font-cinzel mt-8 mb-4 border-b border-white/10 pb-2">PRÓLOGO</h4>
+                <p>Las leyendas susurran en los pueblos olvidados. Cuentan de una mansión en las colinas lejanas, una
+                    estructura gótica que desafía el tiempo, con sus paredes de piedra gris consumidas por la hiedra y
+                    sus ventanas como ojos vacíos que observan la noche eterna. Dicen que ha estado abandonada durante
+                    siglos. Pero los pastores locales saben la verdad: en las noches de lluvia, cuando el viento sopla
+                    desde el norte, se ven luces tenues en las ventanas. Se escucha música antigua, el sonido de un
+                    violín que llora en la oscuridad.</p>
+                <p>Nadie se atreve a acercarse. Los que lo hicieron, nunca regresaron con las mismas historias dos
+                    veces.</p>
+                <p>Este es el relato de lo que sucedió en la noche de Samhain, cuando la barrera entre mundos se vuelve
+                    delgada, y cuando el destino decidió cambiar dos vidas para siempre.</p>
+
+                <h4 class="text-2xl text-gothic-text font-cinzel mt-12 mb-6 text-center">PARTE I: LA MANSIÓN EN LA
+                    SOMBRA</h4>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">Capítulo 1: La Princesa de Medianoche</h5>
+                <p>El año era 1782. En una Europa devastada por guerras y plagas, existían lugares que la civilización
+                    había olvidado. Uno de esos lugares era la Mansión Valdecross, una estructura colosal que se alzaba
+                    en las colinas de Moldavia, lejos de pueblos, lejos de ojos curiosos, lejos de la cruz y el agua
+                    bendita.</p>
+                <p>Adentro, entre paredes de terciopelo carmesí y cortinas de brocado antiguo, vivía Aranza.</p>
+                <p>Su belleza era de otro mundo. Piel pálida como la porcelana de Sajonia, luminosa bajo la luz de las
+                    velas como si brillara desde adentro con un fuego extinguido hace siglos. Sus ojos eran de un azul
+                    profundo, casi violeta en la penumbra, con una tristeza infinita que hablaba de años, no de días. Su
+                    cabello era un cascada de obsidiana, espeso y ondulante, cayendo por su espalda hasta la cintura,
+                    enmarcando un rostro que parecía esculpido por ángeles antes de que la maldición los tocara. Sus
+                    labios eran de un rojo natural, profundo como la sangre, siempre ligeramente entreabiertos como si
+                    estuviera a punto de revelar un secreto ancestral.</p>
+                <p>Pero los colmillos que ocasionalmente asomaban entre esos labios contaban otra historia.</p>
+                <p>Aranza había nacido hace más de doscientos años, aunque aparentaba apenas dieciséis o diecisiete. Su
+                    padre, un príncipe de una dinastía olvidada, le había transmitido la maldición en su lecho de
+                    muerte, consciente de que era la única forma de salvarla de la mortalidad que la acechaba. Su madre,
+                    la reina Catalina, había seguido a su esposo en la muerte apenas una semana después, no por la
+                    transformación, sino por las manos de los cazadores de brujas que irrumpieron en el palacio real.
+                </p>
+                <p>Aranza se había escapado con vida, pero no sin cicatrices. Las cicatrices no eran visibles en la piel
+                    —la sangre vampírica había sanado incluso las heridas más profundas— sino en el alma. El miedo de
+                    que volvieran. El pavor a los humanos que, sin entender, mataban todo lo que temían.</p>
+                <p>Así que se había construido esta mansión en secreto, durante décadas. Contrató artesanos de pueblos
+                    lejanos, pagando bien para que no hicieran preguntas. Los enviaba a diferentes ciudades, para que el
+                    patrón nunca fuera obvio. Gradualmente, piedra por piedra, se levantó el hogar donde ella podría
+                    vivir en paz.</p>
+                <p>El exterior se lo dejó deliberadamente desolado. Las cortinas rotas colgaban de ventanas a medio
+                    romper. Hojas secas se acumulaban en el porche. El techo mostraba parches donde parecía que el moho
+                    había consumido la madera. Para cualquiera que pasara por el camino de herradura cercano, era
+                    claramente un edificio abandonado, posiblemente embrujado, definitivamente a evitar.</p>
+                <p>Pero adentro...</p>
+                <p>Adentro, Aranza había creado un paraíso.</p>
+                <p>Los salones estaban decorados con obras maestras de Caravaggio y Vermeer, robadas de mansiones
+                    durante sus viajes nocturnos. Las bibliotecas contenían primeras ediciones de Dante y Shakespeare,
+                    escritos a mano por los mismos autores en algunos casos. Los pisos de mármol brillaban a la luz de
+                    candelabros de plata que jamás acumulaban polvo. Flores frescas adornaban los jarrones de porcelana
+                    china cada día, traídas de los invernaderos que Aranza mantenía en los sótanos, iluminados por
+                    alquimia y paciencia.</p>
+                <p>La música era lo que mantenía viva su alma. En el salón principal, donde los rayos lunares se
+                    filtraban a través de vidrieras de colores, había un fortepiano de cola de ébano que había
+                    pertenecido a Mozart. Aranza lo tocaba cada noche, sus dedos pálidos volando sobre las teclas con la
+                    soltura de alguien que no había conocido más que música como compañía en dos siglos. Las melodías
+                    que componía eran hipnóticas, melancólicas, la sonora expresión de una soledad que ningún idioma
+                    podía capturar.</p>
+                <p>Vivía de lo que cazaba en los bosques —ciervos, jabalíes, ocasionalmente lobos— transmutando la
+                    sangre animal en algo que le permitía existir sin recurrir a la verdadera depredación. Nunca había
+                    matado a un humano. No importaba cuán hambriento estuviera. Su madre y su padre merecían ese
+                    sacrificio de honra.</p>
+                <p>La soledad era su castillo. El silencio, su compañía.</p>
+                <p>Aranza no sabía que eso estaba a punto de cambiar.</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">Capítulo 2: El Viajero en la Tormenta</h5>
+                <p>Francisco de Mora era un hombre de treinta y dos años que vivía para el movimiento, para la
+                    incertidumbre, para la búsqueda de lo desconocido.</p>
+                <p>Su cabello negro estaba atado en una cola larga que caía entre sus hombros, práctico para los viajes,
+                    aunque llevaba una elegancia que sugería que alguna vez había tenido una vida diferente. Su rostro
+                    era anguloso, varonil, con una mandíbula cuadrada que hablaba de terquedad. Sus ojos eran de un
+                    marrón profundo, cálidos, inquisitivos, siempre buscando el siguiente misterio. Una barba ligera y
+                    cuidada cubría su mentón, y sus bigotes, perfectamente recortados, le daban un aire de refinamiento
+                    que contrastaba con las ropas de viajero que usaba.</p>
+                <p>Era un aventurero por vocación, un cartógrafo de lo imposible. Había pasado años explorando
+                    territorios desconocidos, buscando leyendas que otros hombres consideraban fantasías. Se decía que
+                    había estado en las ruinas mayas, en las cuevas del Himalaya, en los desiertos de Arabia. Llevaba
+                    consigo historias que nadie creía, pero los ojos atentos de quienes lo escuchaban sugerían que, en
+                    algún nivel más profundo, sabían que decía la verdad.</p>
+                <p>Su última expedición lo había llevado a las montañas de Moldavia, siguiendo rumores de una ciudad
+                    subterránea que supuestamente contenía los secretos de una civilización antigua. Había encontrado
+                    poco más que piedras y historia. Decidió regresar a Bucarest, donde tenía una casa pequeña y una
+                    biblioteca de sus recopilaciones de viajes.</p>
+                <p>Fue entonces cuando la tormenta lo encontró.</p>
+                <p>Había estado viajando durante todo el día cuando vio las primeras nubes acumularse en el horizonte.
+                    El cielo se volvió del color del acero, y luego del negro. Francisco buscó refugio, pero se
+                    encontraba en una región deshabitada, donde los pueblos eran pocas y distantes.</p>
+                <p>Fue cuando vio la mansión.</p>
+                <p>Incluso a través de la lluvia torrencial, incluso con el relámpago iluminando el paisaje en
+                    fragmentos desconectados, pudo ver que algo sobre la estructura era anómalo. No parecía el tipo de
+                    edificio que se encontraba simplemente abandonado en el bosque. Su arquitectura era demasiado
+                    deliberada, sus proporciones demasiado precisas.</p>
+                <p>Francisco dirigió su caballo hacia ella, recorriendo el camino de herradura que se abría entre los
+                    árboles. El viento aullaba como si protestara contra su entrada. La lluvia golpeaba como puños sobre
+                    su manto de cuero.</p>
+                <p>Encontró un establo, no muy lejos de la mansión principal. Los cajones de las ventanas colgaban
+                    rotos, pero la estructura estaba de pie. Francisco ató a su caballo en un rincón protegido, le quitó
+                    la silla y lo dejó algo cómodo como la situación permitía.</p>
+                <p>Luego, cargando sus alforjas, corrió hacia las grandes puertas de la mansión.</p>
+                <p>Esperaba que estarían cerradas. Cerradas con llave. Tal vez barricadas.</p>
+                <p>Se abrieron al más leve empujón.</p>
+                <p>Francisco entró en la oscuridad.</p>
+
+                <h4 class="text-2xl text-gothic-text font-cinzel mt-12 mb-6 text-center">PARTE II: EL ENCUENTRO EN LA
+                    NOCHE</h4>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">Capítulo 3: La Primera Mirada</h5>
+                <p>Lo primero que golpeó a Francisco fue el olor.</p>
+                <p>No era el olor a humedad y descomposición que esperaría de un edificio abandonado. Era... rico.
+                    Complejo. Fragancia de velas de cera de abeja, el aroma sutil de flores —rosas, lilas, algo más
+                    exótico que no podía identificar— y bajo todo ello, algo de madera pulida y aire nocturno, como si
+                    la casa respirara.</p>
+                <p>Lo segundo fue la luz.</p>
+                <p>A medida que sus ojos se ajustaban a la oscuridad, se dio cuenta de que había velas encendidas. No
+                    muchas, dispersadas estratégicamente, pero claramente encendidas. En candelabros de plata antiguos.
+                    En lámparas de cristal de Bohemia.</p>
+                <p>Lo tercero fue la belleza.</p>
+                <p>Francisco se quedó sin aliento.</p>
+                <p>El vestíbulo de entrada se elevaba tres pisos hacia el techo, donde un domo de vidrio teñido permitía
+                    la entrada de la luz de la tormenta en formas de azules, verdes y púrpuras. Las paredes estaban
+                    forradas de terciopelo de un rojo intenso. Una escalera de mármol se curvaba elegantemente hacia el
+                    segundo piso, sus barandillas de hierro forjado con patrones de rosas y serpientes entrelazadas.
+                    Cuadros maestros colgaban de las paredes, sus marcos de oro brillando a la luz de las velas.</p>
+                <p>"Dios mío," susurró Francisco, caminando lentamente hacia adentro, olvidando momentáneamente que
+                    todavía chorreaba agua sobre el piso de mármol.</p>
+                <p>—¿Quién eres?</p>
+                <p>Francisco se giró tan rápido que casi se cae.</p>
+                <p>La voz era suave, casi musical, pero cargada de miedo. Provenía desde arriba, desde la sombra de una
+                    de las vigas que se extendían a través del techo del segundo piso.</p>
+                <p>Mientras Francisco observaba, una sombra se movió. Luego, imposiblemente, se transformó.</p>
+                <p>Lo que había sido una forma pequeña, oscura, alada, se convirtió en una mujer.</p>
+                <p>Se descolgó de una cadena de cristal que colgaba del techo, sus movimientos más fluidos que los de
+                    cualquier ser viviente que Francisco hubiera visto. Aterrizó en el balcón del segundo piso con la
+                    gracia de una bailarina.</p>
+                <p>La luna que se filtraba a través de las ventanas la iluminó en una aureola de luz plateada.</p>
+                <p>Francisco dejó de respirar.</p>
+                <p>Era hermosa de una manera que trasciendía la belleza. Su cabello negro caía como un río de
+                    medianoche, sus ojos azules eran dos zafiros suspendidos en un cielo de porcelana pálida. Llevaba un
+                    vestido de brocado negro con bordados de plata que parecía sacado de un sueño gótico. Sus labios
+                    eran del color de la sangre arterial, y cuando se separaron para hablar nuevamente, Francisco
+                    vislumbró el destello de colmillos.</p>
+                <p>Un vampiro.</p>
+                <p>Estaba mirando a un vampiro.</p>
+                <p>La mayoría de los hombres habría corrido. Habría gritado. Habría buscado una cruz o agua bendita.</p>
+                <p>Francisco, que había pasado su vida adulta buscando lo imposible, simplemente sonrió.</p>
+                <p>—Mi nombre es Francisco de Mora, señorita. Soy un viajero que fue atrapado por la tormenta. He
+                    entrado en lo que parecía ser una casa abandonada buscando refugio. No pretendía... —vaciló,
+                    buscando las palabras correctas— no pretendía intrudir en su hogar.</p>
+                <p>El vampiro —porque claramente eso era lo que era— parpadeó. Parecía sorprendido por la calma de
+                    Francisco.</p>
+                <p>—Podrías haberme visto como algo peligroso, —dijo lentamente.</p>
+                <p>—Tienes razón, podría haberlo hecho, —respondió Francisco, extendiendo sus manos lentamente en un
+                    gesto de paz—. Pero a lo largo de mis viajes, he aprendido que hay más de lo que se cree entre el
+                    cielo y la tierra. Y que el peligro y la belleza a menudo caminan juntos.</p>
+                <p>Otra pausa. Luego, el vampiro rio. Era un sonido como campanas distantes.</p>
+                <p>—Eres loco, —dijo, pero no había malicia en su voz.</p>
+                <p>—Posiblemente, —acordó Francisco—. Pero también estoy mojado, cansado, y la tormenta fuera amenaza
+                    con arrancar la cabeza de cualquiera que intente salir. ¿Podrías considerar seriamente dejarme
+                    quedarme esta noche? Te prometo ser un huésped silencioso y respetuoso.</p>
+                <p>Aranza bajó por la escalera. Sus movimientos eran hipnóticos, como si fluyera en lugar de caminar.
+                    Cuando estuvo a una distancia de unos pocos metros de Francisco, se detuvo.</p>
+                <p>—Si quisiera matarte, ya estarías muerto, —dijo suavemente.</p>
+                <p>—Estoy seguro de que es verdad, —respondió Francisco—. Pero sospecho que no lo harás. Porque si
+                    fueras el tipo de criatura que mata sin razón, no vivirías en una casa tan hermosa, rodeada de cosas
+                    hermosas. Las criaturas sin razón no aprecian la belleza.</p>
+                <p>Aranza inclinó la cabeza, estudiándolo. Sus ojos azules penetraron profundamente en los de él.</p>
+                <p>—Entra en la casa, Francisco de Mora, —dijo finalmente—. Pero mantente alejado de mis aposentos
+                    privados. Y no hagas preguntas sobre lo que ves. Si haces eso, podríamos, tal vez, llegar a un
+                    entendimiento.</p>
+                <p>Francisco sonrió, más amplio esta vez.</p>
+                <p>—Seré el huésped más discreto que jamás hayas albergado, señorita...?</p>
+                <p>—Aranza, —dijo ella—. Princesa Aranza Valdecross.</p>
+                <p>—Princesa Aranza, —repitió Francisco, como si probara el nombre, como si lo probara como vino—. Un
+                    honor absoluto, alteza.</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">Capítulo 4: La Noche Bajo el Techo</h5>
+                <p>Aranza lo llevó a través de la mansión como si fuera una guía de museo, aunque hubo cierta cautela en
+                    su voz, cierta reserva. Le mostró el salón principal, donde el fortepiano de cola de ébano se alzaba
+                    como una joya negra bajo la luz de las velas. Le mostró la biblioteca, cuyos estantes se elevaban
+                    tres pisos hasta el techo, llenos de libros de todas las épocas. Francisco reconoció primeras
+                    ediciones de autores que hacía siglos que habían muerto.</p>
+                <p>—¿De dónde vienes con estas? —preguntó, sacando un volumen de Petrarca que claramente databa del
+                    siglo XV.</p>
+                <p>—De muchos lugares, —respondió Aranza evasivamente—. He tenido tiempo para reunir cosas.</p>
+                <p>Luego lo llevó a una habitación de huéspedes en el segundo piso. Era lujosa, con un canopé de cama de
+                    brocado rojo, un armario de caoba, y una ventana que se abría a la vista de la tormenta. Aranza le
+                    trajo ropa seca, que le quedó sorprendentemente bien, lo que sugería que no era la primera vez que
+                    albergaba a un visitante, aunque Francisco intuyó que estos visitantes anteriores probablemente no
+                    habían sido tratados con tanta diplomacia.</p>
+                <p>—Habrá comida en el comedor cuando tengas hambre, —dijo Aranza desde la puerta—. La cocina está en el
+                    piso inferior. Puedo mostrarte mañana. Ahora tengo... tengo cosas que hacer.</p>
+                <p>—¿Y tú? —preguntó Francisco—. ¿Qué comen los vampiros, si se me permite preguntar?</p>
+                <p>Aranza vaciló.</p>
+                <p>—Sangre, —respondió simplemente—. Pero no necesariamente de humanos. Hay muchos animales en el
+                    bosque. Normalmente cazo durante la noche.</p>
+                <p>—¿Normalmente?</p>
+                <p>—Algunos visitantes tienen poco uso, —dijo Aranza, con lo que podría haber sido una sonrisa de
+                    depredador—. Pero algo me dice que tú, Francisco, no eres del tipo que es fácil de usar. Despierta
+                    tarde si quieres. La tormenta no se ha calmado aún.</p>
+                <p>Se fue dejando a Francisco solo con sus pensamientos y el sonido de la lluvia golpeando contra las
+                    ventanas.</p>
+                <p>Francisco no podía dormir. Pasó la noche caminando por los pasillos de la mansión, admirando los
+                    cuadros, corriendo sus dedos sobre el suave terciopelo de las cortinas. No entró en los aposentos
+                    privados de Aranza, como le había pedido que no lo hiciera. Pero en el piso inferior, en el salón de
+                    música, se encontró con la biblioteca de partituras. Obras de Vivaldi, Bach, Beethoven (incluyendo
+                    algunas que no se había completado cuando murió), y entre ellas, obras manuscritas que nunca había
+                    visto antes.</p>
+                <p>Aranza debía haber escrito estas. Debían ser sus composiciones.</p>
+                <p>Eran hermosas. Doloridas. Solitarias.</p>
+                <p>Francisco entendió, en ese momento, que la princesa vampiro no era una criatura de maldad. Era una
+                    criatura de soledad tan profunda que había cristalizado en belleza, como el carbón convirtiéndose en
+                    diamantes bajo presión.</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">Capítulo 5: Los Primeros Secretos</h5>
+                <p>La tormenta duró tres días.</p>
+                <p>No que Francisco se importara particularmente. Podría haber durado tres semanas y aun así no se
+                    habría movido.</p>
+                <p>El primer día, Aranza lo evitaba, aunque Francisco la veía ocasionalmente, moviéndose a través de los
+                    pasillos de su mansión con la soltura de alguien que era completamente cómodo en su propio dominio.
+                    Él pasó el tiempo explorando, leyendo en la biblioteca, tocando con cuidado el fortepiano
+                    (terriblemente mal, debe decirse, pero Aranza sonrió cuando lo escuchó tocar una simple canción de
+                    cuna).</p>
+                <p>El segundo día, ella se atrevió a pasar más tiempo con él. Le mostró los invernaderos en el sótano,
+                    donde flores de todas las épocas crecían bajo la extraña luz de velas de alquimia que nunca se
+                    consumían. Le mostró la galería donde guardaba los retratos de su familia, y Francisco vio en ellos
+                    los ecos de sus propios rasgos: el mismo azul profundo de los ojos, la misma estructura ósea
+                    aristocrática.</p>
+                <p>—Mi padre, —dijo, señalando a un hombre mayor con un parecido inquietante—. Murió... hace mucho
+                    tiempo.</p>
+                <p>—¿Y tu madre?</p>
+                <p>—También, —la voz de Aranza fue muy suave—. Los humanos vinieron. Buscaban brujas. Encontraron a
+                    nosotros en su lugar.</p>
+                <p>Francisco no hizo más preguntas. Simplemente se quedó a su lado, su presencia una forma de
+                    reconocimiento sin necesidad de palabras.</p>
+                <p>El tercer día, la tormenta comenzó a calmarse. Aranza vino a su habitación mientras Francisco
+                    guardaba sus pertenencias, preparándose para partir.</p>
+                <p>—Te vas, —no era una pregunta.</p>
+                <p>—Debo, —respondió Francisco—. He sido una carga para ti durante tres días. Y hay gente que espera mi
+                    retorno en Bucarest.</p>
+                <p>—¿Gente que te ama?</p>
+                <p>Francisco consideró la pregunta.</p>
+                <p>—Gente que depende de mí para ciertos servicios de cartografía y recopilación. Amigos, supongo,
+                    aunque amigos es una palabra que he tenido dificultades para definir. Generalmente estoy demasiado
+                    ocupado buscando lo siguiente como para mantener vínculos duraderos.</p>
+                <p>—Así que te parecemos similares, —dijo Aranza.</p>
+                <p>Francisco se giró para mirarla directamente.</p>
+                <p>—Sí, —acordó—. Pero mientras tu soledad ha sido elegida, para protegerte, tu soledad también te está
+                    destruyendo. Puedo verlo en la forma en que miras los cuadros. Como si estuvieras buscando a otra
+                    persona dentro de ellos.</p>
+                <p>—Que presuntuoso, —dijo Aranza, pero sin calor.</p>
+                <p>—Tal vez, —respondió Francisco—. Pero ¿verdad?</p>
+                <p>Aranza se acercó a la ventana. A través del vidrio, la lluvia finalmente cesaba. Las primeras
+                    estrellas podían verse en el cielo despejándose.</p>
+                <p>—Si te vas, —dijo Aranza lentamente—, no sé si vuelto a verte. Los humanos no duran mucho. Vosotros
+                    venís y os vais. Os hace difícil importar.</p>
+                <p>—Algunos importan más que otros, —respondió Francisco.</p>
+                <p>Se acercó a ella, pero no la tocó. No aún.</p>
+                <p>—Vuelvo, —dijo—. Lo prometo. No en tres días, tal vez no en un mes. Pero volveré.</p>
+                <p>Aranza lo miró, sus ojos azules brillando bajo la luz de las velas.</p>
+                <p>—¿Y si no lo haces? —preguntó con la vulnerabilidad de alguien que había aprendido no a confiar en
+                    las promesas.</p>
+                <p>—Entonces sabrás que me ocurrió algo extraordinario en el camino, —respondió Francisco—. Porque nada
+                    menos me detendría.</p>
+                <p>Esa noche, antes de que se fuera, Aranza lo llevó a la biblioteca de música. Se sentó al fortepiano y
+                    tocó una de sus propias composiciones. Era una pieza que hablaba de longing, de pesar, de esperanza
+                    que no se atrevía a brillar completamente.</p>
+                <p>Francisco la escuchó en silencio, con los ojos cerrados, porque algo sobre la música era demasiado
+                    hermoso, demasiado privado, para verlo completamente.</p>
+                <p>Cuando terminó, le dijo simplemente:</p>
+                <p>—Si nunca vuelvo, al menos tendré esto. Este momento. Esta música. Es más de lo que muchos hombres
+                    obtienen en toda una vida.</p>
+                <p>Aranza se inclinó y lo besó en la mejilla. Su piel era tan fría como la nieve.</p>
+                <p>—Cuídate, Francisco de Mora, —dijo—. Porque aunque no lo sepas aún, eres mucho más importante de lo
+                    que crees.</p>
+
+                <h4 class="text-2xl text-gothic-text font-cinzel mt-12 mb-6 text-center">PARTE III: LA AUSENCIA Y EL
+                    RETORNO</h4>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">Capítulo 6: Tres Meses de Longing</h5>
+                <p>Francisco mantuvo su promesa de una manera que lo sorprendió a sí mismo.</p>
+                <p>Había planeado regresar en un mes. Dos meses en la peor de las circunstancias. Pero cuando llegó a
+                    Bucarest, se encontró con un cliente importante que le encargó una expedición urgente hacia el sur,
+                    hacia las ruinas de Delphi en Grecia. No era algo que pudiera rechazar sin consecuencias financieras
+                    graves.</p>
+                <p>Pasó. Semana tras semana. Las montañas de Moldavia desaparecieron en la bruma de la memoria. Pero no
+                    completamente. Cada noche, en sus alojamientos de campaña bajo las estrellas, Francisco pensaba en
+                    ella. En sus ojos azules. En la forma en que sus dedos volaban sobre las teclas del fortepiano. En
+                    la soledad que, a pesar de toda su belleza, ella no podía ocultar.</p>
+                <p>Escribía cartas. Las quemaba. ¿Cómo envía uno una carta a una casa que aparentemente no existe? ¿A
+                    una mujer cuya dirección es un lugar que la mayoría de las personas cree que es un mito?</p>
+                <p>Cuando finalmente regresó a Bucarest, en la tercera semana de septiembre, su primera acción fue
+                    cerrar su casa, empacar lo esencial, y dirigirse hacia el norte.</p>
+                <p>El viaje tomó dos semanas. El camino que había seguido durante la tormenta de primavera era mucho más
+                    fácil de seguir ahora. Los árboles tenían sus colores de otoño, los rojos y los dorados, lo que
+                    hacía que el viaje fuera hermoso de una manera que lo sorprendió con la intensidad de sus
+                    sentimientos.</p>
+                <p>Aranza lo estaba esperando.</p>
+                <p>No literalmente esperándolo —ella no podía haberlo sabido—, pero cuando llegó a la mansión, encontró
+                    las puertas abiertas. Las velas estaban encendidas. Y en el salón de música, en el fortepiano, había
+                    una pila de partituras nuevas, todas en la letra distintiva de Aranza.</p>
+                <p>Francisco las fue a través. Todas eran variaciones del tema que había escuchado en su última noche.
+                    Pero esta vez, habían evolucionado. Habían crecido en complejidad. Habían adquirido, de alguna
+                    manera, esperanza.</p>
+                <p>—Sabía que vendrías, —dijo Aranza desde la puerta.</p>
+                <p>Se veía diferente. No diferente físicamente —seguía siendo etérea, pálida, bellamente vampírica— pero
+                    había algo en ella que sugerería que había estado esperando. Que se había permitido a sí misma
+                    esperar.</p>
+                <p>—¿Cómo?</p>
+                <p>—Los pájaros, —respondió Aranza con una sonrisa—. Los pájaros que vuelan sobre mis tierras. Vieron a
+                    un hombre viajando desde el sur, hacia el norte, hacia el único lugar que su corazón podría estar
+                    buscando. Pregunté, y ellos respondieron.</p>
+                <p>Francisco rio.</p>
+                <p>—¿Hablas con pájaros?</p>
+                <p>—Entre otras cosas, —respondió Aranza—. Cuando has vivido tanto tiempo como yo, descubres que tienes
+                    alianzas con el mundo natural que los humanos olvidan que era posible.</p>
+                <p>Se acercó a él. Esta vez, cuando le tomó el rostro en sus manos frías, Francisco no se retiró. Cuando
+                    sus labios se encontraron, fue como besar la noche misma. Era dulce, y profundo, y dejó a Francisco
+                    sin aire en los pulmones.</p>
+                <p>—Te has tardado, —dijo Aranza cuando se separaron.</p>
+                <p>—Lo sé, —respondió Francisco—. Y lo siento. Pero ahora estoy aquí. ¿Y si te dijera que no planeo
+                    irme? ¿Que estoy dispuesto a quedarme, si tú lo permitirías?</p>
+                <p>Aranza vaciló.</p>
+                <p>—Eres humano, Francisco. Envejecerás. Morirás. Yo seguiré aquí, en esta mansión, recordándote.</p>
+                <p>—Hay otra opción, —dijo Francisco calmadamente.</p>
+                <p>Aranza entendió lo que estaba sugiriendo.</p>
+                <p>—No.</p>
+                <p>—¿Por qué no?</p>
+                <p>—Porque es una maldición. No un regalo.</p>
+                <p>—Tal vez es ambas cosas, —respondió Francisco—. Tal vez, en las manos de alguien como tú, es
+                    simplemente una forma diferente de existencia. Un mundo diferente para explorar. Una vida diferente
+                    para vivir.</p>
+                <p>Aranza se dio la vuelta y se alejó de él, sus brazos envueltos alrededor de sí misma.</p>
+                <p>—Tú no entiendes lo que estás pidiendo. Perderías el sol. Tendrías que vivir en la noche para
+                    siempre.</p>
+                <p>—Ya vivo en la noche, metafóricamente hablando, —respondió Francisco—. Busco lo que otros humanos no
+                    ven. Vivo en los márgenes, en los espacios entre lo conocido y lo desconocido. Es hora de que sea
+                    literal al respecto.</p>
+                <p>—Matarías, —dijo Aranza, su voz muy baja—. Tendrías hambre. Necesitarías sangre.</p>
+                <p>—Entonces beberé de los animales como haces tú, —respondió Francisco—. O de voluntarios dispuestos.
+                    No seré tan noble como para pretender que no hay tentación, pero seré disciplinado.</p>
+                <p>Aranza se giró nuevamente, y cuando Francisco vio sus ojos, estaban brillando de lágrimas, aunque
+                    como vampiro, él sabía que no podía llorar. Se los estaba imaginando.</p>
+                <p>—Si hago esto, si te doy este regalo maldito, no hay vuelta atrás. Seremos vinculados, tú y yo. Para
+                    siempre. O hasta que nos encontremos el final, lo que sea que sea.</p>
+                <p>—Sí, —respondió Francisco simplemente.</p>
+                <p>—¿Y no tendrás miedo? ¿De lo que puedas convertirte? ¿De lo que podamos convertirnos juntos?</p>
+                <p>—Tengo miedo, —admitió Francisco—. Estoy aterrado. Pero también sé que pasaré el resto de mi
+                    existencia humana preguntándome qué hubiera sido. Y no quiero eso. Quiero saber. Quiero esta vida.
+                    Te quiero a ti.</p>
+                <p>Aranza respiró profundamente. No necesitaba respirar, pero estos pequeños gestos humanos eran
+                    difíciles de soltar después de dos siglos.</p>
+                <p>—Entonces ven, —dijo suavemente—. Tómate mi tiempo. Mi vida. Mi eternidad.</p>
+
+                <h4 class="text-2xl text-gothic-text font-cinzel mt-12 mb-6 text-center">PARTE IV: LA TRANSFORMACIÓN
+                </h4>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">Capítulo 7: La Noche de Samhain</h5>
+                <p>El viaje de Francisco de Mora de humano a vampiro no fue instantáneo. Tomó tres semanas.</p>
+                <p>Aranza había elegido la noche de Samhain, la noche cuando la barrera entre mundos era más delgada,
+                    cuando los espíritus ancestrales caminaban cerca, cuando la magia misma parecía más accesible. Era
+                    la noche más propicia para tal transformación.</p>
+                <p>Durante las tres semanas anteriores, Aranza lo preparó. Le enseñó sobre el hambre que vendría. Le
+                    mostró cómo disciplinar el instinto predador. Le contó historias de otros vampiros que había
+                    conocido a lo largo de los siglos: algunos que se habían entregado completamente a la sed de sangre,
+                    perdiendo su humanidad en el proceso; otros que, como ella, habían encontrado equilibrio.</p>
+                <p>—Lo más importante, —le dijo una noche mientras caminaban por los jardines de la mansión—, es
+                    recordar quién eras. El vampirismo cambia tu cuerpo, pero tu alma, si tienes fe en eso, sigue siendo
+                    tuya. Algunos vampiros olvidan esto. Se convierten en lo que los cazadores dicen que somos. Pero no
+                    tienes que hacerlo.</p>
+                <p>Francisco absorbía cada palabra como si fuera agua y él un hombre en el desierto.</p>
+                <p>Cuando llegó la noche de Samhain, el cielo estaba despejado. Las estrellas brillaban con una
+                    intensidad que Francisco nunca había visto antes. La luna estaba llena, pura, una moneda de plata
+                    suspendida sobre las montañas.</p>
+                <p>Aranza lo llevó a la habitación de ella. Era un espacio que él nunca había visto antes: íntimo,
+                    adornado con sedas y terciopelos de tonos profundos. Había un lecho de caoba con un dosel de brocado
+                    púrpura. Las paredes estaban cubiertas con espejos antiguos que reflejaban la luz de un millar de
+                    velas.</p>
+                <p>—Tengo miedo, —admitió Francisco.</p>
+                <p>—Yo también, —respondió Aranza—. Porque en dos siglos, nunca he hecho esto voluntariamente. Pero creo
+                    que aquí es donde Dios, o la Providencia, o lo que sea que controle tales cosas, quiso que
+                    llegáramos. Dos criaturas solitarias, encontrando compañía en la medianoche.</p>
+                <p>Ella vino a él, y lo besó. Fue un beso largo, profundo, que hablaba de todo lo que había entre ellos.
+                    Luego, suavemente, lo llevó a la cama.</p>
+                <p>Lo que sucedió en las horas siguientes fue sagrado en su propia forma herética. Francisco se entregó
+                    a ella completamente, con la fe de alguien que sabe que está cruzando un umbral del que no hay
+                    regreso.</p>
+                <p>Cuando Aranza finalmente inclinó su cabeza hacia el cuello de Francisco, sus colmillos relucieron a
+                    la luz de las velas. Francisco no cerró los ojos. La miró directamente a los ojos cuando ella lo
+                    mordió, cuando su sangre comenzó a fluir hacia su boca.</p>
+                <p>No era doloroso. Era íntimo de una manera que Francisco nunca había experimentado.</p>
+                <p>Pero después, cuando ella levantó su cabeza, ella también ofreció su muñeca. La sangre vampírica
+                    fluía de la punción que había hecho con sus dientes. No era sangre humana. Era algo más antiguo, más
+                    mágico.</p>
+                <p>—Bebe, —instruyó ella—. Y sé mío. Para siempre.</p>
+                <p>Francisco bebió.</p>
+                <p>La sangre vampírica era fuego. Era revelación. Era como si todo sentido que poseyera se amplificara
+                    mil veces. Podía escuchar el latido del corazón de Aranza, el flujo de la sangre a través de sus
+                    venas. Podía oler cada flor en los invernaderos, varios pisos más abajo. Podía sentir los
+                    pensamientos de Aranza, tocándose con los suyos en los márgenes de su mente.</p>
+                <p>Luego, la agonía.</p>
+                <p>El cambio fue gradual durante los primeros días, luego se aceleró. Sus dientes se hicieron agudos,
+                    dolorosos. Sus sentidos se volvieron demasiado agudos, abrumadores. Tuvo que ser sostenido en la
+                    oscuridad durante casi una semana, mientras su cuerpo se reorganizaba, mientras la sangre vampírica
+                    reescribía cada célula de su ser.</p>
+                <p>Aranza nunca lo dejó. Lo sostuvo a través de la fiebre. Le susurró palabras de aliento en la
+                    oscuridad. Luchó contra sus impulsos predadores cuando el hambre lo consumió, enseñándole a
+                    controlar el sed, a canalizar la necesidad.</p>
+                <p>Cuando finalmente Francisco emergió de la transformación, siete días después, era un hombre nuevo.
+                </p>
+                <p>Literalmente.</p>
+                <p>Su piel ahora llevaba ese brillo pálido que él había admirado en Aranza. Sus ojos, cuando se miró en
+                    el espejo, eran de un marrón profundo pero con oro dentro de ellos, como si la sangre vampírica
+                    hubiera añadido un elemento de luz a su mirada humana anterior. Sus colmillos eran perfectos,
+                    perlados, invisibles cuando sus labios estaban cerrados pero presentes, siempre presentes, un
+                    recordatorio de lo que ahora era.</p>
+                <p>—¿Cómo te sientes? —preguntó Aranza desde la puerta.</p>
+                <p>Francisco se giró. Ella lo miraba con cierta ansiedad, como si no estuviera segura de si el hombre
+                    que había entrado en esa habitación era el mismo que emergería.</p>
+                <p>Francisco sonrió, y su sonrisa reveló sus colmillos nuevos.</p>
+                <p>—Como si finalmente pudiera ver, —respondió—. Como si finalmente pudiera entenderlo. El mundo que has
+                    estado viviendo. Toda esta belleza en la oscuridad.</p>
+                <p>Se acercó a ella. El movimiento fue diferente ahora, más rápido, más controlado. Ella no se retiró
+                    cuando la tomó en sus brazos.</p>
+                <p>—Bienvenido a la eternidad, —dijo ella suavemente—. Te amo, Francisco. Te amo de una manera que pensé
+                    que nunca volvería a amar a nada después de que mataran a mis padres.</p>
+                <p>—Y yo te amo, Aranza, —respondió Francisco—. Te amo como probablemente he amado desde la primera
+                    noche que te vi, colgando de ese candelabro en forma de murciélago.</p>
+                <p>Ella rio, ese sonido de campanas lejanas que lo hacía sonreír cada vez.</p>
+                <p>Cuando se besaron, fue como dos piezas de un puzzle finalmente encajando. Era finalidad. Era inicio.
+                    Era el final de dos siglos de soledad, para ella, y el fin de la búsqueda de Francisco de lo que su
+                    corazón sabía que estaba perdiendo.</p>
+                <p>En la habitación de la mansión Valdecross, bajo un techo que había sido testigo de siglos, dos
+                    vampiros se unieron. Una princesa y un aventurero. Dos almas que había tardado una tormenta de
+                    primavera en encontrarse, pero que, ahora que lo habían hecho, nunca se dejarían ir.</p>
+
+                <h4 class="text-2xl text-gothic-text font-cinzel mt-12 mb-6 text-center">EPÍLOGO: MEDIANOCHE ETERNA</h4>
+                <p>Cien años después.</p>
+                <p>La mansión Valdecross permanecía en las colinas de Moldavia, un fantasma de sí misma y a la vez
+                    completamente viva. Las historias sobre ella continuaron circulando en los pueblos cercanos: que
+                    estaba embrujada, que albergaba demonios, que en las noches de tormenta se podía escuchar música
+                    misteriosa fluyendo de sus ventanas.</p>
+                <p>Los pueblos estaban, por supuesto, en lo correcto.</p>
+                <p>Pero no en la forma que imaginaban.</p>
+                <p>Francisco y Aranza habían encontrado su ritmo juntos. Pasaban los días dormidos bajo la tierra del
+                    sótano, donde la luz del sol no podía tocarlos. Pasaban las noches explorandose el uno al otro, a sí
+                    mismos, al mundo que se desplegaba bajo la luna.</p>
+                <p>Francisco había dejado ir la idea de la exploración en el sentido de descubrir nuevas tierras. En su
+                    lugar, había encontrado una exploración infinita en el cuerpo y la mente de la mujer que amaba.
+                    Aranza había aprendido a abrirse de nuevo, a permitirse la vulnerabilidad, a confiar en que al menos
+                    este hombre no la abandonaría.</p>
+                <p>Habían criado un pequeño círculo de no-muertos alrededor de ellos: otros vampiros que habían
+                    encontrado en sus viajes, otros que había vivido demasiado tiempo en la soledad. La mansión se había
+                    convertido en un refugio, un hogar para aquellos que ya no podían encontrarlo en el mundo de los
+                    vivos.</p>
+                <p>Y cuando los cazadores vinieron, como siempre lo hacían, Aranza y Francisco se defendieron con la
+                    furia y la precisión de dos predadores que habían tenido un siglo completo para perfeccionar sus
+                    habilidades.</p>
+                <p>Nadie ganaba contra ambos juntos.</p>
+                <p>En las noches de Samhain, cada año, Aranza toca el fortepiano la pieza que compuso aquella primera
+                    noche, la que luego se convirtió en un tema que Francisco añadió con su propio instrumento, una
+                    flauta que había aprendido a tocar. La música que producen juntos es de una belleza tan devastadora
+                    que incluso otros vampiros deben detenerse para escuchar.</p>
+                <p>Es música de una eternidad juntos. Es música del amor que sobrevive a los siglos. Es música de dos
+                    almas que se encontraron en la medianoche y decidieron que eso era suficiente.</p>
+                <p>Más que suficiente.</p>
+                <p>Es todo lo que jamás supieron que necesitaban.</p>
+
+                <p class="text-center font-bold text-gothic-white mt-12 mb-4">FIN</p>
+
+                <div class="border-t border-gothic-red/30 mt-12 pt-8">
+                    <p class="font-bold text-gothic-gold mb-2">Notas del autor Franxito:</p>
+                    <p class="italic text-sm text-gothic-muted">Esta historia fue escrita como un tributo al poder del
+                        romance oscuro, al viaje del encuentro en la incertidumbre, y al coraje requerido para
+                        transformarse completamente por amor. La mansión Valdecross, aunque ficticia, fue inspirada por
+                        los castillos góticos reales de Europa Central, lugares donde la historia y el misterio todavía
+                        parecen pulsar bajo las piedras.</p>
+                    <p class="italic text-sm text-gothic-muted mt-2">Aranza representa a aquellos que han sido heridos
+                        por la humanidad pero que se niegan a permitir que esa herida se conviertan en todas sus
+                        definiciones. Francisco representa la búsqueda humana de lo extraordinario, la disposición a
+                        cruzar fronteras que otros consideran infranqueables.</p>
+                    <p class="italic text-sm text-gothic-muted mt-2">Su amor es un testimonio de la verdad de que el
+                        amor verdadero ve más allá de las diferencias —incluso las diferencias de especie, eternidad, o
+                        la naturaleza misma de la existencia— y encuentra belleza en la oscuridad.</p>
+                    <p class="italic text-sm text-gothic-muted mt-2">Que encontremos todos nuestro fortepiano en la
+                        medianoche, y alguien para tocarlo con nosotros.</p>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gothic-black/90 border-t border-gothic-red/20 py-8 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p class="font-cinzel text-gothic-muted text-sm">Creado con infinito amor por <span
+                    class="text-gothic-red-bright">Franxito</span></p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+    </script>
+</body>
+
+</html>

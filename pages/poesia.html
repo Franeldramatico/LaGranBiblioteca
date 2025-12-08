@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poesía | Gran Biblioteca</title>
+    <meta name="description" content="Poesía dedicada: versos y poemas de nuestra historia." />
+    <meta name="author" content="Frari" />
+    <meta name="theme-color" content="#8a0000" />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Poesía" />
+    <meta property="og:description" content="Versos forjados para nosotros." />
+    <meta property="og:image" content="../assets/images/nosotros/imagendeNosotros.jpg" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%238a0000' d='M23.6 3.6c-2.9 0-5.4 1.8-7.6 4.4-2.2-2.6-4.7-4.4-7.6-4.4C3.8 3.6 0 7.5 0 12.1c0 7.4 9.4 12.5 16 16 6.6-3.5 16-8.6 16-16 0-4.6-3.8-8.5-8.4-8.5z'/%3E%3C/svg%3E">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { 'gothic-black': '#050005', 'gothic-darker': '#0a0a0a', 'gothic-red': '#4a0404', 'gothic-red-bright': '#8a0000', 'gothic-purple': '#240046', 'gothic-purple-light': '#5a189a', 'gothic-text': '#e0e0e0', 'gothic-muted': '#9ca3af' }, fontFamily: { 'gothic-title': ['"UnifrakturMaguntia"', 'cursive'], 'cinzel': ['"Cinzel"', 'serif'], 'crimson': ['"Crimson Text"', 'serif'], 'raleway': ['"Raleway"', 'sans-serif'] }, backgroundImage: { 'dark-texture': "url('https://www.transparenttextures.com/patterns/dark-matter.png')" } } } }
+    </script>
+</head>
+<body class="bg-gothic-black text-gothic-text overflow-x-hidden selection:bg-gothic-red selection:text-white">
+    <div class="fixed inset-0 z-[-1] pointer-events-none">
+        <div class="absolute inset-0 bg-dark-texture opacity-40 mix-blend-overlay"></div>
+        <div class="absolute top-[20%] right-[-10%] w-[400px] h-[400px] bg-gothic-purple/20 rounded-full blur-[100px] mix-blend-screen"></div>
+        <div class="absolute bottom-[10%] left-[-10%] w-[400px] h-[400px] bg-gothic-red/10 rounded-full blur-[100px] mix-blend-screen" style="animation-delay:3s"></div>
+    </div>
+
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md border-b border-white/5 bg-gothic-black/80">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a class="text-2xl md:text-3xl font-gothic-title text-gothic-text hover:text-gothic-red-bright transition-all duration-300 text-glow hover:scale-105" href="../index.html">Gran Biblioteca</a>
+            <button id="mobile-menu-btn" aria-controls="mobile-menu" aria-expanded="false" class="lg:hidden text-gothic-text focus:outline-none hover:text-gothic-red-bright transition-colors transform hover:rotate-180 duration-500 relative z-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+            </button>
+            <div class="hidden lg:block">
+                <ul class="flex items-center gap-8">
+                    <li>
+                        <a href="galeria.html" class="group flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300">
+                            <i class="bi bi-images text-gothic-red-bright group-hover:text-white transition-colors text-lg"></i>
+                            <span class="font-cinzel font-bold text-sm tracking-wide border-b border-transparent group-hover:border-gothic-red-bright transition-all">Visuales</span>
+                        </a>
+                    </li>
+                    <li class="relative group">
+                        <button class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300 focus:outline-none">
+                            <i class="bi bi-hourglass-split text-gothic-red-bright group-hover:text-white transition-colors text-lg"></i>
+                            <span class="font-cinzel font-bold text-sm tracking-wide border-b border-transparent group-hover:border-gothic-red-bright transition-all">Historia</span>
+                            <i class="bi bi-chevron-down text-xs ml-1 transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-56 bg-gothic-black/95 border border-gothic-red/30 rounded-lg shadow-[0_0_20px_rgba(0,0,0,0.8)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 z-50 overflow-hidden">
+                            <a href="poesia.html" class="block px-4 py-3 text-sm text-white bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5">
+                                <i class="bi bi-feather mr-2 text-gothic-red-bright"></i> Poesía
+                            </a>
+                            <a href="sobre_nosotros.html" class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel">
+                                <i class="bi bi-journal-richtext mr-2 text-gothic-red-bright"></i> Leyenda
+                            </a>
+                        </div>
+                    </li>
+                    <li class="relative group">
+                        <button class="flex items-center gap-2 text-white transition-colors duration-300 focus:outline-none">
+                            <i class="bi bi-feather text-gothic-red-bright group-hover:text-white transition-colors text-lg"></i>
+                            <span class="font-cinzel font-bold text-sm tracking-wide border-b border-gothic-red-bright transition-all">Escritos</span>
+                            <i class="bi bi-chevron-down text-xs ml-1 transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-56 bg-gothic-black/95 border border-gothic-red/30 rounded-lg shadow-[0_0_20px_rgba(0,0,0,0.8)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 z-50 overflow-hidden">
+                            <a href="cartas.html" class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5">
+                                <i class="bi bi-envelope-paper-heart mr-2 text-gothic-red-bright"></i> Cartas
+                            </a>
+                            <a href="dedicatorias.html" class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5">
+                                <i class="bi bi-stars mr-2 text-gothic-red-bright"></i> Dedicatorias
+                            </a>
+                            <a href="dedicatorias_musicales.html" class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel">
+                                <i class="bi bi-music-note-beamed mr-2 text-gothic-red-bright"></i> Dedicatorias Musicales
+                            </a>
+                            <a href="biblioteca_fanfics.html" class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel">
+                                <i class="bi bi-book-half mr-2 text-gothic-red-bright"></i> Fanfics
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="contacto.html" class="group flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300">
+                            <i class="bi bi-chat-heart text-gothic-red-bright group-hover:text-white transition-colors text-lg"></i>
+                            <span class="font-cinzel font-bold text-sm tracking-wide border-b border-transparent group-hover:border-gothic-red-bright transition-all">Buzón</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-30 hidden transition-opacity duration-300 opacity-0" aria-hidden="true"></div>
+        <div id="mobile-menu" class="fixed top-0 right-0 h-[100dvh] w-72 bg-black border-l border-white/20 shadow-[0_0_50px_rgba(0,0,0,1)] transform translate-x-full transition-transform duration-300 ease-in-out z-50 flex flex-col overflow-y-auto pb-20">
+            <div class="p-6 flex justify-between items-center border-b border-white/10 bg-gothic-red/10">
+                <span class="font-gothic-title text-2xl text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Navegación</span>
+                <button id="mobile-menu-close" class="text-white hover:text-gothic-red-bright transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                </button>
+            </div>
+            <nav class="flex-1 p-6 space-y-2">
+                <a href="galeria.html" class="flex items-center space-x-4 p-4 rounded-lg hover:bg-white/10 transition-colors text-white group border border-transparent hover:border-white/5">
+                    <i class="bi bi-images text-xl text-gothic-red-bright group-hover:scale-110 transition-transform"></i>
+                    <span class="font-cinzel font-bold tracking-wide">Visuales</span>
+                </a>
+                <div class="h-px bg-white/10 my-3"></div>
+                <p class="px-4 text-xs uppercase tracking-widest text-gothic-red-bright font-bold mb-3 mt-2 border-l-2 border-gothic-red-bright pl-3">Historia</p>
+                <a href="poesia.html" class="flex items-center space-x-4 p-4 rounded-lg hover:bg-white/10 transition-colors text-white group border border-transparent hover:border-white/5">
+                    <i class="bi bi-feather text-xl text-gothic-red-bright group-hover:scale-110 transition-transform"></i>
+                    <span class="font-cinzel font-bold tracking-wide">Poesía</span>
+                </a>
+                <a href="sobre_nosotros.html" class="flex items-center space-x-4 p-4 rounded-lg hover:bg-white/10 transition-colors text-white group border border-transparent hover:border-white/5">
+                    <i class="bi bi-journal-richtext text-xl text-gothic-red-bright group-hover:scale-110 transition-transform"></i>
+                    <span class="font-cinzel font-bold tracking-wide">Leyenda</span>
+                </a>
+                <div class="h-px bg-white/10 my-3"></div>
+                <p class="px-4 text-xs uppercase tracking-widest text-gothic-red-bright font-bold mb-3 mt-2 border-l-2 border-gothic-red-bright pl-3">Escritos</p>
+                <a href="cartas.html" class="flex items-center space-x-4 p-4 rounded-lg hover:bg-white/10 transition-colors text-white group border border-transparent hover:border-white/5">
+                    <i class="bi bi-envelope-paper-heart text-xl text-gothic-red-bright group-hover:scale-110 transition-transform"></i>
+                    <span class="font-cinzel font-bold tracking-wide">Cartas</span>
+                </a>
+                <a href="dedicatorias.html" class="flex items-center space-x-4 p-4 rounded-lg hover:bg-white/10 transition-colors text-white group border border-transparent hover:border-white/5">
+                    <i class="bi bi-stars text-xl text-gothic-red-bright group-hover:scale-110 transition-transform"></i>
+                    <span class="font-cinzel font-bold tracking-wide">Dedicatorias</span>
+                </a>
+                <a href="dedicatorias_musicales.html" class="flex items-center space-x-4 p-4 rounded-lg hover:bg-white/10 transition-colors text-white group border border-transparent hover:border-white/5">
+                    <i class="bi bi-music-note-beamed text-xl text-gothic-red-bright group-hover:scale-110 transition-transform"></i>
+                    <span class="font-cinzel font-bold tracking-wide">Dedicatorias Musicales</span>
+                </a>
+                <a href="biblioteca_fanfics.html" class="flex items-center space-x-4 p-4 rounded-lg hover:bg-white/10 transition-colors text-white group border border-transparent hover:border-white/5">
+                    <i class="bi bi-book-half text-xl text-gothic-red-bright group-hover:scale-110 transition-transform"></i>
+                    <span class="font-cinzel font-bold tracking-wide">Fanfics</span>
+                </a>
+                <div class="h-px bg-white/10 my-3"></div>
+                <a href="contacto.html" class="flex items-center space-x-4 p-4 rounded-lg hover:bg-white/10 transition-colors text-white group border border-transparent hover:border-white/5">
+                    <i class="bi bi-chat-heart text-xl text-gothic-red-bright group-hover:scale-110 transition-transform"></i>
+                    <span class="font-cinzel font-bold tracking-wide">Buzón</span>
+                </a>
+            </nav>
+        </div>
+    </nav>
+
+    <header class="min-h-[50vh] flex items-center justify-center relative overflow-hidden pt-20 text-center">
+        <div class="absolute inset-0 bg-gradient-to-b from-gothic-red/20 to-transparent pointer-events-none"></div>
+        <div class="container mx-auto text-center relative z-10 px-4">
+            <h1 class="text-5xl md:text-7xl font-gothic-title text-white mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">Poesía</h1>
+            <p class="text-lg md:text-2xl font-cinzel text-gothic-muted max-w-2xl mx-auto">Versos y poemas dedicados a nuestra unión.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto my-16 px-4 min-h-screen">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="poetry-grid">
+            <div class="group bg-gothic-darker/80 backdrop-blur-md border border-white/5 rounded-lg overflow-hidden transition-all duration-500 hover:border-gothic-red-bright hover:shadow-[0_0_20px_rgba(138,0,0,0.3)] p-8 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <h3 class="text-2xl font-gothic-title text-white">Poema I: Votos en Sombras</h3>
+                    <span class="text-xs font-cinzel text-gothic-red-bright uppercase">Dedicado</span>
+                </div>
+                <p class="text-gothic-muted font-raleway">Bajo la luna de hierro, tus manos fueron brújula; mi voz, refugio. En cada latido, un juramento.</p>
+            </div>
+            <div class="group bg-gothic-darker/80 backdrop-blur-md border border-white/5 rounded-lg overflow-hidden transition-all duration-500 hover:border-gothic-red-bright hover:shadow-[0_0_20px_rgba(138,0,0,0.3)] p-8 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <h3 class="text-2xl font-gothic-title text-white">Poema II: Amar es Gravar</h3>
+                    <span class="text-xs font-cinzel text-gothic-red-bright uppercase">Nos representa</span>
+                </div>
+                <p class="text-gothic-muted font-raleway">Sobre el mármol del tiempo, tu nombre y el mío: dos sombras aprendiendo a ser luz.</p>
+            </div>
+            <div class="group bg-gothic-darker/80 backdrop-blur-md border border-white/5 rounded-lg overflow-hidden transition-all duration-500 hover:border-gothic-red-bright hover:shadow-[0_0_20px_rgba(138,0,0,0.3)] p-8 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <h3 class="text-2xl font-gothic-title text-white">Poema III: Nuestras Constelaciones</h3>
+                    <span class="text-xs font-cinzel text-gothic-red-bright uppercase">Memoria</span>
+                </div>
+                <p class="text-gothic-muted font-raleway">Si el universo calla, que hable tu risa: la única estrella que siempre encuentra mi norte.</p>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+            <div class="group bg-gothic-darker/80 backdrop-blur-md border border-white/5 rounded-lg overflow-hidden transition-all duration-500 hover:border-gothic-red-bright hover:shadow-[0_0_20px_rgba(138,0,0,0.3)] p-8 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <h3 class="text-2xl font-gothic-title text-white">Poema IV: Latido que rima</h3>
+                    <span class="text-xs font-cinzel text-gothic-red-bright uppercase">Para ti</span>
+                </div>
+                <p class="text-gothic-muted font-raleway">Si el cielo me anima y tu voz me ilumina, mi alma camina, tu amor me domina.</p>
+            </div>
+            <div class="group bg-gothic-darker/80 backdrop-blur-md border border-white/5 rounded-lg overflow-hidden transition-all duration-500 hover:border-gothic-red-bright hover:shadow-[0_0_20px_rgba(138,0,0,0.3)] p-8 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <h3 class="text-2xl font-gothic-title text-white">Poema V: Verso en destino</h3>
+                    <span class="text-xs font-cinzel text-gothic-red-bright uppercase">Nuestra unión</span>
+                </div>
+                <p class="text-gothic-muted font-raleway">Mi paso adivino, contigo es camino; tu risa es divino, mi eterno destino.</p>
+            </div>
+            <div class="group bg-gothic-darker/80 backdrop-blur-md border border-white/5 rounded-lg overflow-hidden transition-all duration-500 hover:border-gothic-red-bright hover:shadow-[0_0_20px_rgba(138,0,0,0.3)] p-8 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <h3 class="text-2xl font-gothic-title text-white">Poema VI: Llama y camino</h3>
+                    <span class="text-xs font-cinzel text-gothic-red-bright uppercase">Eterno</span>
+                </div>
+                <p class="text-gothic-muted font-raleway">Tu nombre me atino, mi fe se combina; amor peregrino, mi luz cristalina.</p>
+            </div>
+        </div>
+
+        <div class="text-center mt-16">
+            <a href="../index.html" class="inline-flex items-center justify-center px-8 py-3 text-lg font-cinzel text-white transition-all duration-300 border border-gothic-red rounded-sm hover:bg-gothic-red/20 hover:border-gothic-red-bright">Regresar al Santuario</a>
+        </div>
+    </main>
+
+    <footer class="relative border-t border-white/5 bg-gothic-black py-12 text-center mt-20">
+        <div class="container mx-auto px-4">
+            <div class="mb-6 flex justify-center space-x-6">
+                <span class="text-2xl text-gothic-red-bright">✦</span>
+                <span class="text-2xl text-gothic-purple">✦</span>
+                <span class="text-2xl text-gothic-red-bright">✦</span>
+            </div>
+            <p class="text-gothic-muted font-cinzel text-sm md:text-base tracking-widest uppercase">Forjado en la penumbra <span class="mx-2 text-gothic-red">|</span> &copy; 2025 Gran Biblioteca</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script>
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileOverlay = document.getElementById('mobile-menu-overlay');
+        const mobileCloseBtn = document.getElementById('mobile-menu-close');
+        function toggleMenu() {
+            const isClosed = mobileMenu.classList.contains('translate-x-full');
+            if (isClosed) {
+                mobileMenu.classList.remove('translate-x-full');
+                mobileOverlay.classList.remove('hidden');
+                setTimeout(() => mobileOverlay.classList.remove('opacity-0'), 10);
+                document.body.style.overflow = 'hidden';
+                mobileBtn.setAttribute('aria-expanded', 'true');
+            } else {
+                mobileMenu.classList.add('translate-x-full');
+                mobileOverlay.classList.add('opacity-0');
+                setTimeout(() => mobileOverlay.classList.add('hidden'), 300);
+                document.body.style.overflow = '';
+                mobileBtn.setAttribute('aria-expanded', 'false');
+            }
+        }
+        if (mobileBtn && mobileMenu && mobileOverlay) {
+            mobileBtn.addEventListener('click', toggleMenu);
+            mobileOverlay.addEventListener('click', toggleMenu);
+            if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', toggleMenu);
+        }
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => { link.addEventListener('click', () => { if (!mobileMenu.classList.contains('translate-x-full')) { toggleMenu(); } }); });
+    </script>
+    <script src="../assets/js/menu.js"></script>
+</body>
+</html>

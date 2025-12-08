@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta para Aranza</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(ellipse at top, #1a0033, #0d001a);
+            font-family: 'Cormorant Garamond', serif;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #da70d6;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        
+        .letter-wrapper {
+            position: relative;
+            max-width: 700px;
+            width: 100%;
+            perspective: 1000px;
+        }
+        
+        .letter-container {
+            background: linear-gradient(to bottom, 
+                rgba(20, 0, 40, 0.95), 
+                rgba(30, 0, 50, 0.98));
+            backdrop-filter: blur(10px);
+            border: 3px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            padding: 60px 50px;
+            box-shadow: 
+                0 20px 60px rgba(139, 0, 139, 0.6),
+                inset 0 0 60px rgba(218, 112, 214, 0.1),
+                0 0 100px rgba(138, 43, 226, 0.4);
+            animation: floatIn 2s ease-out;
+        }
+        
+        .letter-container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 3px solid;
+            border-image: linear-gradient(135deg, #8b008b, #da70d6, #ba55d3, #8b008b) 1;
+            pointer-events: none;
+            animation: borderGlow 4s linear infinite;
+        }
+        
+        @keyframes borderGlow {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.5); }
+        }
+        
+        .corner-ornament {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border: 2px solid #da70d6;
+            pointer-events: none;
+        }
+        
+        .corner-ornament::before,
+        .corner-ornament::after {
+            content: '';
+            position: absolute;
+            background: #ba55d3;
+            box-shadow: 0 0 10px #da70d6;
+        }
+        
+        .corner-ornament::before {
+            width: 2px;
+            height: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .corner-ornament::after {
+            width: 20px;
+            height: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .top-left {
+            top: 20px;
+            left: 20px;
+            border-right: none;
+            border-bottom: none;
+        }
+        
+        .top-right {
+            top: 20px;
+            right: 20px;
+            border-left: none;
+            border-bottom: none;
+        }
+        
+        .bottom-left {
+            bottom: 20px;
+            left: 20px;
+            border-right: none;
+            border-top: none;
+        }
+        
+        .bottom-right {
+            bottom: 20px;
+            right: 20px;
+            border-left: none;
+            border-top: none;
+        }
+        
+        .header-ornament {
+            text-align: center;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            color: #da70d6;
+            font-size: 1.5em;
+            text-shadow: 0 0 15px rgba(218, 112, 214, 0.8);
+        }
+        
+        .divider::before,
+        .divider::after {
+            content: '';
+            width: 80px;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #da70d6, transparent);
+        }
+        
+        h1 {
+            font-family: 'Cinzel Decorative', serif;
+            color: #da70d6;
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-shadow: 
+                0 0 20px rgba(218, 112, 214, 0.8),
+                0 0 40px rgba(186, 85, 211, 0.5);
+            letter-spacing: 5px;
+            animation: glow 3s ease-in-out infinite;
+        }
+        
+        @keyframes glow {
+            0%, 100% { text-shadow: 0 0 20px rgba(218, 112, 214, 0.8); }
+            50% { text-shadow: 0 0 30px rgba(218, 112, 214, 1), 0 0 50px rgba(186, 85, 211, 0.8); }
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #ba55d3;
+            font-style: italic;
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+        
+        .content {
+            color: #f0e6fa;
+            font-size: 1.25em;
+            line-height: 1.7;
+            text-align: justify;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .content p {
+            margin-bottom: 18px;
+            text-shadow: 0 0 8px rgba(240, 230, 250, 0.3);
+            text-indent: 30px;
+        }
+        
+        .content p:first-letter {
+            font-size: 2em;
+            font-weight: bold;
+            color: #da70d6;
+            float: left;
+            line-height: 1;
+            margin-right: 8px;
+            text-shadow: 0 0 10px rgba(218, 112, 214, 0.8);
+        }
+        
+        .heart-container {
+            text-align: center;
+            margin: 40px 0;
+            position: relative;
+        }
+        
+        .heart {
+            display: inline-block;
+            font-size: 3em;
+            color: #8b008b;
+            animation: heartbeat 1.5s infinite;
+            filter: drop-shadow(0 0 20px rgba(139, 0, 139, 0.8));
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            10%, 30% { transform: scale(1.1); }
+            20%, 40% { transform: scale(1); }
+        }
+        
+        .signature {
+            text-align: right;
+            font-style: italic;
+            color: #da70d6;
+            font-size: 1.5em;
+            margin-top: 50px;
+            font-family: 'Cinzel Decorative', serif;
+            text-shadow: 0 0 10px rgba(218, 112, 214, 0.6);
+        }
+        
+        .footer-ornament {
+            text-align: center;
+            margin-top: 30px;
+            color: #ba55d3;
+            font-size: 2em;
+            text-shadow: 0 0 15px rgba(186, 85, 211, 0.8);
+        }
+        
+        @keyframes floatIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px) rotateX(10deg);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) rotateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    
+    <div class="letter-wrapper">
+        <div class="letter-container">
+            <div class="corner-ornament top-left"></div>
+            <div class="corner-ornament top-right"></div>
+            <div class="corner-ornament bottom-left"></div>
+            <div class="corner-ornament bottom-right"></div>
+            
+            <div class="header-ornament">
+                <div class="divider">❋</div>
+            </div>
+            
+            <h1>Aranza</h1>
+            <p class="subtitle">Una carta desde el corazón</p>
+            
+            <div class="content">
+                <p>
+                    Estoy realmente feliz de conocerte, Aranza. Cada día que pasa me doy cuenta de lo afortunado que soy de tenerte en mi vida. A pesar de que hubo ligeros problemas en el pasado y nos dimos un tiempo de un mes, me alegra profundamente volver contigo. Ese tiempo separados me hizo valorar aún más lo que tenemos.
+                </p>
+                
+                <p>
+                    Sé que nuestra relación es a distancia, y no voy a mentir, hay momentos difíciles. Pero eso no disminuye en absoluto lo que siento por ti. En serio me siento feliz por lo que tenemos, por cada conversación que compartimos, por cada risa, por cada momento en el que conectamos aunque sea a través de una pantalla.
+                </p>
+                
+                <p>
+                    La distancia puede separar nuestros cuerpos, pero nunca nuestros corazones. Cada mensaje tuyo ilumina mi día, cada llamada es un regalo que atesoro. Has traído color a mi vida de formas que nunca imaginé posibles.
+                </p>
+                
+                <p>
+                    Quiero que sepas que estoy comprometido con esto, con nosotros. Cada kilómetro que nos separa es solo un recordatorio de lo fuerte que es lo que sentimos. Y aunque no pueda estar físicamente a tu lado todos los días, mi corazón siempre está contigo.
+                </p>
+                
+                <p>
+                    Gracias por darme otra oportunidad, por creer en nosotros, y por ser la persona increíble que eres. Eres especial para mí de maneras que las palabras apenas pueden expresar.
+                </p>
+            </div>
+            
+            <div class="heart-container">
+                <span class="heart">♥</span>
+            </div>
+            
+            <div class="signature">
+                Con todo mi amor<br>
+                Siempre tuyo
+            </div>
+            
+            <div class="footer-ornament">✦</div>
+        </div>
+    </div>
+    
+    <script>
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 50; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            starsContainer.appendChild(star);
+        }
+    </script>
+</body>
+</html>

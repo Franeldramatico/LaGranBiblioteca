@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fanfic 7 | Gran Biblioteca</title>
+    <meta name="description" content="Capítulo 7 de nuestra historia." />
+    <meta name="theme-color" content="#8a0000" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%238a0000' d='M23.6 3.6c-2.9 0-5.4 1.8-7.6 4.4-2.2-2.6-4.7-4.4-7.6-4.4C3.8 3.6 0 7.5 0 12.1c0 7.4 9.4 12.5 16 16 6.6-3.5 16-8.6 16-16 0-4.6-3.8-8.5-8.4-8.5z'/%3E%3C/svg%3E">
+
+    <!-- Styles & Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Raleway:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Custom CSS (Relative path specific for sub-subfolder) -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { 'gothic-black': '#050005', 'gothic-darker': '#0a0a0a', 'gothic-red': '#4a0404', 'gothic-red-bright': '#8a0000', 'gothic-purple': '#240046', 'gothic-purple-light': '#5a189a', 'gothic-text': '#e0e0e0', 'gothic-muted': '#9ca3af', 'gothic-gold': '#d4af37' }, fontFamily: { 'gothic-title': ['"UnifrakturMaguntia"', 'cursive'], 'cinzel': ['"Cinzel"', 'serif'], 'crimson': ['"Crimson Text"', 'serif'], 'raleway': ['"Raleway"', 'sans-serif'] }, backgroundImage: { 'dark-texture': "url('https://www.transparenttextures.com/patterns/dark-matter.png')" }, animation: { 'float': 'float 6s ease-in-out infinite' } } } }
+    </script>
+</head>
+
+<body class="bg-gothic-black text-gothic-text overflow-x-hidden selection:bg-gothic-red selection:text-white">
+    <!-- Background Effects -->
+    <div class="fixed inset-0 z-[-1] pointer-events-none">
+        <div class="absolute inset-0 bg-dark-texture opacity-40 mix-blend-overlay"></div>
+        <div
+            class="absolute top-[20%] right-[-10%] w-[400px] h-[400px] bg-gothic-purple/20 rounded-full blur-[100px] mix-blend-screen">
+        </div>
+        <div
+            class="absolute bottom-[10%] left-[-10%] w-[400px] h-[400px] bg-gothic-red/10 rounded-full blur-[100px] mix-blend-screen">
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav
+        class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md border-b border-white/5 bg-gothic-black/80">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a class="text-2xl md:text-3xl font-gothic-title text-gothic-text hover:text-gothic-red-bright transition-all duration-300 text-glow hover:scale-105"
+                href="../../index.html">Gran Biblioteca</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn"
+                class="lg:hidden text-gothic-text focus:outline-none hover:text-gothic-red-bright transition-colors relative z-50">
+                <i class="bi bi-list text-3xl"></i>
+            </button>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:block">
+                <ul class="flex items-center gap-8">
+                    <li><a href="../galeria.html"
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-images text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Visuales</span></a></li>
+
+                    <!-- Historia Dropdown -->
+                    <li class="relative group">
+                        <button
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-hourglass-split text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Historia</span><i
+                                class="bi bi-chevron-down text-xs ml-1"></i></button>
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-gothic-black/95 border border-gothic-red/30 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                            <a href="../tiempo_juntos.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-clock-history mr-2 text-gothic-red-bright"></i> Cronología</a>
+                            <a href="../sobre_nosotros.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel"><i
+                                    class="bi bi-journal-richtext mr-2 text-gothic-red-bright"></i> Leyenda</a>
+                        </div>
+                    </li>
+
+                    <!-- Escritos Dropdown -->
+                    <li class="relative group">
+                        <button class="flex items-center gap-2 text-white transition-colors duration-300"><i
+                                class="bi bi-feather text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide border-b border-gothic-red-bright">Escritos</span><i
+                                class="bi bi-chevron-down text-xs ml-1"></i></button>
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-gothic-black/95 border border-gothic-red/30 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                            <a href="../cartas.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-envelope-paper-heart mr-2 text-gothic-red-bright"></i> Cartas</a>
+                            <a href="../dedicatorias.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-stars mr-2 text-gothic-red-bright"></i> Dedicatorias</a>
+                            <a href="../biblioteca_fanfics.html"
+                                class="block px-4 py-3 text-sm text-white bg-gothic-red/10 transition-colors font-cinzel"><i
+                                    class="bi bi-book-half mr-2 text-gothic-red-bright"></i> Fanfics</a>
+                        </div>
+                    </li>
+
+                    <li><a href="../contacto.html"
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-chat-heart text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Buzón</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Simplified for sub-page) -->
+        <div id="mobile-menu"
+            class="hidden fixed top-0 right-0 h-screen w-72 bg-gothic-black/95 border-l border-white/10 z-50 p-6 flex-col gap-4 shadow-2xl backdrop-blur-xl">
+            <div class="flex justify-end"><button id="mobile-menu-close"><i
+                        class="bi bi-x-lg text-2xl text-white"></i></button></div>
+            <a href="../../index.html" class="text-gothic-gold font-cinzel text-lg">Inicio</a>
+            <a href="../galeria.html" class="text-white font-cinzel text-lg">Visuales</a>
+            <a href="../biblioteca_fanfics.html" class="text-white font-cinzel text-lg">Volver a Fanfics</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pt-32 pb-20 max-w-4xl min-h-screen flex flex-col">
+
+        <!-- Back Button -->
+        <div class="mb-8" data-aos="fade-right">
+            <a href="../biblioteca_fanfics.html"
+                class="inline-flex items-center gap-2 text-gothic-muted hover:text-gothic-red-bright transition-colors font-cinzel group">
+                <i class="bi bi-arrow-left group-hover:-translate-x-1 transition-transform"></i> Volver a la Biblioteca
+            </a>
+        </div>
+
+        <!-- Header -->
+        <header class="text-center mb-12" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-gothic-title text-gothic-gold mb-4 text-glow">
+                Fanfic Capítulo 7
+            </h1>
+            <div class="h-1 w-32 bg-gradient-to-r from-transparent via-gothic-red-bright to-transparent mx-auto"></div>
+        </header>
+
+        <!-- Writing Area (Editable) -->
+        <article
+            class="bg-gothic-darker/60 backdrop-blur-md rounded-lg p-8 md:p-12 border border-white/5 shadow-[0_0_30px_rgba(0,0,0,0.5)] min-h-[500px]"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="prose prose-invert prose-lg max-w-none font-crimson text-gray-300 leading-relaxed">
+                <h2 class="text-3xl text-gothic-gold font-cinzel text-center mb-2">NOVELA GÓTICA VICTORIANA - SUSURROS
+                    EN MANSIONES</h2>
+                <h3 class="text-xl text-gothic-red-bright font-cinzel text-center mb-8">Fanfic 7: La Eternidad en las
+                    Sombras - Edición Extendida</h3>
+                <div class="my-6 p-6 bg-black/40 border border-gothic-purple-light/40 rounded-md shadow-[0_0_20px_rgba(90,24,154,0.2)]">
+                    <p class="italic text-gothic-muted">En cada universo donde la noche guarda secretos, dos almas se buscan. Francisco —viajero obstinado de la sombra— y Aranza —guardiana de la belleza en lo oscuro— trenzan sus destinos bajo lunas antiguas. Lo que sigue es un pliegue de ese pacto: romance feroz, promesas en voz baja y el latido gótico de un amor que no aprende a morir.</p>
+                </div>
+                <h4 class="text-2xl text-gothic-text font-cinzel mt-12 mb-6 text-center">YORKSHIRE, 1875 - NOCHE DE
+                    TORMENTA</h4>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">I. El Abogado Perdido</h5>
+                <p>La diligencia se detuvo con una sacudida brutal, una rueda hundiéndose profundamente en el barro
+                    espeso de los páramos. El cochero, un hombre supersticioso de pocas palabras, se negó a avanzar más.
+                </p>
+                <p>"Hasta aquí llego, señor," gruñó, señalando hacia la colina. "Blackthorn Manor está ahí arriba. Que
+                    Dios se apiade de su alma."</p>
+                <p>Francisco de Mora bajó, ajustándose el cuello de su abrigo empapado contra el viento cortante de
+                    noviembre. No creía en maldiciones, solo en libros de contabilidad y leyes. Pero incluso él tuvo que
+                    admitir que la mansión imponía respeto.</p>
+                <p>No era una casa; era una herida en el paisaje. Torreones afilados como agujas rasgaban el cielo gris
+                    plomo, y gárgolas de piedra desgastada parecían observar su llegada con malicia viva. Era el tipo de
+                    lugar que los poetas románticos adorarían y que los hombres sensatos evitarían.</p>
+                <p>Francisco llamó a la pesada puerta de roble con el aldabón de bronce en forma de cabeza de lobo. El
+                    sonido resonó como un disparo en una cripta vacía.</p>
+                <p>La puerta se abrió sin chirridos, revelando no a un mayordomo encorvado, sino a la señora de la casa
+                    en persona.</p>
+                <p>"Sr. De Mora," dijo ella. Su voz era como terciopelo negro rozando la piel.</p>
+                <p>Aranza vestía de luto riguroso, encaje negro sobre seda negra, que hacía que su piel pálida pareciera
+                    mármol esculpido bajo la luz de la luna. Sus ojos, de un azul antinaturalmente profundo, lo
+                    atraparon al instante y no lo soltaron.</p>
+                <p>"Lady Aranza," Francisco inclinó la cabeza, ocultando su turbación. "Lamento la hora. La tormenta en
+                    el camino..."</p>
+                <p>"Las tormentas son viejas amigas en este páramo," lo interrumpió ella, haciéndose a un lado con una
+                    gracia líquida. "Entre, por favor. El frío de los vivos no es bienvenido aquí."</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">II. Una Auditoría Inusual</h5>
+                <p>El interior de la mansión olía a cera de abejas, lavanda seca y... algo más. Algo metálico, ferroso y
+                    antiguo. La biblioteca, donde ella lo condujo, era inmensa, con estanterías que llegaban al techo
+                    abovedado. Estaba iluminada por docenas de candelabros de plata, aunque las cortinas de terciopelo
+                    pesado estaban cerradas herméticamente, bloqueando cualquier atisbo de la noche.</p>
+                <p>Los retratos parecían respirar. Rostros de damas y caballeros pintados con manos maestras seguían a
+                    Francisco con ojos barnizados que reflejaban una chispa imposible. Cada marco dorado exudaba polvo
+                    fino como ceniza reciente, y el suelo alfombrado devolvía una vibración sutil al paso, un murmullo
+                    que recordaba al latido de un corazón enterrado.</p>
+                <p>Un reloj de péndulo marcaba los segundos con un golpe grave que no coincidía con el tiempo real; a
+                    veces adelantaba, a veces se detenía, como si la casa respirara en su propia cadencia. Al rozar el
+                    lomo de un incunable, Francisco sintió un pulso frío que le recorrió el brazo hasta el pecho.</p>
+                <p>Aranza lo observaba con una atención que no era cortesía, sino hambre de alma. No de sangre aún, sino
+                    de historia compartida, de ese tipo de compañía que las mansiones olvidadas devoran para no
+                    desplomarse sobre sí mismas.</p>
+                <p>Francisco extendió sus libros de cuentas sobre la gran mesa de caoba pulida.</p>
+                <p>"Sus inversiones en el comercio de las Indias Orientales han rendido frutos extraordinarios, señora,"
+                    comenzó él, intentando mantener su tono profesional. "Su fortuna se ha triplicado en la última
+                    década. Sin embargo, hay discrepancias preocupantes en los registros civiles. No hemos podido
+                    localizar su partida de bautismo, ni la de su difunto esposo. De hecho, no hay registro de su
+                    matrimonio en ninguna parroquia de Inglaterra."</p>
+                <p>Aranza servía té en tazas de porcelana tan finas que parecían cáscaras de huevo. No se sirvió para
+                    ella, notó Francisco con un escalofrío, solo para él.</p>
+                <p>"Los registros se pierden, Sr. De Mora," dijo ella con indiferencia, sentándose en un sillón de
+                    respaldo alto tapizado en terciopelo rojo que parecía un trono. "Las iglesias se queman. Los
+                    clérigos olvidan. El papel es frágil y efímero. No como nosotros... no como la piedra de esta casa."
+                </p>
+                <p>Francisco la miró fijamente, olvidando por un momento sus modales. Había una tristeza insondable en
+                    ella que resonaba con la suya propia. Hacía tres años que él había enterrado a su esposa, víctima de
+                    la tuberculosis, y desde entonces, el mundo había perdido su color. Vivía en una escala de grises,
+                    cumpliendo sus deberes mecánicamente.</p>
+                <p>Pero Aranza... ella era un destello de oscuridad brillante en su mundo gris. Era magnética.</p>
+                <p>"Usted habla como si hubiera visto arder muchas iglesias," comentó él suavemente, cerrando el libro
+                    de contabilidad.</p>
+                <p>"He visto arder ciudades enteras, Francisco," respondió ella, usando su nombre de pila con una
+                    intimidad impactante que lo dejó sin aliento. "He visto imperios convertirse en polvo y reyes
+                    olvidados llorar sobre ruinas."</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">III. La Confesión Carmesí</h5>
+                <p>La tormenta afuera se intensificó, los truenos sacudiendo los cimientos de la mansión. Francisco
+                    debería haber sentido miedo. Estaba solo, aislado en medio de la nada, con una mujer que hablaba en
+                    enigmas peligrosos. Pero no sentía miedo. Sentía... curiosidad. Y una extraña paz, como si hubiera
+                    llegado a un destino que no sabía que estaba buscando.</p>
+                <p>"¿Quién es usted realmente?" preguntó él, su voz apenas un susurro en la gran sala.</p>
+                <p>Aranza se levantó y caminó hacia la chimenea. El fuego rugía, pero extrañamente, no se reflejaba en
+                    sus ojos cuando se giró hacia él. No había chispa de vida en ellos, solo una profundidad abismal.
+                </p>
+                <p>"Tengo trescientos años," dijo, sin preámbulos. "Morí en 1675, en una celda húmeda de la Inquisición,
+                    acusada de brujería. Pero la muerte... me rechazó. O mejor dicho, alguien me robó de ella antes de
+                    que pudiera reclamarme."</p>
+                <p>Se acercó a él lentamente, sus movimientos desprovistos de cualquier sonido humano. En la luz
+                    parpadeante de las velas, Francisco vio el cambio. Sus rasgos delicados se afilaron, volviéndose
+                    depredadores, inhumanamente hermosos y aterradores. Sus labios se separaron ligeramente, revelando
+                    caninos blancos y afilados que no pertenecían a una mujer mortal.</p>
+                <p>"Soy un monstruo, Francisco," susurró ella, con una vulnerabilidad que rompió el corazón de él. "Me
+                    alimento de vida para mantener esta... existencia estática y maldita. Bebo sangre para no
+                    convertirme en polvo."</p>
+                <p>Francisco se levantó, tirando la silla hacia atrás. Su mente lógica, su mente de abogado de la City
+                    de Londres, gritaba que esto era imposible, una locura, una alucinación inducida por el cansancio.
+                    Pero su alma, esa parte de él que había estado dormida y entumecida durante tres años, despertó de
+                    golpe.</p>
+                <p>No corrió hacia la puerta. Caminó hacia ella.</p>
+                <p>"No veo un monstruo," dijo él, deteniéndose a un paso de ella, lo suficientemente cerca para sentir
+                    el frío que emanaba de su cuerpo. "Veo a alguien que ha estado sola demasiado tiempo. Veo a alguien
+                    que carga con demasiada historia."</p>
+                <p>Aranza retrocedió un paso, sorprendida de verdad por primera vez en un siglo. Sus ojos felinos se
+                    abrieron con incredulidad. "¿No temes? ¿No hueles la muerte en mí? Podría matarte antes de que tu
+                    corazón lata una vez más."</p>
+                <p>"La muerte ha sido mi compañera de cama durante tres años," respondió Francisco, extendiendo la mano
+                    y tocando suavemente la mejilla fría de ella. "Desde que perdí a mi esposa, la he buscado en cada
+                    botella de láudano y en cada callejón oscuro. Ya no me asusta su rostro. Ni siquiera cuando es tan
+                    hermoso como el tuyo."</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">IV. Pacto de Sangre y Tinta</h5>
+                <p>La tensión en la sala era palpable, un hilo de acero estirado a punto de romperse. Aranza miró la
+                    mano de él en su rostro, sintiendo el calor de su sangre pulsando bajo la piel de sus dedos. El
+                    hambre estaba allí, siempre estaba allí, pero por primera vez, el deseo de conexión era más fuerte.
+                </p>
+                <p>No hubo mordiscos en el cuello esa noche. Hubo algo mucho más peligroso y prohibido: una conexión de
+                    almas.</p>
+                <p>En la penumbra, ella confesó el precio: cada caricia hacía cantar a su hambre como un coro antiguo.
+                    Amar significaba recordar la vida con demasiada precisión, y recordar la vida volvía más cruel el
+                    acto de robarla. Francisco escuchó sin apartar la mano; su respuesta fue un juramento bajo, una
+                    promesa de medir su pulso con el de ella, de ser brújula cuando la eternidad tentara con decadencia.</p>
+                <p>Las velas se consumieron hasta quedar lágrimas de cera. El reloj de péndulo se alineó al fin con el
+                    corazón de ambos, y por unas horas la casa dejó de estar maldita: aceptó el pacto silencioso de no
+                    exigir sangre a cambio de compañía.</p>
+                <p>Francisco se quedó en Blackthorn Manor. La auditoría se convirtió en una excusa que duró semanas,
+                    luego meses. Él gestionaba su vasta fortuna durante el día, protegiéndola de los buitres legales y
+                    de la curiosidad entrometida del mundo moderno. Y por la noche... por la noche, ella le enseñaba
+                    historia que no estaba en los libros.</p>
+                <p>Le contó sobre la peste negra vista desde los tejados de un Londres desierto. Sobre los bailes
+                    decadentes en Versalles antes de que cayera la guillotina. Sobre guerras olvidadas y amores
+                    perdidos. Y él la escuchaba, fascinado, hipnotizado, enamorado no solo de la mujer, sino de la
+                    eternidad que ella representaba.</p>
+                <p>"¿Por qué yo?" le preguntó él una noche de pleno invierno, mientras paseaban por el jardín de
+                    estatuas cubierto de escarcha bajo la luna llena. Él estaba envuelto en pieles y temblando; ella, en
+                    su seda fina, era inmune al frío mordaz.</p>
+                <p>"Porque tú no pediste vivir para siempre," respondió Aranza, entrelazando su brazo frío con el de él.
+                    "La mayoría de los hombres que descubren mi secreto buscan inmortalidad, poder o riqueza. Me miran y
+                    ven un medio para un fin. Tú me miraste y viste soledad. Solo alguien que ha amado y perdido
+                    profundamente puede entender la verdadera carga de la inmortalidad. Es ver morir todo lo que amas,
+                    una y otra vez."</p>
+                <p>Francisco se detuvo frente a una fuente congelada y la miró a los ojos. "Entonces, déjame compartir
+                    esa carga. No puedo darte la eternidad, Aranza. Soy mortal. Envejeceré. Mi piel se arrugará, mis
+                    huesos dolerán y eventualmente moriré. Pero hasta ese día... seré tu ancla. Tu testigo. Tu amor. No
+                    dejaré que estés sola mientras tenga aliento."</p>
+                <p>Aranza acarició su rostro, donde las primeras líneas de expresión comenzaban a marcarse alrededor de
+                    sus ojos. Para ella, él era un suspiro en el tiempo, un parpadeo de una vela. Pero era el suspiro
+                    más dulce y cálido que había sentido en siglos.</p>
+                <p>"Acepto," dijo ella, inclinándose y besándolo bajo la luz plateada. Sus labios eran fríos como el
+                    hielo, pero el beso encendió un fuego abrasador en el alma de Francisco. "Seas mi día, y yo seré tu
+                    noche. Hasta que el tiempo nos separe... y quizás, incluso después. Te buscaré en la oscuridad,
+                    Francisco De Mora."</p>
+                <p>Y así, en una mansión embrujada en los desolados páramos de Yorkshire, un abogado mortal y una
+                    vampira antigua encontraron algo que la sociedad victoriana nunca aprobaría, pero que el universo,
+                    en su infinita y oscura sabiduría, había conspirado para crear: un amor que desafiaba a la muerte
+                    misma.</p>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gothic-black/90 border-t border-gothic-red/20 py-8 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p class="font-cinzel text-gothic-muted text-sm">Creado con infinito amor por <span
+                    class="text-gothic-red-bright">Franxito</span></p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+    </script>
+</body>
+
+</html>

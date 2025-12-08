@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fanfic 5 | Gran Biblioteca</title>
+    <meta name="description" content="Capítulo 5 de nuestra historia." />
+    <meta name="theme-color" content="#8a0000" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%238a0000' d='M23.6 3.6c-2.9 0-5.4 1.8-7.6 4.4-2.2-2.6-4.7-4.4-7.6-4.4C3.8 3.6 0 7.5 0 12.1c0 7.4 9.4 12.5 16 16 6.6-3.5 16-8.6 16-16 0-4.6-3.8-8.5-8.4-8.5z'/%3E%3C/svg%3E">
+
+    <!-- Styles & Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Raleway:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Custom CSS (Relative path specific for sub-subfolder) -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { 'gothic-black': '#050005', 'gothic-darker': '#0a0a0a', 'gothic-red': '#4a0404', 'gothic-red-bright': '#8a0000', 'gothic-purple': '#240046', 'gothic-purple-light': '#5a189a', 'gothic-text': '#e0e0e0', 'gothic-muted': '#9ca3af', 'gothic-gold': '#d4af37' }, fontFamily: { 'gothic-title': ['"UnifrakturMaguntia"', 'cursive'], 'cinzel': ['"Cinzel"', 'serif'], 'crimson': ['"Crimson Text"', 'serif'], 'raleway': ['"Raleway"', 'sans-serif'] }, backgroundImage: { 'dark-texture': "url('https://www.transparenttextures.com/patterns/dark-matter.png')" }, animation: { 'float': 'float 6s ease-in-out infinite' } } } }
+    </script>
+</head>
+
+<body class="bg-gothic-black text-gothic-text overflow-x-hidden selection:bg-gothic-red selection:text-white">
+    <!-- Background Effects -->
+    <div class="fixed inset-0 z-[-1] pointer-events-none">
+        <div class="absolute inset-0 bg-dark-texture opacity-40 mix-blend-overlay"></div>
+        <div
+            class="absolute top-[20%] right-[-10%] w-[400px] h-[400px] bg-gothic-purple/20 rounded-full blur-[100px] mix-blend-screen">
+        </div>
+        <div
+            class="absolute bottom-[10%] left-[-10%] w-[400px] h-[400px] bg-gothic-red/10 rounded-full blur-[100px] mix-blend-screen">
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav
+        class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md border-b border-white/5 bg-gothic-black/80">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a class="text-2xl md:text-3xl font-gothic-title text-gothic-text hover:text-gothic-red-bright transition-all duration-300 text-glow hover:scale-105"
+                href="../../index.html">Gran Biblioteca</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn"
+                class="lg:hidden text-gothic-text focus:outline-none hover:text-gothic-red-bright transition-colors relative z-50">
+                <i class="bi bi-list text-3xl"></i>
+            </button>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:block">
+                <ul class="flex items-center gap-8">
+                    <li><a href="../galeria.html"
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-images text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Visuales</span></a></li>
+
+                    <!-- Historia Dropdown -->
+                    <li class="relative group">
+                        <button
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-hourglass-split text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Historia</span><i
+                                class="bi bi-chevron-down text-xs ml-1"></i></button>
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-gothic-black/95 border border-gothic-red/30 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                            <a href="../tiempo_juntos.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-clock-history mr-2 text-gothic-red-bright"></i> Cronología</a>
+                            <a href="../sobre_nosotros.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel"><i
+                                    class="bi bi-journal-richtext mr-2 text-gothic-red-bright"></i> Leyenda</a>
+                        </div>
+                    </li>
+
+                    <!-- Escritos Dropdown -->
+                    <li class="relative group">
+                        <button class="flex items-center gap-2 text-white transition-colors duration-300"><i
+                                class="bi bi-feather text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide border-b border-gothic-red-bright">Escritos</span><i
+                                class="bi bi-chevron-down text-xs ml-1"></i></button>
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-gothic-black/95 border border-gothic-red/30 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                            <a href="../cartas.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-envelope-paper-heart mr-2 text-gothic-red-bright"></i> Cartas</a>
+                            <a href="../dedicatorias.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-stars mr-2 text-gothic-red-bright"></i> Dedicatorias</a>
+                            <a href="../biblioteca_fanfics.html"
+                                class="block px-4 py-3 text-sm text-white bg-gothic-red/10 transition-colors font-cinzel"><i
+                                    class="bi bi-book-half mr-2 text-gothic-red-bright"></i> Fanfics</a>
+                        </div>
+                    </li>
+
+                    <li><a href="../contacto.html"
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-chat-heart text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Buzón</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Simplified for sub-page) -->
+        <div id="mobile-menu"
+            class="hidden fixed top-0 right-0 h-screen w-72 bg-gothic-black/95 border-l border-white/10 z-50 p-6 flex-col gap-4 shadow-2xl backdrop-blur-xl">
+            <div class="flex justify-end"><button id="mobile-menu-close"><i
+                        class="bi bi-x-lg text-2xl text-white"></i></button></div>
+            <a href="../../index.html" class="text-gothic-gold font-cinzel text-lg">Inicio</a>
+            <a href="../galeria.html" class="text-white font-cinzel text-lg">Visuales</a>
+            <a href="../biblioteca_fanfics.html" class="text-white font-cinzel text-lg">Volver a Fanfics</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pt-32 pb-20 max-w-4xl min-h-screen flex flex-col">
+
+        <!-- Back Button -->
+        <div class="mb-8" data-aos="fade-right">
+            <a href="../biblioteca_fanfics.html"
+                class="inline-flex items-center gap-2 text-gothic-muted hover:text-gothic-red-bright transition-colors font-cinzel group">
+                <i class="bi bi-arrow-left group-hover:-translate-x-1 transition-transform"></i> Volver a la Biblioteca
+            </a>
+        </div>
+
+        <!-- Header -->
+        <header class="text-center mb-12" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-gothic-title text-gothic-gold mb-4 text-glow">
+                Fanfic Capítulo 5
+            </h1>
+            <div class="h-1 w-32 bg-gradient-to-r from-transparent via-gothic-red-bright to-transparent mx-auto"></div>
+        </header>
+
+        <!-- Writing Area (Editable) -->
+        <article
+            class="bg-gothic-darker/60 backdrop-blur-md rounded-lg p-8 md:p-12 border border-white/5 shadow-[0_0_30px_rgba(0,0,0,0.5)] min-h-[500px]"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="prose prose-invert prose-lg max-w-none font-crimson text-gray-300 leading-relaxed">
+                <h2 class="text-3xl text-gothic-gold font-cinzel text-center mb-2">SCI-FI ESPACIAL - ESTRELLAS LEJANAS
+                </h2>
+                <h3 class="text-xl text-gothic-red-bright font-cinzel text-center mb-8">Fanfic 5: Horizonte de Eventos -
+                    Edición Extendida</h3>
+                <div class="my-6 p-6 bg-black/40 border border-gothic-purple-light/40 rounded-md shadow-[0_0_20px_rgba(90,24,154,0.2)]">
+                    <p class="italic text-gothic-muted">En cada universo donde la noche guarda secretos, dos almas se buscan. Francisco —viajero obstinado de la sombra— y Aranza —guardiana de la belleza en lo oscuro— trenzan sus destinos bajo lunas antiguas. Lo que sigue es un pliegue de ese pacto: romance feroz, promesas en voz baja y el latido gótico de un amor que no aprende a morir.</p>
+                </div>
+                <h4 class="text-2xl text-gothic-text font-cinzel mt-12 mb-6 text-center">BITÁCORA ESTELAR: AÑO 3421 -
+                    SECTOR OMEGA</h4>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">I. La Capitana de Cristal</h5>
+                <p>La USS Valdecross no era solo una nave; era una catedral de duracero y cristal ionizado, una aguja de
+                    tres kilómetros de largo que perforaba el tejido del espacio-tiempo. En su interior, diez mil almas
+                    vivían, trabajaban y soñaban, protegidas del vacío absoluto y del frío cero por escudos de energía
+                    que zumbaban con una frecuencia que solo los perros y los telépatas podían oír.</p>
+                <p>Pero en la cubierta de observación Beta-9, el silencio era absoluto, denso, casi religioso.</p>
+                <p>La Capitana Aranza permanecía frente al ventanal de grafeno reforzado, sus ojos azules reflejando la
+                    danza lenta y violeta de la Nebulosa del Velo. Según los registros oficiales de la Flota Estelar,
+                    tenía treinta y cinco años biológicos. Según los archivos clasificados de bio-ingeniería de Nueva
+                    Babilonia, encriptados bajo siete llaves cuánticas, su código genético había sido escrito hace
+                    ochocientos años. Era una "Hija de las Estrellas", un prototipo diseñado genéticamente para soportar
+                    los rigores de los viajes interestelares relativistas que destrozarían la mente de un humano común.
+                </p>
+                <p>Inmortalidad funcional. Ese era el término técnico aséptico. Soledad eterna. Esa era la realidad
+                    brutal.</p>
+                <p>Había visto imperios planetarios ascender en gloria y caer en cenizas. Había visto estrellas nacer en
+                    guarderías estelares y morir en supernovas silenciosas. Y a través de los siglos, había aprendido
+                    una lección dolorosa: la única forma de sobrevivir a la eternidad era no apegarse a lo efímero. Y
+                    todo, absolutamente todo, era efímero.</p>
+                <p>"Capitana," una voz suave rompió su meditación, no por el intercomunicador, sino en el aire real de
+                    la sala.</p>
+                <p>Aranza no necesitó girarse para saber quién era. El ritmo de esos pasos —un poco irregulares, uno más
+                    pesado que el otro, legado de una vieja herida de gravedad— se había grabado en su memoria auditiva
+                    con una claridad alarmante durante los últimos seis meses.</p>
+                <p>"Teniente De Mora," respondió ella, su voz serena y autoritaria, la máscara de comando deslizándose
+                    perfectamente sobre su rostro, aunque sus manos se tensaron ligeramente sobre la barandilla fría.
+                    "¿Turno de noche en Cartografía otra vez? El Comandante Riker me informó que has estado excediendo
+                    tus horas de guardia."</p>
+                <p>Francisco de Mora se detuvo a su lado, respetando la distancia protocolaria, pero invadiendo su
+                    espacio personal con su mera presencia. No era un "Hijo de las Estrellas". Era humano, dolorosamente
+                    mortal, vulnerable. Tenía treinta y cinco años de vida real, vivida bajo soles duros y en lunas
+                    mineras. Tenía cicatrices en las manos por trabajar con servidores de datos antiguos sin guantes, y
+                    una calidez en su mirada color avellana que derretía el hielo que Aranza había construido
+                    meticulosamente alrededor de su corazón durante siglos.</p>
+                <p>"Las estrellas no se van a mapear solas, Capitana," dijo él, con esa leve sonrisa irreverente que le
+                    había ganado tres amonestaciones oficiales y... la atención secreta y obsesiva de su comandante.
+                    "Además, los sensores de largo alcance detectaron una fluctuación en el sector 7, cuadrante Gamma.
+                    Una resonancia armónica extraña. Pensé que querría verlo en persona antes de que lo catalogue como
+                    'ruido estático'."</p>
+                <p>"Podrías haber enviado el informe a mi datapad personal. Hubiera sido más eficiente."</p>
+                <p>"Podría," admitió él, dando un paso casi imperceptible hacia ella, rompiendo la barrera invisible del
+                    rango. "Pero entonces no tendría excusa para verla mirar la nebulosa. Dicen que es la vista más
+                    hermosa de la galaxia, pero creo que la nebulosa tiene celos de quién la observa."</p>
+                <p>Aranza sintió que el rubor subía a sus mejillas, una reacción fisiológica que pensó haber suprimido
+                    hacía décadas.</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">II. Una Taza de Café en el Fin del Mundo</h5>
+                <p>Francisco sacó dos termos plateados de su chaqueta de uniforme. "Café de verdad. Granos cultivados en
+                    la Tierra, no esa basura sintetizada que sirven en el comedor."</p>
+                <p>Aranza aceptó el termo. El calor se filtró a través de sus guantes. "¿Soborno, Teniente?"</p>
+                <p>"Diplomacia, Capitana."</p>
+                <p>Bebieron en silencio por un momento, mirando el vacío. Fue Aranza quien rompió el silencio.</p>
+                <p>"¿Alguna vez te asusta?" preguntó ella, bajando la guardia. "¿La inmensidad de todo esto? ¿Saber que
+                    somos polvo flotando en la nada?"</p>
+                <p>"Todo el tiempo," confesó Francisco. "Pero es el miedo lo que nos hace sentir vivos. Ustedes... los
+                    de tu clase... ¿sienten miedo?"</p>
+                <p>"Sentimos... tiempo," dijo Aranza. "El peso de los años acumulándose. A veces siento que soy un museo
+                    viviente, lleno de recuerdos de gente que ya no existe."</p>
+                <p>"Yo existo," dijo Francisco con firmeza. Dejó su termo y giró el cuerpo para mirarla de frente.
+                    "Estoy aquí, Aranza. Ahora. En este segundo. Y tal vez mi vida sea un parpadeo comparada con la
+                    tuya, pero planeo hacer que ese parpadeo sea tan brillante que lo recuerdes por los próximos mil
+                    años."</p>
+                <p>"Francisco..."</p>
+                <p>"No me digas que el Código 7-Alpha lo prohíbe. Ese código fue escrito por burócratas en oficinas con
+                    aire acondicionado que nunca han visto la luz de un sol binario reflejada en los ojos de la mujer
+                    que aman."</p>
+                <p>Aranza cerró los ojos, luchando. El deseo de tocarlo, de anclarse a su humanidad efímera, era
+                    abrumador. "Si doy un paso, Francisco, no podré retroceder. Y cuando te vayas... cuando el tiempo te
+                    lleve..."</p>
+                <p>"Entonces tendrás un recuerdo hermoso en lugar de un arrepentimiento eterno," susurró él, su mano
+                    rozando la de ella.</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">III. La Anomalía de Kronos</h5>
+                <p>Antes de que sus dedos pudieran entrelazarse, la realidad se rompió.</p>
+                <p>No hubo explosión inicial, solo un sonido horrible, como el de un hueso gigante rompiéndose, que
+                    resonó a través del casco de la nave. La gravedad artificial parpadeó violentamente y luego se
+                    invirtió por un segundo, lanzándolos hacia el techo y luego dejándolos caer dolorosamente al suelo.
+                </p>
+                <p>Las luces se tornaron de un rojo sangre estroboscópico. La voz de la computadora central, normalmente
+                    calmada, sonaba distorsionada y frenética.</p>
+                <p><em>"ALERTA DE PROXIMIDAD. COLISIÓN INMINENTE. FALLO EN CONTENCIÓN DE NÚCLEO. TODOS LOS SISTEMAS EN
+                        CRÍTICO."</em></p>
+                <p>"¡Al puente!" gritó Aranza, el dolor de la caída olvidado, la adrenalina inundando su sistema
+                    modificado.</p>
+                <p>Corrieron por los pasillos inclinados, esquivando a tripulantes heridos y conductos de vapor que
+                    estallaban. Cuando las puertas del puente se abrieron, la vista era una pesadilla.</p>
+                <p>La pantalla principal mostraba el terror encarnado: no era una nave enemiga, ni un asteroide. Era una
+                    grieta en el espacio mismo. Una anomalía gravitacional de Clase 5: un agujero negro primordial
+                    errante, invisible a los sensores hasta que fue demasiado tarde.</p>
+                <p>"¡Informe!" ladró Aranza, saltando a su silla de mando.</p>
+                <p>"¡Nos arrastra, Capitana!" gritó el Oficial Táctico, con la cara bañada en sudor. "¡El horizonte de
+                    eventos está a trescientos mil kilómetros y acercándose! ¡Los motores están al 110% pero
+                    retrocedemos!"</p>
+                <p>"¡Escudos abajo! ¡El casco se está desintegrando en la cubierta 14!"</p>
+                <p>La nave gimió, un sonido metálico de agonía. Estaban siendo estirados, espaguetizados por la marea
+                    gravitatoria.</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">IV. El Cálculo Imposible</h5>
+                <p>Aranza miró los datos. Era jaque mate. La computadora no podía calcular un vector de escape porque la
+                    física misma se estaba rompiendo alrededor de ellos.</p>
+                <p>"Estamos muertos," susurró el navegante, paralizado.</p>
+                <p>"No," dijo una voz firme.</p>
+                <p>Francisco estaba en la estación de ciencias auxiliar, sus dedos volando sobre el teclado holográfico
+                    con una velocidad inhumana. Sangre goteaba de un corte en su ceja, manchando la consola.</p>
+                <p>"Hay una corriente," gritó, sin mirar atrás. "Una hebra de materia oscura estable orbitando el
+                    horizonte. Es estrecha, menos de diez metros de ancho. Si entramos en ella, podemos usarla como una
+                    honda. Nos escupirá fuera del pozo gravitatorio."</p>
+                <p>"¡Es una locura!" gritó el Primer Oficial. "¡Tendríamos que volar *hacia* el agujero negro! ¡La
+                    computadora no puede navegar con esa precisión!"</p>
+                <p>"¡La computadora no!" replicó Francisco, girándose hacia Aranza. Sus ojos ardían con una intensidad
+                    feroz. "Tú sí. Tú tienes reflejos neuronales de grado militar. Tú puedes sentir la nave. Yo te daré
+                    los números. Tú pones las manos."</p>
+                <p>Aranza lo miró. Vio la certeza matemática en él. Vio la fe ciega en ella.</p>
+                <p>"Transfiere el control manual a mi estación," ordenó.</p>
+                <p>"¡Capitana...!"</p>
+                <p>"¡AHORA!"</p>
+                <p>Aranza tomó los controles físicos, dos palancas de aleación pesada que emergieron de su silla. Cerró
+                    los ojos por un instante, conectando su implante neural con el núcleo de la nave. Sintió la
+                    <em>Valdecross</em> como una extensión de su propio cuerpo. Sintió el dolor del casco, el rugido de
+                    los motores.</p>
+                <p>"Dime dónde, Francisco," susurró.</p>
+                <p>"Rumbo 2-2-0, inclinación negativa 45 grados. ¡Acelera!"</p>
+                <p>La nave se inclinó y se lanzó en picado hacia la oscuridad eterna.</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">V. El Baile de la Muerte</h5>
+                <p>Los siguientes tres minutos fueron una eternidad comprimida.</p>
+                <p>Francisco cantaba números como una oración. "¡Izquierda tres grados! ¡Corrige! ¡Olas de gravedad
+                    entrante en babor! ¡Subir morro, subir morro!"</p>
+                <p>Aranza bailaba. Sus manos eran un borrón. La nave temblaba tanto que los paneles del techo caían
+                    sobre ellos. La visión periférica de Aranza se ennegrecía por la fuerza G, pero la voz de Francisco
+                    era su ancla. Era lo único real en un universo que se deshacía.</p>
+                <p>"¡Ahí está!" gritó él. "¡La hebra! ¡Entramos en 3... 2... 1...!"</p>
+                <p>La Valdecross golpeó la corriente de materia oscura. Fue como chocar contra un muro de agua a la
+                    velocidad de la luz. El mundo se volvió blanco, un blanco puro y doloroso.</p>
+                <p>En el silencio sordo de ese instante, Aranza pensó que habían muerto. Y su último pensamiento no fue
+                    para las estrellas, ni para su deber. Fue para el sabor del café de Francisco.</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">VI. Nuevo Destino</h5>
+                <p>El sonido de las alarmas médicas la despertó. No eran alarmas de emergencia, sino de recuperación.
+                </p>
+                <p>Abrió los ojos. La pantalla principal mostraba un campo de estrellas sereno y aburrido. Estaban
+                    vivos.</p>
+                <p>El puente estaba destrozado, pero la tripulación comenzaba a levantarse, aturdida. Aranza se soltó
+                    los cinturones y, con las piernas temblorosas, corrió hacia la estación de ciencias.</p>
+                <p>Francisco estaba desplomado sobre la consola, respirando con dificultad. Levantó la vista cuando ella
+                    llegó. Tenía la cara pálida, pero sonrió. Esa maldita sonrisa irreverente.</p>
+                <p>"Te dije... que tenías buenos reflejos," jadeó.</p>
+                <p>Aranza no le importó el protocolo. No le importó la tripulación mirando. Lo agarró por las solapas de
+                    su uniforme y lo besó. Fue un beso desesperado, lleno de adrenalina, miedo y vida. Un beso que sabía
+                    a sangre y café.</p>
+                <p>Cuando se separaron, el puente estaba en un silencio atónito.</p>
+                <p>"Teniente," dijo ella, recuperando el aliento pero sin soltarlo. "Acaba de violar el Código 7-Alpha."
+                </p>
+                <p>"Sí, señora," susurró él contra sus labios. "¿Corte marcial?"</p>
+                <p>"Peor," dijo Aranza, con un brillo en los ojos que rivalizaba con cualquier supernova. "Te condeno a
+                    cadena perpetua... conmigo. He decidido que la USS Valdecross necesita una nueva misión. Una misión
+                    de exploración profunda, sin contacto con el Mando Central durante... digamos... los próximos
+                    cincuenta años."</p>
+                <p>Francisco rió, un sonido limpio y feliz. "Eso suena terriblemente irregular, Capitana."</p>
+                <p>"Es una orden, Teniente. ¿Tiene problemas con ella?"</p>
+                <p>"Ninguno, señora. Tengo mis mapas. Tengo mi café. Y tengo a mi piloto."</p>
+                <p>Aranza miró las estrellas en la pantalla. Ya no parecían frías. Por primera vez en ochocientos años,
+                    el universo parecía un hogar.</p>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gothic-black/90 border-t border-gothic-red/20 py-8 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p class="font-cinzel text-gothic-muted text-sm">Creado con infinito amor por <span
+                    class="text-gothic-red-bright">Franxito</span></p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+:root {
+    --color-morado: #6B5CF6;
+    --color-rojo-vino: #4B1C2A;
+    --color-blanco: #FFFFFF;
+    --color-gris-claro: #f8f9fa;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lora&display=swap');
+
+body {
+    background-color: var(--color-gris-claro);
+    font-family: 'Lora', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Dancing Script', cursive;
+    color: var(--color-morado);
+}
+
+.btn-primary {
+    background-color: var(--color-rojo-vino);
+    border-color: var(--color-rojo-vino);
+}
+
+.btn-primary:hover {
+    background-color: #6B1C31;
+    border-color: #6B1C31;
+}
+
+.card {
+    border-color: var(--color-morado);
+}
+
+.list-group-item a {
+    color: var(--color-rojo-vino);
+}

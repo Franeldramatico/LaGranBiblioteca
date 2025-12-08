@@ -1,0 +1,181 @@
+/* Estilos para sobres animados - Diseño Premium */
+.envelope-container {
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.envelope-closed {
+    position: relative;
+    width: 320px;
+    height: 220px;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    filter: drop-shadow(0 15px 35px rgba(106, 0, 0, 0.4));
+}
+
+.envelope-closed:hover {
+    transform: translateY(-5px);
+    filter: drop-shadow(0 20px 45px rgba(106, 0, 0, 0.6));
+}
+
+.envelope-body {
+    width: 100%;
+    height: 160px;
+    background: linear-gradient(135deg, #2a2a2a 0%, #0a0a0a 50%, #1a1a1a 100%);
+    border: 3px solid #6a0000;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 0;
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.7),
+        inset 0 2px 10px rgba(106, 0, 0, 0.3),
+        inset 0 -2px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.envelope-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 48%, rgba(160, 0, 0, 0.1) 50%, transparent 52%);
+    background-size: 20px 20px;
+    opacity: 0.3;
+}
+
+.envelope-body::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #6a0000, transparent);
+    opacity: 0.5;
+}
+
+.envelope-flap {
+    width: 0;
+    height: 0;
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+    border-top: 120px solid #2a003e;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    transform-origin: top center;
+    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 2;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.5));
+}
+
+.envelope-flap::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    left: -160px;
+    width: 320px;
+    height: 120px;
+    background: linear-gradient(180deg, #3a004e 0%, #2a003e 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    opacity: 0.8;
+}
+
+.envelope-seal {
+    position: absolute;
+    top: 95px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    background: radial-gradient(circle, #1a0000 0%, #0a0a0a 70%);
+    border: 3px solid #a00000;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    box-shadow:
+        0 0 20px rgba(160, 0, 0, 0.5),
+        0 5px 15px rgba(0, 0, 0, 0.6),
+        inset 0 2px 5px rgba(160, 0, 0, 0.3);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 20px rgba(160, 0, 0, 0.5),
+            0 5px 15px rgba(0, 0, 0, 0.6),
+            inset 0 2px 5px rgba(160, 0, 0, 0.3);
+    }
+
+    50% {
+        box-shadow:
+            0 0 30px rgba(160, 0, 0, 0.8),
+            0 5px 20px rgba(0, 0, 0, 0.7),
+            inset 0 2px 8px rgba(160, 0, 0, 0.5);
+    }
+}
+
+.envelope-closed:hover .envelope-seal {
+    transform: translateX(-50%) scale(1.15) rotate(5deg);
+    box-shadow:
+        0 0 35px rgba(160, 0, 0, 0.9),
+        0 8px 25px rgba(0, 0, 0, 0.8),
+        inset 0 2px 10px rgba(160, 0, 0, 0.6);
+}
+
+.envelope-container.opened .envelope-flap {
+    transform: rotateX(180deg);
+}
+
+.envelope-container.opened .envelope-closed {
+    opacity: 0;
+    transform: scale(0.7) rotateY(15deg);
+    pointer-events: none;
+}
+
+.envelope-container.opened .envelope-content {
+    display: block !important;
+    animation: revealContent 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+@keyframes revealContent {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9) rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotateX(0);
+    }
+}
+
+/* Mejorar el contenido revelado */
+.envelope-content .bg-gothic-gray {
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.8),
+        0 0 40px rgba(106, 0, 0, 0.3);
+}
+
+.envelope-content .h-64 {
+    height: 400px !important;
+}
+
+.envelope-content img {
+    transition: transform 0.5s ease;
+}
+
+.envelope-content img:hover {
+    transform: scale(1.05);
+}

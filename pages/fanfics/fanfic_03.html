@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fanfic 3 | Gran Biblioteca</title>
+    <meta name="description" content="Capítulo 3 de nuestra historia." />
+    <meta name="theme-color" content="#8a0000" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%238a0000' d='M23.6 3.6c-2.9 0-5.4 1.8-7.6 4.4-2.2-2.6-4.7-4.4-7.6-4.4C3.8 3.6 0 7.5 0 12.1c0 7.4 9.4 12.5 16 16 6.6-3.5 16-8.6 16-16 0-4.6-3.8-8.5-8.4-8.5z'/%3E%3C/svg%3E">
+
+    <!-- Styles & Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Raleway:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Custom CSS (Relative path specific for sub-subfolder) -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { 'gothic-black': '#050005', 'gothic-darker': '#0a0a0a', 'gothic-red': '#4a0404', 'gothic-red-bright': '#8a0000', 'gothic-purple': '#240046', 'gothic-purple-light': '#5a189a', 'gothic-text': '#e0e0e0', 'gothic-muted': '#9ca3af', 'gothic-gold': '#d4af37' }, fontFamily: { 'gothic-title': ['"UnifrakturMaguntia"', 'cursive'], 'cinzel': ['"Cinzel"', 'serif'], 'crimson': ['"Crimson Text"', 'serif'], 'raleway': ['"Raleway"', 'sans-serif'] }, backgroundImage: { 'dark-texture': "url('https://www.transparenttextures.com/patterns/dark-matter.png')" }, animation: { 'float': 'float 6s ease-in-out infinite' } } } }
+    </script>
+</head>
+
+<body class="bg-gothic-black text-gothic-text overflow-x-hidden selection:bg-gothic-red selection:text-white">
+    <!-- Background Effects -->
+    <div class="fixed inset-0 z-[-1] pointer-events-none">
+        <div class="absolute inset-0 bg-dark-texture opacity-40 mix-blend-overlay"></div>
+        <div
+            class="absolute top-[20%] right-[-10%] w-[400px] h-[400px] bg-gothic-purple/20 rounded-full blur-[100px] mix-blend-screen">
+        </div>
+        <div
+            class="absolute bottom-[10%] left-[-10%] w-[400px] h-[400px] bg-gothic-red/10 rounded-full blur-[100px] mix-blend-screen">
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav
+        class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md border-b border-white/5 bg-gothic-black/80">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a class="text-2xl md:text-3xl font-gothic-title text-gothic-text hover:text-gothic-red-bright transition-all duration-300 text-glow hover:scale-105"
+                href="../../index.html">Gran Biblioteca</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn"
+                class="lg:hidden text-gothic-text focus:outline-none hover:text-gothic-red-bright transition-colors relative z-50">
+                <i class="bi bi-list text-3xl"></i>
+            </button>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:block">
+                <ul class="flex items-center gap-8">
+                    <li><a href="../galeria.html"
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-images text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Visuales</span></a></li>
+
+                    <!-- Historia Dropdown -->
+                    <li class="relative group">
+                        <button
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-hourglass-split text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Historia</span><i
+                                class="bi bi-chevron-down text-xs ml-1"></i></button>
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-gothic-black/95 border border-gothic-red/30 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                            <a href="../tiempo_juntos.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-clock-history mr-2 text-gothic-red-bright"></i> Cronología</a>
+                            <a href="../sobre_nosotros.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel"><i
+                                    class="bi bi-journal-richtext mr-2 text-gothic-red-bright"></i> Leyenda</a>
+                        </div>
+                    </li>
+
+                    <!-- Escritos Dropdown -->
+                    <li class="relative group">
+                        <button class="flex items-center gap-2 text-white transition-colors duration-300"><i
+                                class="bi bi-feather text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide border-b border-gothic-red-bright">Escritos</span><i
+                                class="bi bi-chevron-down text-xs ml-1"></i></button>
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-gothic-black/95 border border-gothic-red/30 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                            <a href="../cartas.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-envelope-paper-heart mr-2 text-gothic-red-bright"></i> Cartas</a>
+                            <a href="../dedicatorias.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-stars mr-2 text-gothic-red-bright"></i> Dedicatorias</a>
+                            <a href="../biblioteca_fanfics.html"
+                                class="block px-4 py-3 text-sm text-white bg-gothic-red/10 transition-colors font-cinzel"><i
+                                    class="bi bi-book-half mr-2 text-gothic-red-bright"></i> Fanfics</a>
+                        </div>
+                    </li>
+
+                    <li><a href="../contacto.html"
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-chat-heart text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Buzón</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Simplified for sub-page) -->
+        <div id="mobile-menu"
+            class="hidden fixed top-0 right-0 h-screen w-72 bg-gothic-black/95 border-l border-white/10 z-50 p-6 flex-col gap-4 shadow-2xl backdrop-blur-xl">
+            <div class="flex justify-end"><button id="mobile-menu-close"><i
+                        class="bi bi-x-lg text-2xl text-white"></i></button></div>
+            <a href="../../index.html" class="text-gothic-gold font-cinzel text-lg">Inicio</a>
+            <a href="../galeria.html" class="text-white font-cinzel text-lg">Visuales</a>
+            <a href="../biblioteca_fanfics.html" class="text-white font-cinzel text-lg">Volver a Fanfics</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pt-32 pb-20 max-w-4xl min-h-screen flex flex-col">
+
+        <!-- Back Button -->
+        <div class="mb-8" data-aos="fade-right">
+            <a href="../biblioteca_fanfics.html"
+                class="inline-flex items-center gap-2 text-gothic-muted hover:text-gothic-red-bright transition-colors font-cinzel group">
+                <i class="bi bi-arrow-left group-hover:-translate-x-1 transition-transform"></i> Volver a la Biblioteca
+            </a>
+        </div>
+
+        <!-- Header -->
+        <header class="text-center mb-12" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-gothic-title text-gothic-gold mb-4 text-glow">
+                Fanfic Capítulo 3
+            </h1>
+            <div class="h-1 w-32 bg-gradient-to-r from-transparent via-gothic-red-bright to-transparent mx-auto"></div>
+        </header>
+
+        <!-- Writing Area (Editable) -->
+        <article
+            class="bg-gothic-darker/60 backdrop-blur-md rounded-lg p-8 md:p-12 border border-white/5 shadow-[0_0_30px_rgba(0,0,0,0.5)] min-h-[500px]"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="prose prose-invert prose-lg max-w-none font-crimson text-gray-300 leading-relaxed">
+                <h2 class="text-3xl text-gothic-gold font-cinzel text-center mb-2">MAGIA URBANA - ENCANTAMIENTO EN LA
+                    CIUDAD</h2>
+                <h3 class="text-xl text-gothic-red-bright font-cinzel text-center mb-8">Fanfic 2</h3>
+                <div class="my-6 p-6 bg-black/40 border border-gothic-purple-light/40 rounded-md shadow-[0_0_20px_rgba(90,24,154,0.2)]">
+                    <p class="italic text-gothic-muted">En cada universo donde la noche guarda secretos, dos almas se buscan. Francisco —viajero obstinado de la sombra— y Aranza —guardiana de la belleza en lo oscuro— trenzan sus destinos bajo lunas antiguas. Lo que sigue es un pliegue de ese pacto: romance feroz, promesas en voz baja y el latido gótico de un amor que no aprende a morir.</p>
+                </div>
+                <h4 class="text-2xl text-gothic-text font-cinzel mt-12 mb-6 text-center">PARTE I: LA TIENDA DE LOS
+                    SECRETOS</h4>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">Capítulo 1: El Detective Escéptico</h5>
+                <p>Nueva York, 2024. El East Village bullía con una energía peculiar incluso para Manhattan. Era el tipo
+                    de barrio donde bohemios y artistas coexistían con restaurantes caros y boutiques de diseñador. Los
+                    edificios estaban llenos de historia, sus paredes de ladrillo rojo susurrando secretos de
+                    generaciones pasadas.</p>
+                <p>En una esquina de la calle St. Mark's Place y la avenida Second, había una pequeña tienda que la
+                    mayoría de los neoyorquinos pasaban cada día sin notarla. Tenía un escaparate discreto, adornado con
+                    cristales que brillaban de maneras que parecían violar las leyes de la física. La puerta estaba
+                    pintada de un azul profundo casi negro, con un símbolo dorado en el centro: una luna creciente
+                    entrelazada con una estrella.</p>
+                <p>La tienda se llamaba "Valdecross Occult & Antiquities". Su propietaria, Aranza, solo iba por su
+                    primer nombre. Nadie sabía su apellido completo, y ella prefería que así fuera.</p>
+                <p>Aranza estaba organizando una estantería de cristales cuando escuchó la campanilla de la puerta
+                    sonar. Era un sonido agradable, como campanas de viento en una brisa suave, aunque no había brisa
+                    dentro de la tienda. El sonido se activaba mediante un pequeño hechizo, nada importante, solo un
+                    aviso gentil de que alguien había entrado.</p>
+                <p>No levantó la vista inmediatamente. Era su forma de mantener el control de las situaciones. Podía
+                    sentir la energía de la persona que había entrado: cautelosa, escéptica, con una capa de
+                    escepticismo tan gruesa que era casi táctil. Pero bajo eso, había algo más. Alguien que había visto
+                    demasiado para ser completamente escéptico.</p>
+                <p>El hombre que entró era de mediana edad, aproximadamente treinta y cinco años. Tenía el cabello negro
+                    atado en una cola de caballo, con una barba ligera que sugerería que se había levantado con prisa
+                    esa mañana. Sus ojos marrones eran inteligentes, observadores, el tipo de ojos que habían visto
+                    demasiada oscuridad.</p>
+                <p>Llevaba una chaqueta de cuero desgastada sobre una camiseta gris. Jeans azules, botas de trabajo.
+                    Todo en él gritaba "detective urbano gastado".</p>
+                <p>"¿Puedo ayudarte?" preguntó Aranza, finalmente levantando la vista. Sus ojos eran un azul profundo,
+                    casi imposible en su intensidad, como si toda la profundidad del océano hubiera sido comprimida en
+                    iris humano. Su cabello era negro como la obsidiana, cayendo en ondas sueltas hasta su cintura. Su
+                    piel era pálida, luminosa, como si brillara desde dentro.</p>
+                <p>El hombre se detuvo, visiblemente afectado por su apariencia.</p>
+                <p>"Yo... sí. Tal vez," tartamudeó. "Estoy buscando a alguien que entienda de... cosas no
+                    convencionales."</p>
+                <p>"¿Cosas no convencionales?" preguntó Aranza, bajando de su escalera de biblioteca con gracia felina.
+                </p>
+                <p>"Magia," dijo el hombre abruptamente, como si escupiera la palabra. "Hechicería. Brujería. Lo que sea
+                    que quieras llamarlo. Necesito a alguien que sepa sobre esas cosas."</p>
+                <p>"¿Y por qué un hombre que claramente no cree en la magia estaría buscando a alguien que trabaje con
+                    ella?" preguntó Aranza, acercándose. A medida que se acercaba, el olor a magia antigua y hierbas
+                    raras emanaba de ella.</p>
+                <p>"Porque tengo un caso que la policía no puede resolver. Tengo un caso donde la única explicación
+                    lógica es que está sucediendo magia. Y aunque no creo en la magia, estoy desesperado."</p>
+                <p>Aranza estudió su rostro. Había algo familiar en él. Algo que hizo que sus recuerdos se agitaran,
+                    buscando en archivos mentales que remontaban siglos.</p>
+                <p>"¿Cuál es tu nombre?" preguntó.</p>
+                <p>"Francisco de Mora. Soy detective privado. Trabajé con el NYPD durante diez años, pero me cansé de
+                    que me ignoraran cada vez que mencionaba lo sobrenatural. Ahora trabajo por mi cuenta."</p>
+                <p>El nombre. Ese nombre hizo que algo se rompiera dentro de Aranza. Francisco de Mora. Había conocido a
+                    alguien con ese nombre una vez, hace mucho tiempo. Hace ciento y cincuenta años, para ser exacto. En
+                    Nueva Orleans, durante la era Victoriana tardía. Habían sido amantes durante tres años.</p>
+                <p>"¿De dónde eres?" preguntó, intentando mantener su voz neutral.</p>
+                <p>"Por todos lados. En ningún lugar realmente. Mi familia es española, pero han estado viajando durante
+                    generaciones. Yo mismo he pasado la vida viajando también. Hasta hace diez años, cuando me instalé
+                    en Nueva York."</p>
+                <p>"Siéntate," ordenó Aranza, señalando una silla en la esquina de la tienda. No era una invitación. Era
+                    un mandato, dicho con la autoridad de alguien que había pasado muchos siglos dando órdenes.</p>
+                <p>Francisco se sentó sin protestar, como si no pudiera hacer otra cosa.</p>
+                <p>Aranza fue a la parte trasera de su tienda, donde tenía una pequeña cocina. Preparó té de una mezcla
+                    especial que había hecho ella misma: una combinación de hierbas mágicas que relajaban el escudo
+                    mental y permitían que la verdad emergiera. Llevó la taza a Francisco.</p>
+                <p>"Bebe," dijo.</p>
+                <p>"¿Qué es esto?"</p>
+                <p>"Té. ¿Hay algún problema?"</p>
+                <p>Francisco desconfió, pero bebió. El líquido era dulce, con un trasfondo de especias que no podía
+                    identificar. Cuando llegó al fondo de su estómago, sintió una calidez extraña, como si estuviera
+                    siendo tocado por la luz del sol desde adentro.</p>
+                <p>"Ahora," dijo Aranza, sentándose frente a él, "cuéntame todo sobre tu caso. Y no omitas detalles.
+                    Quiero saber exactamente lo que has visto."</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">Capítulo 2: La Verdad Oculta</h5>
+                <p>El caso que Francisco describió era exactamente el tipo que habría causado que los detectives
+                    convencionales lo rieran. Había un asesino en serie que operaba en Manhattan, pero con un giro:</p>
+                <p>"Están desapareciendo," explicó Francisco. "Tres personas en el último mes. Todas ellas fueron
+                    últimas vistas entrando en un edificio de apartamentos en Hell's Kitchen. Pero cuando la policía fue
+                    al edificio, no había nadie allí. No hay cuerpos. No hay sangre. Solo... desapariciones."</p>
+                <p>"¿Y cómo sabes que es magia?" preguntó Aranza.</p>
+                <p>"Porque estuve en el apartamento. El apartamento donde fueron vistos por última vez. Y hay símbolos
+                    en las paredes. Símbolos que están brillando cuando pasas tu teléfono sobre ellos con la linterna.
+                    Símbolos que parecen antiguos. Símbolos que parecen diseñados para hacer algo."</p>
+                <p>Aranza se inclinó hacia adelante.</p>
+                <p>"¿Que clase de símbolos?"</p>
+                <p>Francisco sacó su teléfono y le mostró fotos que había tomado. Aranza las estudió, su expresión
+                    endureciéndose con cada imagen.</p>
+                <p>"Estos son símbolos de hechicería oscura," dijo finalmente. "Específicamente, son símbolos de un
+                    hechizo de transferencia de vida. Alguien está usando a estas personas como reservorios de poder.
+                    Les está extrayendo su esencia vital."</p>
+                <p>"¿Para qué?"</p>
+                <p>"Para muchas cosas. Para prolongar la vida de otra persona. Para ganar poder sobrenatural. Para crear
+                    un servidor vinculado mágicamente." Aranza se levantó, comenzando a caminar de un lado a otro.
+                    "¿Cuándo comenzó esto?"</p>
+                <p>"Hace un mes. El primer desaparecido fue una mujer llamada Jessica Chen. Luego, dos semanas después,
+                    un hombre llamado Marcus Washington. Luego, esta semana, una estudiante de arte llamada Rebecca
+                    Sullivan."</p>
+                <p>"¿Hay un patrón entre ellas?"</p>
+                <p>"No que yo pueda ver. Diferentes edades. Diferentes orígenes étnicos. Diferentes profesiones.
+                    Diferentes áreas de la ciudad donde fueron vistas por última vez, aunque todas desaparecieron en ese
+                    edificio específico."</p>
+                <p>Aranza cerró los ojos. Cuando los abrió, parecían brillar desde dentro, como si estuviera viéndolo a
+                    través de múltiples capas de realidad.</p>
+                <p>"Alguien ha abierto un portal," dijo suavemente. "En ese apartamento. Un portal a un plano de
+                    existencia donde pueden existir sin ser tocados por la ley humana. Y están usando a esas personas
+                    para alimentar el portal, para mantenerlo abierto."</p>
+                <p>"¿Un portal? ¿En serio?" Francisco parecía escéptico incluso después de todo lo que había visto.
+                    "¿Portales a otros planos de existencia? Eso es completamente ridículo."</p>
+                <p>Aranza le lanzó una mirada.</p>
+                <p>"Hace una hora, no creías que la magia era real. Ahora estás sentado en mi tienda, bebiendo té
+                    hechizado, aprendiendo sobre portales dimensionales. Tienes que dejar de pensar en términos de lo
+                    que es posible según lo que aprendiste en la escuela, Francisco. El mundo tiene muchas más capas de
+                    lo que la educación formal podría jamás enseñarte."</p>
+                <p>"¿Cómo lo cierro?" preguntó Francisco, ignorando su comentario sobre educación.</p>
+                <p>"Necesito investigar más. Necesito visitar el apartamento. Necesito sentir la magia que se está
+                    trabajando allí. Luego podré decirte cómo cerrar el portal. Pero te advierto: quienquiera que sea
+                    que esté haciendo esto es un hechicero poderoso. Cerrar el portal probablemente los alertará de
+                    nuestros esfuerzos."</p>
+                <p>"¿Nuestros esfuerzos?" preguntó Francisco.</p>
+                <p>"Sí. Vamos juntos," dijo Aranza. "Te ayudaré a cerrar este portal. Y entonces, después, tienes que
+                    prometerme algo."</p>
+                <p>"¿Qué?"</p>
+                <p>Aranza lo estudió nuevamente, sus ojos azules penetrando profundamente en los de él, como si
+                    estuviera leyendo el código de su alma.</p>
+                <p>"Que me dirás la verdad sobre quién eres realmente. Porque, Francisco de Mora, hay algo en ti que
+                    reconozco. Algo que sugiere que eres mucho más que un detective privado con una inclinación hacia lo
+                    sobrenatural. Y necesito saber qué es."</p>
+                <p>Francisco quería negarlo. Quería protestar. Pero bajo la mirada de Aranza, encontró que no podía
+                    mentir. La verdad simplemente surgió.</p>
+                <p>"Soy como tú," dijo en voz baja. "No completamente humano. Fue por eso que la policía me ignoró
+                    cuando mencioné lo sobrenatural. Mis superiores sentían que había algo anómalo conmigo. No sabían
+                    qué, exactamente, pero lo sentían."</p>
+                <p>Aranza sonrió. Fue un pequeño movimiento, apenas un levantamiento de sus labios, pero cambió toda su
+                    cara.</p>
+                <p>"Lo sabía. Tenía que ser. Ahora, vamos. Hay un portal que necesita ser cerrado. Y luego, mi querido
+                    Francisco, tenemos muchos años de conversación que recuperar."</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">Capítulo 3: Dentro del Portal</h5>
+                <p>El apartamento en Hell's Kitchen era exactamente tan inquietante como Francisco había descrito.
+                    Estaba en un edificio sin ventanas, en una habitación sin ventanas. Las paredes estaban cubiertas
+                    con los símbolos brillantes que Francisco había fotografiado. Pero en persona, eran mucho más
+                    aterradores.</p>
+                <p>Aranza entró primero, sus sentidos sobrenatales extendiéndose. Ella cerró los ojos.</p>
+                <p>"Allí," señaló, apuntando a la pared del fondo. "El portal está aquí. Débil, pero presente. Y está
+                    siendo alimentado por... sí, confirmo que hay tres esencias de vida aquí. Las tres personas
+                    desaparecidas. Aún están vivas, pero apenas. Están siendo drenadas lentamente."</p>
+                <p>"¿Podemos salvarlas?" preguntó Francisco.</p>
+                <p>"Tal vez. Primero necesito cerrar el portal. Luego puedo intentar extraer sus esencias del plano de
+                    existencia donde están atrapadas. Pero esto va a ser peligroso, Francisco. El hechicero que abrió
+                    este portal ya debe estar consciente de que alguien ha entrado. Pueden contraatacar."</p>
+                <p>Como para demostrar su punto, la temperatura en el apartamento se precipitó. La respiración de ambos
+                    se volvió visible, pequeños puffs de vapor en el aire glacial. Los símbolos en las paredes
+                    comenzaron a brillar con mayor intensidad, el azul cambiando a un rojo ominoso.</p>
+                <p>"Ha llegado," susurró una voz desde las sombras.</p>
+                <p>Una figura se materializó en el apartamento, de pie entre Aranza y el portal. Era una mujer,
+                    aparentando tener cuarenta años, con cabello rojo oscuro y ojos que brillaban con magia antigua. Su
+                    nombre era Victoria, aunque Aranza no tenía forma de saber eso.</p>
+                <p>"¿Quiénes sois?" demandó Victoria, su voz cargada de poder mágico.</p>
+                <p>"Alguien aquí para detener lo que estás haciendo," respondió Aranza, con una calma que contrastaba
+                    fuertemente con la energía voltaica que zumbaba alrededor de Victoria.</p>
+                <p>"¿Matarme, quieres decir?" preguntó Victoria. Sonrió, y cuando lo hizo, mostró colmillos. "Soy un
+                    hechicero que ha estado vivo durante más de ochocientos años. He consumido el poder de cientos de
+                    personas. Crees que puedes cerrarme."</p>
+                <p>"No te voy a cerrar," dijo Aranza. "Voy a detener el portal que has abierto, liberar a las personas
+                    que has capturado, y luego veremos qué sucede."</p>
+                <p>Victoria levantó sus manos, y la magia fluyó a través de la habitación como un tsunami. Energía roja
+                    pura, destinada a incinerar tanto a Francisco como a Aranza.</p>
+                <p>Aranza levantó sus manos también. De su palmas, fluyó una contra-magia, un escudo de energía azul
+                    pura. Los dos tipos de magia chocaron, y la explosión resultante derribó al departamento entero.</p>
+                <p>Francisco fue arrojado contra la pared, viendo estrellas. Pero cuando abrió los ojos, vio a Aranza
+                    flotando en el aire, sus ojos ahora completamente azules, sus dedos emitiendo rayos de poder puro.
+                </p>
+                <p>"¿Qué eres?" gritó Victoria, retrocediendo.</p>
+                <p>"Alguien mucho más antiguo que tú," respondió Aranza. "He vivido durante cuatrocientos años. He
+                    aprendido magia de personas cuya existencia desapareció antes de que tú nacieras. Y no voy a
+                    permitir que lastimes a más gente."</p>
+                <p>Lo que siguió fue una batalla de magia tan intensa que Francisco apenas podía verla directamente sin
+                    que sus ojos se quemaran. Hechizos antiguos. Magia elemental. Poder puro dirigido de una bruja a
+                    otra.</p>
+                <p>Pero Aranza era más rápida. Era más fuerte. Era más inteligente.</p>
+                <p>Con un gesto final, envió a Victoria a través de la pared. La bruja hechicera fue arrojada fuera del
+                    apartamento, cayendo varios pisos hasta la calle. No sobrevivió.</p>
+                <p>Luego, Aranza se giró hacia el portal. Levantó sus manos nuevamente, pero esta vez, en lugar de
+                    atacar, estaba tejiendo. Estaba deshaciendo el hechizo, descomponiendo la estructura mágica que
+                    mantenía abierto el portal.</p>
+                <p>Los símbolos en las paredes se desvanecieron. La temperatura comenzó a subir nuevamente.</p>
+                <p>Con un gesto final, Aranza rompió el portal. La energía que se liberó fue blanca y cegadora.</p>
+                <p>Cuando se disipó, el apartamento estaba completamente normal. Los símbolos se habían ido. La magia se
+                    había disipado.</p>
+                <p>Y en el piso, yacían tres cuerpos: Jessica Chen, Marcus Washington y Rebecca Sullivan, todos
+                    magullados pero vivos.</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">Capítulo 4: Después del Caos</h5>
+                <p>En los días siguientes, la historia fue cubierta por los medios como un caso extraño. Victoria, la
+                    asesina serial, aparentemente se había suicidado saltando desde un apartamento en Hell's Kitchen.
+                    Las tres personas desaparecidas habían sido encontradas milagrosamente sin ninguna herida grave. Su
+                    desaparición fue descrita como un secuestro fallido, y no había explicación de dónde habían estado.
+                </p>
+                <p>Nadie había visto a Aranza entrar en el apartamento. Francisco había asegurado eso, manteniéndose
+                    como testigo de la "muerte accidental" de Victoria.</p>
+                <p>Después de que todo se calmó, Francisco fue a visitar la tienda de Aranza nuevamente. Era de noche,
+                    un viernes por la noche, y la mayoría de la gente estaba fuera disfrutando de la vida nocturna de
+                    East Village.</p>
+                <p>Encontró a Aranza leyendo en la trastienda, un libro antiguo con páginas de pergamino amarillento.
+                </p>
+                <p>"Sabía que vendrías," dijo ella sin mirar hacia arriba.</p>
+                <p>"¿Cómo?"</p>
+                <p>"Estuve esperando. Dijiste que tenía que decirte la verdad sobre quién soy. Así que aquí estoy,
+                    dispuesto a responder todas tus preguntas."</p>
+                <p>Francisco se sentó en la silla frente a ella.</p>
+                <p>"Primero: ¿Quién eres realmente?"</p>
+                <p>Aranza cerró su libro y lo miró.</p>
+                <p>"Me llamo Aranza Valdecross. He vivido durante cuatrocientos años. Soy una bruja, aunque ese término
+                    es tan anticuado que preferiría llamarme maga. Soy el último miembro de mi linaje de familias
+                    mágicas que remonta cientos de años. Y hace ciento y cincuenta años, te conocí en Nueva Orleans.
+                    Fuimos amantes durante tres años."</p>
+                <p>Francisco parpadeó.</p>
+                <p>"¿Nueva Orleans? Yo... recuerdo Nueva Orleans. Fui allí en 1874. Estaba cazando un espíritu que
+                    estaba matando a gente en las Catacumbas."</p>
+                <p>"Sí," dijo Aranza suavemente. "Y yo estaba investigando el mismo espíritu. Nos conocimos en un café
+                    cerca del Cementerio de las Ciudades de los Muertos. Tú eras tan valiente, tan dispuesto a arriesgar
+                    tu vida para salvar vidas que no conocías. Me enamoré de ti en el primer momento que te vi."</p>
+                <p>"Pero... desapareciste," dijo Francisco, sus ojos reflexionando sobre ese antiguo dolor. "Un día
+                    estabas aquí, y al siguiente te habías ido. Dejaste una nota diciendo que era peligroso que nos
+                    conociéramos. Que si la gente descubría que estábamos juntos, te perseguirían. Así que te fuiste."
+                </p>
+                <p>"Tenía que hacerlo," dijo Aranza, levantándose. Se acercó a él y le tomó la cara en sus manos frías.
+                    "Porque en ese momento, no sabía cómo mantenerme contigo sin ponerte en peligro. No sabía que había
+                    otra forma de existir. Así que te dejé. Y he estado arrepentida cada día desde entonces."</p>
+                <p>"¿Por qué no regresaste?" preguntó Francisco. "¿Después de que tuviera más experiencia? ¿Después de
+                    que me convertiera en detective privado y pudiera cuidarme a mí mismo?"</p>
+                <p>"Porque no sabía dónde estabas," respondió Aranza. "Buscé durante años. Décadas. Pero eras un
+                    fantasma, Francisco. Viajabas constantemente, aparecías en diferentes ciudades, siempre un paso por
+                    delante de cualquiera que pudiera haberte rastreado. Hasta que nos encontramos nuevamente. En esta
+                    tienda. Por casualidad."</p>
+                <p>"No fue casualidad," dijo Francisco. "No creo en la casualidad. Creo que el destino nos reunió."</p>
+                <p>Se besaron entonces, suavemente al principio, luego más profundamente. Fue como si ciento y cincuenta
+                    años de separación se disolvieran en ese beso. Fue como volver a casa.</p>
+                <p>"No te dejaré ir nuevamente," dijo Francisco cuando se separaron. "No importa qué peligros haya. No
+                    importa a quién nos persiga. Te elegiré. Siempre."</p>
+                <p>"Y yo te elegiré," respondió Aranza. "Para siempre, Francisco. Si me lo permites."</p>
+                <p>"Te lo permito," dijo él.</p>
+                <p>Y así, en una pequeña tienda de magia en el East Village, dos almas que habían sido separadas durante
+                    un siglo y medio finalmente encontraron su camino de regreso una a la otra.</p>
+                <p class="text-center font-bold text-gothic-white mt-12 mb-4">FIN</p>
+
+                <div class="border-t border-gothic-red/30 mt-12 pt-8">
+                    <p class="font-bold text-gothic-gold mb-2">Notas del autor Franxito:</p>
+                    <p class="italic text-sm text-gothic-muted">Siempre he creído que hay magia oculta en las grandes
+                        ciudades, escondida a plena vista. Esta historia explora esa idea: que lo extraordinario camina
+                        a nuestro lado en el metro o en una tienda de antigüedades.</p>
+                    <p class="italic text-sm text-gothic-muted mt-2">Aranza aquí es la guardiana de lo místico en un
+                        mundo escéptico, y Francisco es la prueba de que incluso el más cínico puede creer si encuentra
+                        la razón correcta. Su reencuentro es un recordatorio de que algunas conexiones son magia pura.
+                    </p>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gothic-black/90 border-t border-gothic-red/20 py-8 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p class="font-cinzel text-gothic-muted text-sm">Creado con infinito amor por <span
+                    class="text-gothic-red-bright">Franxito</span></p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+    </script>
+</body>
+
+</html>

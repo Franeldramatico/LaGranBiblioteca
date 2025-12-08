@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fanfic 2 | Gran Biblioteca</title>
+    <meta name="description" content="Capítulo 2 de nuestra historia." />
+    <meta name="theme-color" content="#8a0000" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%238a0000' d='M23.6 3.6c-2.9 0-5.4 1.8-7.6 4.4-2.2-2.6-4.7-4.4-7.6-4.4C3.8 3.6 0 7.5 0 12.1c0 7.4 9.4 12.5 16 16 6.6-3.5 16-8.6 16-16 0-4.6-3.8-8.5-8.4-8.5z'/%3E%3C/svg%3E">
+
+    <!-- Styles & Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Raleway:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Custom CSS (Relative path specific for sub-subfolder) -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { 'gothic-black': '#050005', 'gothic-darker': '#0a0a0a', 'gothic-red': '#4a0404', 'gothic-red-bright': '#8a0000', 'gothic-purple': '#240046', 'gothic-purple-light': '#5a189a', 'gothic-text': '#e0e0e0', 'gothic-muted': '#9ca3af', 'gothic-gold': '#d4af37' }, fontFamily: { 'gothic-title': ['"UnifrakturMaguntia"', 'cursive'], 'cinzel': ['"Cinzel"', 'serif'], 'crimson': ['"Crimson Text"', 'serif'], 'raleway': ['"Raleway"', 'sans-serif'] }, backgroundImage: { 'dark-texture': "url('https://www.transparenttextures.com/patterns/dark-matter.png')" }, animation: { 'float': 'float 6s ease-in-out infinite' } } } }
+    </script>
+</head>
+
+<body class="bg-gothic-black text-gothic-text overflow-x-hidden selection:bg-gothic-red selection:text-white">
+    <!-- Background Effects -->
+    <div class="fixed inset-0 z-[-1] pointer-events-none">
+        <div class="absolute inset-0 bg-dark-texture opacity-40 mix-blend-overlay"></div>
+        <div
+            class="absolute top-[20%] right-[-10%] w-[400px] h-[400px] bg-gothic-purple/20 rounded-full blur-[100px] mix-blend-screen">
+        </div>
+        <div
+            class="absolute bottom-[10%] left-[-10%] w-[400px] h-[400px] bg-gothic-red/10 rounded-full blur-[100px] mix-blend-screen">
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav
+        class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md border-b border-white/5 bg-gothic-black/80">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a class="text-2xl md:text-3xl font-gothic-title text-gothic-text hover:text-gothic-red-bright transition-all duration-300 text-glow hover:scale-105"
+                href="../../index.html">Gran Biblioteca</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn"
+                class="lg:hidden text-gothic-text focus:outline-none hover:text-gothic-red-bright transition-colors relative z-50">
+                <i class="bi bi-list text-3xl"></i>
+            </button>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:block">
+                <ul class="flex items-center gap-8">
+                    <li><a href="../galeria.html"
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-images text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Visuales</span></a></li>
+
+                    <!-- Historia Dropdown -->
+                    <li class="relative group">
+                        <button
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-hourglass-split text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Historia</span><i
+                                class="bi bi-chevron-down text-xs ml-1"></i></button>
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-gothic-black/95 border border-gothic-red/30 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                            <a href="../tiempo_juntos.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-clock-history mr-2 text-gothic-red-bright"></i> Cronología</a>
+                            <a href="../sobre_nosotros.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel"><i
+                                    class="bi bi-journal-richtext mr-2 text-gothic-red-bright"></i> Leyenda</a>
+                        </div>
+                    </li>
+
+                    <!-- Escritos Dropdown -->
+                    <li class="relative group">
+                        <button class="flex items-center gap-2 text-white transition-colors duration-300"><i
+                                class="bi bi-feather text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide border-b border-gothic-red-bright">Escritos</span><i
+                                class="bi bi-chevron-down text-xs ml-1"></i></button>
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-gothic-black/95 border border-gothic-red/30 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                            <a href="../cartas.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-envelope-paper-heart mr-2 text-gothic-red-bright"></i> Cartas</a>
+                            <a href="../dedicatorias.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-stars mr-2 text-gothic-red-bright"></i> Dedicatorias</a>
+                            <a href="../biblioteca_fanfics.html"
+                                class="block px-4 py-3 text-sm text-white bg-gothic-red/10 transition-colors font-cinzel"><i
+                                    class="bi bi-book-half mr-2 text-gothic-red-bright"></i> Fanfics</a>
+                        </div>
+                    </li>
+
+                    <li><a href="../contacto.html"
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-chat-heart text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Buzón</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Simplified for sub-page) -->
+        <div id="mobile-menu"
+            class="hidden fixed top-0 right-0 h-screen w-72 bg-gothic-black/95 border-l border-white/10 z-50 p-6 flex-col gap-4 shadow-2xl backdrop-blur-xl">
+            <div class="flex justify-end"><button id="mobile-menu-close"><i
+                        class="bi bi-x-lg text-2xl text-white"></i></button></div>
+            <a href="../../index.html" class="text-gothic-gold font-cinzel text-lg">Inicio</a>
+            <a href="../galeria.html" class="text-white font-cinzel text-lg">Visuales</a>
+            <a href="../biblioteca_fanfics.html" class="text-white font-cinzel text-lg">Volver a Fanfics</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pt-32 pb-20 max-w-4xl min-h-screen flex flex-col">
+
+        <!-- Back Button -->
+        <div class="mb-8" data-aos="fade-right">
+            <a href="../biblioteca_fanfics.html"
+                class="inline-flex items-center gap-2 text-gothic-muted hover:text-gothic-red-bright transition-colors font-cinzel group">
+                <i class="bi bi-arrow-left group-hover:-translate-x-1 transition-transform"></i> Volver a la Biblioteca
+            </a>
+        </div>
+
+        <!-- Header -->
+        <header class="text-center mb-12" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-gothic-title text-gothic-gold mb-4 text-glow">
+                Fanfic Capítulo 2
+            </h1>
+            <div class="h-1 w-32 bg-gradient-to-r from-transparent via-gothic-red-bright to-transparent mx-auto"></div>
+        </header>
+
+        <!-- Writing Area (Editable) -->
+        <article
+            class="bg-gothic-darker/60 backdrop-blur-md rounded-lg p-8 md:p-12 border border-white/5 shadow-[0_0_30px_rgba(0,0,0,0.5)] min-h-[500px]"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="prose prose-invert prose-lg max-w-none font-crimson text-gray-300 leading-relaxed">
+                <h2 class="text-3xl text-gothic-gold font-cinzel text-center mb-2">STEAMPUNK - LA MÁQUINA DEL CORAZÓN
+                </h2>
+                <h3 class="text-xl text-gothic-red-bright font-cinzel text-center mb-8">Fanfic 1</h3>
+                <div class="my-6 p-6 bg-black/40 border border-gothic-purple-light/40 rounded-md shadow-[0_0_20px_rgba(90,24,154,0.2)]">
+                    <p class="italic text-gothic-muted">En cada universo donde la noche guarda secretos, dos almas se buscan. Francisco —viajero obstinado de la sombra— y Aranza —guardiana de la belleza en lo oscuro— trenzan sus destinos bajo lunas antiguas. Lo que sigue es un pliegue de ese pacto: romance feroz, promesas en voz baja y el latido gótico de un amor que no aprende a morir.</p>
+                </div>
+                <h4 class="text-2xl text-gothic-text font-cinzel mt-12 mb-6 text-center">PARTE I: EL TALLER EN LA
+                    OSCURIDAD</h4>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">Capítulo 1: Engranajes y Secretos</h5>
+                <p>Londres, 1887. La ciudad bullía con el sonido constante del vapor y los engranajes. Los cielos nunca
+                    estaban completamente despejados; siempre había una bruma de hollín que se cernía sobre los tejados
+                    de las casas, coloreando el mundo en tonos de gris y negro. Los automóviles a vapor zumbaban a
+                    través de las calles de adoquines. Los dirigibles flotaban lentamente a través del aire como
+                    ballenas mecánicas. Era una era de máquinas, de progreso implacable, de un futuro que se estaba
+                    construyendo minuto a minuto.</p>
+                <p>En las profundidades bajo los callejones de Whitechapel, en un sótano que ningún mapa oficial
+                    reconocía, existía otro Londres. Un Londres de luz de gas azul y cobre pulido, de máquinas que
+                    zumbaban suavemente en lugar de rugir, de orden perfecto en lugar del caos industrial de la
+                    superficie.</p>
+                <p>Este era el taller de Aranza Valdecross.</p>
+                <p>Ella estaba inclinada sobre una mesa de trabajo, sus dedos pálidos manipulando una esfera de cobre
+                    tan perfecta que parecía haber caído del cielo. Tenía aproximadamente el tamaño de un balón de
+                    fútbol, pero era increíblemente compleja. Engranajes dentro de engranajes, rotores dentro de
+                    rotores, todos funcionando con una precisión que haría que los mejores relojeros de Suiza lloraran
+                    de envidia.</p>
+                <p>Su cabello negro caía sobre su hombro mientras trabajaba, la luz de gas azul haciendo que sus ojos
+                    brillaran de un violeta profundo. Aranza aparentaba tener treinta años, quizás treinta y uno, con la
+                    belleza pálida de alguien que nunca había visto el sol. Pero si alguien hubiera escarbado en los
+                    registros históricos que ella sabía que existían en archivos privados en todo el mundo, habrían
+                    descubierto que su nombre aparecía en patentes del siglo XVI. En diarios del siglo XVII. En
+                    testimonios de personas que nunca envejecían.</p>
+                <p>La verdad era mucho más extraña y maravillosa que cualquier historia de vampiros o hechicería. Ella
+                    era una superviviente de una era anterior. Cuando la civilización había sido diferente. Cuando la
+                    tecnología había alcanzado alturas que el mundo actual estaba solo comenzando a redescubrir.</p>
+                <p>Había vivido cuatrocientos años, pero su cuerpo había sido detenido en la edad de treinta gracias a
+                    una modificación genética que sus ancestros habían realizado hacía siglos. Los detalles de cómo
+                    estaban perdidos en el tiempo, fragmentados en memorias que se desvanecían incluso para ella.</p>
+                <p>Lo que importaba ahora era esto: la esfera. La máquina del tiempo.</p>
+                <p>Ella la había estado construyendo durante años. Trabajando en secreto, noches tras noches, mientras
+                    el mundo de arriba dormía. Había reunido materiales de fuentes diversas. Cobre de Cornualles. Acero
+                    de Essen. Cristales de cuarzo de Brasil. Y en el corazón, un núcleo de energía que ella misma había
+                    desarrollado, basado en fórmulas que sus padres le habían enseñado cuando era joven.</p>
+                <p>Lo que ella quería era viajar a través del tiempo. No para cambiar el pasado, sino para encontrarlo.
+                    Para encontrar a la única persona que le importaba. La única persona a quien había amado en todos
+                    esos cuatrocientos años.</p>
+                <p>Francisco de Mora.</p>
+                <p>Lo había conocido hace doscientos años, en una vida anterior, en un lugar que ya no existía. Él era
+                    un aventurero incluso entonces, siempre buscando la siguiente frontera, la siguiente misterio. Se
+                    habían encontrado en una biblioteca privada en Estambul. Habían estado leyendo los mismos libros
+                    antiguos, buscando las mismas respuestas. Habían sido amantes durante seis meses, apasionados y
+                    completamente inmersos el uno en el otro.</p>
+                <p>Luego él había desaparecido.</p>
+                <p>Se suponía que se iba en una expedición. Dijo que estaría de vuelta en tres meses. Pero nunca
+                    regresó. Ella había buscado durante años. Había seguido sus posibles caminos. Nada.</p>
+                <p>Durante ciento noventa y cuatro años, lo había buscado de otras formas. Través de espías. Través de
+                    contactos en toda Europa. Nunca encontró nada concreto. Era como si él hubiera desaparecido del
+                    mundo.</p>
+                <p>Hasta hace cinco años, cuando había encontrado un manuscrito antiguo en una subasta privada. Estaba
+                    escrito en el código que Francisco le había enseñado, un sistema de cifrado que nunca nadie más
+                    sabría descifrar. Era su letra. Sus palabras.</p>
+                <div class="border-l-4 border-gothic-gold pl-4 py-2 my-6 bg-white/5 italic text-gothic-muted">
+                    "A Aranza, si alguna vez esto llega a ti. He construido una máquina. Es posible viajar a través del
+                    tiempo. Estoy atrapado en 1682, en un accidente de viaje. No puedo regresar. Pero si eres tan
+                    brillante como siempre he sabido que eres, construirás tu propia máquina. Busca las coordenadas en
+                    la página trece. Encontrarás una máquina escondida en Estambul. Está detenida en 1750. Puedes viajar
+                    hasta allí. Desde allí, puedes encontrarme. Te amo. Siempre te he amado. Y si Dios existe, nos
+                    volveremos a encontrar."
+                </div>
+                <p>El manuscrito la había galvanizado. Había dejado su vida anterior. Había cerrado sus conexiones. Y
+                    había comenzado a construir con una obsesión que rozaba la locura.</p>
+                <p>Ahora, finalmente, la máquina estaba casi lista.</p>
+                <p>Ajustó el último conjunto de engranajes con un destornillador de plata tan fino que era casi
+                    invisible. La esfera zumbó suavemente cuando ajustó el mecanismo de precisión en su lugar. Una luz
+                    azul comenzó a brillar desde dentro, de algún tipo de energía que ella había canalizado desde los
+                    cables conectados al generador en la habitación contigua.</p>
+                <p>"Casi," susurró para sí misma. "Casi está lista."</p>
+                <p>Fue entonces cuando escuchó el sonido que nunca esperaba escuchar.</p>
+                <p>Una explosión, arriba en las calles de Whitechapel.</p>
+                <p>No una explosión pequeña. Una explosión masiva, el tipo que hace que toda la estructura tiemble.
+                    Aranza levantó la cabeza, sus ojos azules enfocándose en el techo de su taller. El polvo caía en
+                    pequeñas nubes.</p>
+                <p>Luego, algo más inusual. El sonido de pasos. Alguien corría a través de los callejones de arriba.
+                    Alguien que huía de algo.</p>
+                <p>Aranza guardó rápidamente la esfera en una caja de acero acolchada. Apagó cuidadosamente los
+                    generadores. Y se posicionó detrás de la puerta, en la sombra, donde podría ver a cualquiera que
+                    entrara pero no ser vista ella misma.</p>
+                <p>No tenía armas. Aranza no creía en armas. Pero tenía la velocidad sobrenatural de alguien que había
+                    vivido cuatrocientos años y aprendido cada forma de lucha que la humanidad había concebido jamás.
+                </p>
+                <p>Esperó.</p>
+                <p>No tuvo que esperar mucho. La entrada secreta a su taller, una puerta camuflada que parecía parte de
+                    la pared, fue forzada. El acero del cerrojo cedió, aunque no sin resistencia.</p>
+                <p>Un hombre entró rodando, aterrizando en su espalda con un grito de dolor.</p>
+                <p>Aranza reconoció el patrón de movimiento al instante. Lo reconoció en la forma en que se movía, en la
+                    cadencia de su respiración, en el aroma exacto de su piel.</p>
+                <p>No. No podía ser.</p>
+                <p>El hombre se puso de pie, buscando a su alrededor en la penumbra del taller. Cuando sus ojos se
+                    ajustaron a la luz tenue, vio a Aranza.</p>
+                <p>Y congeló.</p>
+                <p>"¿Aranza?" preguntó, su voz cargada de incredulidad.</p>
+                <p>Era él. Definitivamente él. Tenía aproximadamente treinta y cinco años, con su cabello negro amarrado
+                    en una cola de caballo larga como siempre, un poco de barba sombreando su mentón, sus ojos marrones
+                    profundos e inquisitivos buscando la verdad en su rostro. Llevaba ropa de viajero, hecha harapos por
+                    la explosión de arriba. Tenía un corte sangrante en su mejilla.</p>
+                <p>"¿Francisco?" Su voz sonó extraña, incluso para sus propios oídos. Después de doscientos años, lo
+                    encontraba aquí, en su taller, sucio y sangrante.</p>
+                <p>"¿Cómo estás aquí?" preguntó él, tambaleándose hacia adelante. "Creí... pensé que habías muerto. Hace
+                    años. Hay registros de una Aranza Valdecross que murió en 1721..."</p>
+                <p>"Fingí mi muerte," respondió ella, saliendo de las sombras. "¿Y tú? ¿Dónde estuviste? He estado
+                    buscándote durante casi dos siglos."</p>
+                <p>Francisco la miró como si fuera un fantasma. Luego sonrió, ese lado desigual que ella recordaba tan
+                    bien.</p>
+                <p>"Oh, Aranza. He estado tan perdido en el tiempo que no pensé que alguna vez volvería a encontrarte.
+                    Pero aquí estás. Tan hermosa como la recordaba. Como si no hubiera pasado ni un día."</p>
+                <p>Aranza cruzó la distancia entre ellos en un instante, moviéndose con la velocidad de alguien que
+                    había esperado este momento durante dos siglos. Lo tomó en sus brazos, y él la levantó, girándola.
+                </p>
+                <p>Cuando la besó, fue como si el tiempo mismo se detuviera.</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">Capítulo 2: Historias de Pérdida</h5>
+                <p>Más tarde, después de que Aranza hubiera vendado su corte, después de que le hubiera dado ropa seca y
+                    comida caliente (que él comió aunque no lo necesitaba realmente; su cuerpo había sido modificado
+                    para existir con muy poca nutrición), se sentaron en los sofás de su taller, rodeados de máquinas
+                    zumbantes y la luz azul pálida de los generadores.</p>
+                <p>"Cuéntame," dijo Aranza, su mano tomando la de él. "Cuéntame todo. No me conformaré con menos que los
+                    detalles completos."</p>
+                <p>Francisco respiró profundamente.</p>
+                <p>"Cuando dejé Estambul esa vez, hace doscientos años, estaba buscando un sitio arqueológico en las
+                    montañas de Anatolia. Había encontrado referencias a una ciudad antigua, una que se suponía contenía
+                    tecnología imposible. Parecía exactamente el tipo de cosa que un aventurero como yo perseguiría."
+                </p>
+                <p>"Deberías haberme pedido que viniera contigo," dijo Aranza suavemente.</p>
+                <p>"Lo sé. Debería haberlo hecho. Pero eras tan feliz en Estambul, con tu investigación. Y pensé que
+                    sería rápido. Un viaje de tres meses como mucho. Fui un tonto."</p>
+                <p>Aranza no lo contradijo. Le estrechó la mano, esperando.</p>
+                <p>"Encontré la ciudad," continuó Francisco. "Estaba exactamente donde los antiguos textos decían que
+                    estaría. Y encontré algo dentro. Una máquina. Una máquina que parecía capaz de viajar a través del
+                    tiempo. Estaba roto, pero lo reconocí porque había visto dibujos de máquinas similares en los
+                    registros privados que nuestros tutores nos habían mostrado cuando éramos jóvenes."</p>
+                <p>Aranza asintió. Sus tutores les habían enseñado muchas cosas que el mundo no sabía. Su linaje
+                    compartía secretos que remontaban milenios.</p>
+                <p>"Intenté activarlo," dijo Francisco. "Estúpidamente, lo activé sin protecciones, sin coordenadas
+                    claras. La máquina se encendió, y de repente me encontré viajando a través del tiempo. Pero no de la
+                    manera que pretendía. Fui... dispersado. Fragmentado a través de múltiples líneas de tiempo
+                    simultáneamente."</p>
+                <p>"Eso debería haber te matado," dijo Aranza con horror.</p>
+                <p>"Casi lo hizo. Pasé lo que se sintió como eones en un estado entre estados. Viendo múltiples
+                    versiones de realidad simultáneamente. Viendo todos los momentos de mi vida ocurriendo a la vez.
+                    Fue... es difícil de describir. Como estar en el ojo de una tormenta de tiempo."</p>
+                <p>Aranza visualizó eso. La idea de perder la linealidad, de ser roto a través de múltiples realidades.
+                    Era aterrador solo pensar en ello.</p>
+                <p>"Eventualmente," continuó Francisco, "mi mente se asentó. O fue expulsado del estado fragmentado.
+                    Encontré una máquina temporal que habías dejado en Estambul, en 1750. Reconocí tu marca en ella. Tu
+                    genio. Sabía que si existía esa máquina, significaba que habías sobrevivido. Significaba que un día
+                    podrías encontrar la forma de viajar a través del tiempo también."</p>
+                <p>"¿Cuánto tiempo pasó para ti?" preguntó Aranza.</p>
+                <p>"Décadas, Aranza. Viajé a través de siglos en ese estado. Aprendí a construir máquinas temporales.
+                    Construí varias, todas con la esperanza de que podrían servir como balizas, guiándote a través del
+                    tiempo si alguna vez lograba construir tu propia máquina. Luego, hace unos años, mi máquina más
+                    reciente se averió. Estoy atrapado nuevamente, pero esta vez en 1887. En Londres. En una realidad
+                    donde casi fui capturado por gente que no entendía lo que estaba buscando."</p>
+                <p>"¿Quiénes?" preguntó Aranza, sus ojos endureciéndose.</p>
+                <p>"Cazadores de anomalías. Hace algunos años, comenzaron a surgir personas que podían detectar cambios
+                    en la línea de tiempo. Personas que buscan viajeros del tiempo. Dicen que somos un peligro para la
+                    estructura del universo. Que si dos viajeros del tiempo se aman y permanecen juntos, podría crear un
+                    bucle causal que paralice toda la realidad."</p>
+                <p>"¿Y es verdad?" preguntó Aranza.</p>
+                <p>"No lo sé," admitió Francisco. "Pero no me importa si es verdad. Te encontré. Acaba de ocurrir. Y no
+                    voy a dejar que nada en el universo me te quite de nuevo."</p>
+                <p>La miró directamente a los ojos cuando dijo eso.</p>
+                <p>Aranza se movió hacia él, besándolo nuevamente. Fue largo, profundo, y cuando finalmente se
+                    separaron, ambos estaban respirando fuerte.</p>
+                <p>"Tengo la máquina casi lista," dijo Aranza. "He estado construyéndola durante años. Fue mi obsesión
+                    desde que encontré tu mensaje en ese manuscrito."</p>
+                <p>"¿Qué manuscrito?"</p>
+                <p>"Te lo mostraré," dijo, levantándose. "Pero primero, debo preguntarte algo. Los cazadores de
+                    anomalías. ¿Saben dónde estás?"</p>
+                <p>La expresión de Francisco se volvió sombría.</p>
+                <p>"Sospecho que sí. La explosión de arriba... fue una de sus bombas. Estaban siguiéndome. Tenía la
+                    esperanza de que pudiera perderlos en los callejones de Whitechapel, pero si saben que estoy
+                    aquí..."</p>
+                <p>"Entonces necesitamos terminar la máquina. Ahora. Esta noche," dijo Aranza con determinación.</p>
+                <p>"¿Está lista?"</p>
+                <p>"Casi. Necesita algunos ajustes finales. Pero con tu ayuda, alguien que ha viajado a través del
+                    tiempo en máquinas que rompiste y reparaste... juntos podemos terminarla."</p>
+                <p>Francisco sonrió.</p>
+                <p>"Juntos. He estado esperando esas palabras durante dos siglos, Aranza. Juntos. Suena perfecto."</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">Capítulo 3: La Construcción de la Eternidad
+                </h5>
+                <p>Pasaron toda la noche trabajando.</p>
+                <p>Francisco demostraría ser tan genio con las máquinas como Aranza. No de la misma manera; mientras su
+                    genio era artístico, visual, suyo era intuitivo. Él podía mirar un conjunto de engranajes y saber
+                    exactamente cómo deberían conectarse, aunque no estuviera completamente seguro de por qué.</p>
+                <p>Juntos, fue como ver a un maestro de ballet danzar con otro maestro. Cada movimiento complementaba al
+                    otro. Cuando Aranza estaba vacilante, Francisco encontraba la solución. Cuando Francisco estaba
+                    atascado, ella veía el problema desde un ángulo que él no había considerado.</p>
+                <p>Ella le mostró el manuscrito mientras trabajaban, la letra familiar de Francisco danzando frente a
+                    sus ojos.</p>
+                <p>"Sabía que eras genio," dijo él, leyendo sus notas sobre la mecánica temporal. "Pero esto... Aranza,
+                    esto es asombroso. Has ido mucho más allá de lo que yo podría haber hecho en mi vida."</p>
+                <p>"Tenía la mejor motivación," respondió ella, sin mirar hacia arriba de su trabajo. "Te tenía que
+                    encontrar."</p>
+                <p>La madrugada llegó cuando finalmente estaban cerca de completar. El último componente necesitaba ser
+                    soldado en su lugar. Requería calor extremo, el tipo que solo su forja especial podía producir.</p>
+                <p>Aranza llevó el componente a la forja, un dispositivo que funcionaba con energía del núcleo de fusión
+                    que ella había construido años atrás. Era lo más cerca que podía llegar a la tecnología de su era
+                    anterior sin revelar completamente sus secretos.</p>
+                <p>Mientras trabajaba, Francisco se paró detrás de ella, observando cómo manipulaba el metal con
+                    precisión quirúrgica.</p>
+                <p>"¿Alguna vez te arrepentiste?" preguntó. "De esperarme durante todo este tiempo. Pudiste haber
+                    encontrado a otro. Alguien más accesible. Alguien más... humano."</p>
+                <p>Aranza pausó, el metal brillando rojo bajo la luz de la forja.</p>
+                <p>"No," dijo simplemente. "Porque tú no eres solo accesible o humano, Francisco. Eres la mitad de mí.
+                    La mitad que faltaba durante todos estos años. Cuando estamos separados, siento como si estuviera
+                    caminando con un pie. Como si la mitad de mi alma estuviera en el exilio."</p>
+                <p>Ella completó la soldadura, el metal fusionándose perfectamente bajo su mano experta.</p>
+                <p>"Aunque," continuó, "debo confesar algo. Ha habido momentos donde dudé. Momentos donde pensé que tal
+                    vez habías muerto realmente. Momentos donde la esperanza parecía tan absurda que casi me rendía."
+                </p>
+                <p>"¿Qué te mantuvo esperando?" preguntó Francisco.</p>
+                <p>Aranza se giró, el componente terminado en sus manos, brillando como una joya recién pulida.</p>
+                <p>"Tú," dijo. "Tu amor. Incluso separados a través de siglos, podía sentirlo. Era como un hilo de luz
+                    en la oscuridad. Me guiaba. Me mantenía creyendo que la reunión era posible."</p>
+                <p>Francisco la abrazó, el componente todavía caliente entre ellos, pero ninguno de los dos se importaba
+                    por quemarse.</p>
+                <p>"Te amo," dijo contra su cabello. "Te amo de una manera que trasciende el tiempo mismo."</p>
+                <p>"Y yo te amo," respondió ella. "A través de los tiempos. A través de las dimensiones. A través de
+                    todo."</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">Capítulo 4: La Huida a Través del Tiempo</h5>
+                <p>Cuando terminaron de instalar el componente final, las primeras luces del alba ya estaban filtrándose
+                    a través de las ventanas altas del taller. La esfera estaba completa. Brillaba con una luz interna
+                    azul, zumbando con una energía que hacía que el aire mismo pareciera distorsionado alrededor de
+                    ella.</p>
+                <p>"¿Estás listo?" preguntó Aranza.</p>
+                <p>"¿Adónde iremos?" preguntó Francisco.</p>
+                <p>"A un lugar que no existe en ninguna línea de tiempo," dijo ella. "Un lugar entre momentos. Creé
+                    coordenadas para ello mientras construía la máquina. Debería ser seguro. Los cazadores de anomalías
+                    no podrán seguirnos allí."</p>
+                <p>"¿Y luego?"</p>
+                <p>"Y luego decidimos juntos," dijo Aranza. "¿Volvemos a un momento anterior en la línea de tiempo?
+                    ¿Viajamos al futuro? ¿O simplemente permanecemos en el espacio entre espacios, viviendo en nuestro
+                    propio momento privado fuera del universo?"</p>
+                <p>Francisco la miró, sonriendo.</p>
+                <p>"Siempre supe que eras capaz de cualquier cosa, Aranza. Pero créeme cuando digo que incluso mis
+                    sueños más salvajes no habían imaginado esto."</p>
+                <p>Fue entonces cuando escucharon el sonido.</p>
+                <p>Pasos. Muchos pasos. Bajando las escaleras hacia el taller subterráneo. Los cazadores de anomalías
+                    habían encontrado la entrada.</p>
+                <p>Aranza y Francisco intercambiaron una mirada. Sin palabras, ambos entendieron lo que necesitaba ser
+                    hecho.</p>
+                <p>Francisco tomó la esfera en sus manos, sintiendo el calor de su energía.</p>
+                <p>"¿Qué necesitas de mí?" preguntó.</p>
+                <p>"Sostén esto," dijo Aranza. "Y piensa en mí. Piensa en nosotros. Piensa en un lugar donde podamos
+                    estar juntos sin el miedo de ser separados. Piensa en la eternidad."</p>
+                <p>"Siempre lo hago," dijo Francisco.</p>
+                <p>Los pasos se acercaban más. Las voces ahora eran audibles.</p>
+                <p>Aranza presionó su mano contra la suya en la esfera.</p>
+                <p>"Juntos," dijo.</p>
+                <p>"Juntos," acordó Francisco.</p>
+                <p>La esfera se iluminó. La luz azul se volvió casi blanca, tan brillante que ambos tuvieron que cerrar
+                    los ojos. El aire a su alrededor comenzó a distorsionarse, como si la realidad misma se estuviera
+                    doblando.</p>
+                <p>Los cazadores de anomalías irrumpieron en el taller justo cuando Francisco y Aranza desaparecieron en
+                    una columna de luz azul pura. Sus máquinas y dispositivos fueron desactivados simultáneamente por la
+                    descarga de energía. Los generadores se apagaron. Las luces fallaron.</p>
+                <p>El taller se quedó en silencio, vacío, como si nada hubiera estado allí jamás.</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">Capítulo 5: El Espacio Entre Tiempos</h5>
+                <p>No había cielo. No había suelo. No había adelante ni atrás, arriba ni abajo. Había solo luz azul, y
+                    dentro de esa luz, dos figuras.</p>
+                <p>Francisco y Aranza se encontraban suspendidos en lo que podría describirse mejor como "no-lugar". Un
+                    espacio que existía fuera de la línea de tiempo del universo normal. Aquí, no pasaba el tiempo. O
+                    más exactamente, todo el tiempo pasaba simultáneamente. Podían ver momentos yuxtapuestos: el
+                    amanecer y el atardecer ocurriendo al mismo tiempo; años de decadencia y construcción sucediendo a
+                    la vez.</p>
+                <p>"¿Dónde estamos?" preguntó Francisco, su voz sonando extraña y distorsionada en este lugar sin aire.
+                </p>
+                <p>"En el espacio entre momentos," respondió Aranza. "Es mi construcción. Un lugar que creé mentalmente
+                    en los planos de la máquina. Un santuario."</p>
+                <p>Cuando habló, el lugar cambió. La luz azul se condensó en formas. Aparecieron paredes. Un piso de
+                    cristal. Techos que mostraban todas las eras simultáneamente.</p>
+                <p>"Esto es increíble," susurró Francisco.</p>
+                <p>"Te dije que podía hacer cualquier cosa," respondió Aranza con una sonrisa.</p>
+                <p>Se miraron el uno al otro, y luego se abrazaron. En este lugar, sin tiempo, pudieron simplemente
+                    estar. Sin prisa. Sin miedo de ser separados. Solo dos almas que finalmente, después de dos siglos,
+                    habían encontrado su camino una a la otra.</p>
+                <p>"¿Cuánto tiempo podemos permanecer aquí?" preguntó Francisco.</p>
+                <p>"Tanto como queramos," dijo Aranza. "Mientras la esfera mantenga energía, y la construí para ser
+                    alimentada por el movimiento del tiempo mismo. Básicamente, es perpetuo."</p>
+                <p>"Entonces estamos aquí para siempre. Juntos."</p>
+                <p>"Sí," confirmó Aranza. "Juntos."</p>
+                <p>Francisco levantó su mano, mirando su piel. Su apariencia se veía diferente aquí, menos sólida, más
+                    como luz condensada en forma de hombre.</p>
+                <p>"¿Es esto la eternidad?" preguntó.</p>
+                <p>Aranza lo tomó de la mano, y su toque lo hizo sentir más real, más sólido.</p>
+                <p>"Si lo es," dijo, "entonces es la eternidad más hermosa que jamás podría haber imaginado. Porque
+                    estás aquí. Finalmente. Después de tanto tiempo. Finalmente, Francisco, estás conmigo."</p>
+                <p>Él la besó, y en el espacio fuera del tiempo, en el lugar entre momentos, dos almas que habían sido
+                    separadas por siglos encontraron, por fin, paz.</p>
+                <p class="text-center font-bold text-gothic-white mt-12 mb-4">FIN</p>
+
+                <div class="border-t border-gothic-red/30 mt-12 pt-8">
+                    <p class="font-bold text-gothic-gold mb-2">Notas del autor Franxito:</p>
+                    <p class="italic text-sm text-gothic-muted">Esta historia nació de mi fascinación por la estética
+                        Steampunk y la idea de que el amor es la única máquina que puede desafiar el tiempo. Aranza como
+                        una inventora inmortal representa la paciencia infinita, mientras que Francisco simboliza la
+                        búsqueda incansable.</p>
+                    <p class="italic text-sm text-gothic-muted mt-2">La mansión subterránea es una metáfora de cómo a
+                        veces construimos nuestros propios mundos para proteger lo que amamos. Espero que disfruten de
+                        este viaje entre engranajes y vapor tanto como yo disfruté escribiéndolo.</p>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gothic-black/90 border-t border-gothic-red/20 py-8 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p class="font-cinzel text-gothic-muted text-sm">Creado con infinito amor por <span
+                    class="text-gothic-red-bright">Franxito</span></p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+    </script>
+</body>
+
+</html>

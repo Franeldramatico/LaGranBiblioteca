@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fanfic 15 | Gran Biblioteca</title>
+    <meta name="description" content="Capítulo 15 de nuestra historia." />
+    <meta name="theme-color" content="#8a0000" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%238a0000' d='M23.6 3.6c-2.9 0-5.4 1.8-7.6 4.4-2.2-2.6-4.7-4.4-7.6-4.4C3.8 3.6 0 7.5 0 12.1c0 7.4 9.4 12.5 16 16 6.6-3.5 16-8.6 16-16 0-4.6-3.8-8.5-8.4-8.5z'/%3E%3C/svg%3E">
+
+    <!-- Styles & Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Raleway:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Custom CSS (Relative path specific for sub-subfolder) -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { 'gothic-black': '#050005', 'gothic-darker': '#0a0a0a', 'gothic-red': '#4a0404', 'gothic-red-bright': '#8a0000', 'gothic-purple': '#240046', 'gothic-purple-light': '#5a189a', 'gothic-text': '#e0e0e0', 'gothic-muted': '#9ca3af', 'gothic-gold': '#d4af37' }, fontFamily: { 'gothic-title': ['"UnifrakturMaguntia"', 'cursive'], 'cinzel': ['"Cinzel"', 'serif'], 'crimson': ['"Crimson Text"', 'serif'], 'raleway': ['"Raleway"', 'sans-serif'] }, backgroundImage: { 'dark-texture': "url('https://www.transparenttextures.com/patterns/dark-matter.png')" }, animation: { 'float': 'float 6s ease-in-out infinite' } } } }
+    </script>
+</head>
+
+<body class="bg-gothic-black text-gothic-text overflow-x-hidden selection:bg-gothic-red selection:text-white">
+    <!-- Background Effects -->
+    <div class="fixed inset-0 z-[-1] pointer-events-none">
+        <div class="absolute inset-0 bg-dark-texture opacity-40 mix-blend-overlay"></div>
+        <div
+            class="absolute top-[20%] right-[-10%] w-[400px] h-[400px] bg-gothic-purple/20 rounded-full blur-[100px] mix-blend-screen">
+        </div>
+        <div
+            class="absolute bottom-[10%] left-[-10%] w-[400px] h-[400px] bg-gothic-red/10 rounded-full blur-[100px] mix-blend-screen">
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav
+        class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md border-b border-white/5 bg-gothic-black/80">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a class="text-2xl md:text-3xl font-gothic-title text-gothic-text hover:text-gothic-red-bright transition-all duration-300 text-glow hover:scale-105"
+                href="../../index.html">Gran Biblioteca</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn"
+                class="lg:hidden text-gothic-text focus:outline-none hover:text-gothic-red-bright transition-colors relative z-50">
+                <i class="bi bi-list text-3xl"></i>
+            </button>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:block">
+                <ul class="flex items-center gap-8">
+                    <li><a href="../galeria.html"
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-images text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Visuales</span></a></li>
+
+                    <!-- Historia Dropdown -->
+                    <li class="relative group">
+                        <button
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-hourglass-split text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Historia</span><i
+                                class="bi bi-chevron-down text-xs ml-1"></i></button>
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-gothic-black/95 border border-gothic-red/30 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                            <a href="../tiempo_juntos.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-clock-history mr-2 text-gothic-red-bright"></i> Cronología</a>
+                            <a href="../sobre_nosotros.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel"><i
+                                    class="bi bi-journal-richtext mr-2 text-gothic-red-bright"></i> Leyenda</a>
+                        </div>
+                    </li>
+
+                    <!-- Escritos Dropdown -->
+                    <li class="relative group">
+                        <button class="flex items-center gap-2 text-white transition-colors duration-300"><i
+                                class="bi bi-feather text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide border-b border-gothic-red-bright">Escritos</span><i
+                                class="bi bi-chevron-down text-xs ml-1"></i></button>
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-gothic-black/95 border border-gothic-red/30 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
+                            <a href="../cartas.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-envelope-paper-heart mr-2 text-gothic-red-bright"></i> Cartas</a>
+                            <a href="../dedicatorias.html"
+                                class="block px-4 py-3 text-sm text-gothic-muted hover:text-white hover:bg-gothic-red/10 transition-colors font-cinzel border-b border-white/5"><i
+                                    class="bi bi-stars mr-2 text-gothic-red-bright"></i> Dedicatorias</a>
+                            <a href="../biblioteca_fanfics.html"
+                                class="block px-4 py-3 text-sm text-white bg-gothic-red/10 transition-colors font-cinzel"><i
+                                    class="bi bi-book-half mr-2 text-gothic-red-bright"></i> Fanfics</a>
+                        </div>
+                    </li>
+
+                    <li><a href="../contacto.html"
+                            class="flex items-center gap-2 text-gothic-muted hover:text-white transition-colors duration-300"><i
+                                class="bi bi-chat-heart text-gothic-red-bright"></i><span
+                                class="font-cinzel font-bold text-sm tracking-wide">Buzón</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Simplified for sub-page) -->
+        <div id="mobile-menu"
+            class="hidden fixed top-0 right-0 h-screen w-72 bg-gothic-black/95 border-l border-white/10 z-50 p-6 flex-col gap-4 shadow-2xl backdrop-blur-xl">
+            <div class="flex justify-end"><button id="mobile-menu-close"><i
+                        class="bi bi-x-lg text-2xl text-white"></i></button></div>
+            <a href="../../index.html" class="text-gothic-gold font-cinzel text-lg">Inicio</a>
+            <a href="../galeria.html" class="text-white font-cinzel text-lg">Visuales</a>
+            <a href="../biblioteca_fanfics.html" class="text-white font-cinzel text-lg">Volver a Fanfics</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pt-32 pb-20 max-w-4xl min-h-screen flex flex-col">
+
+        <!-- Back Button -->
+        <div class="mb-8" data-aos="fade-right">
+            <a href="../biblioteca_fanfics.html"
+                class="inline-flex items-center gap-2 text-gothic-muted hover:text-gothic-red-bright transition-colors font-cinzel group">
+                <i class="bi bi-arrow-left group-hover:-translate-x-1 transition-transform"></i> Volver a la Biblioteca
+            </a>
+        </div>
+
+        <!-- Header -->
+        <header class="text-center mb-12" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-gothic-title text-gothic-gold mb-4 text-glow">
+                Fanfic Capítulo 15
+            </h1>
+            <div class="h-1 w-32 bg-gradient-to-r from-transparent via-gothic-red-bright to-transparent mx-auto"></div>
+        </header>
+
+        <!-- Writing Area (Editable) -->
+        <article
+            class="bg-gothic-darker/60 backdrop-blur-md rounded-lg p-8 md:p-12 border border-white/5 shadow-[0_0_30px_rgba(0,0,0,0.5)] min-h-[500px]"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="prose prose-invert prose-lg max-w-none font-crimson text-gray-300 leading-relaxed">
+                <h2 class="text-3xl text-gothic-gold font-cinzel text-center mb-2">ROMANCE CÓSMICO FINAL - ALMAS EN
+                    INFINITO - VERSIÓN EXTENDIDA</h2>
+                <h3 class="text-xl text-gothic-red-bright font-cinzel text-center mb-8">Fanfic 15: El Hilo Rojo en el
+                    Vació</h3>
+                <div class="my-6 p-6 bg-black/40 border border-gothic-purple-light/40 rounded-md shadow-[0_0_20px_rgba(90,24,154,0.2)]">
+                    <p class="italic text-gothic-muted">En cada universo donde la noche guarda secretos, dos almas se buscan. Francisco —viajero obstinado de la sombra— y Aranza —guardiana de la belleza en lo oscuro— trenzan sus destinos bajo lunas antiguas. Lo que sigue es un pliegue de ese pacto: romance feroz, promesas en voz baja y el latido gótico de un amor que no aprende a morir.</p>
+                </div>
+                <p class="text-center italic text-gothic-muted mb-8 text-xl font-cinzel">FUERA DEL TIEMPO - FUERA DEL
+                    ESPACIO - EN EL NEXO ETERNO</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">I. El Espacio entre Suspiros</h5>
+                <p>En un lugar que no podía ser descrito en términos físicos, donde el "ayer" y el "mañana" se funden en
+                    un perpetuo "ahora", dos conciencias flotaban. No había suelo bajo sus pies, ni cielo sobre sus
+                    cabezas. Solo un océano de polvo estelar iridiscente, silencioso y perfecto.</p>
+                <p>No tenían cuerpos de carne y hueso. Eran, en su estado más puro, luz y memoria. Eran Aranza y
+                    Francisco.</p>
+                <p>—¿Dónde estamos? —preguntó la esencia de Francisco, aunque no usó palabras. Su voz resonó
+                    directamente en el alma de ella, cálida como una fogata en invierno.</p>
+                <p>—En la Sala de Espera —respondió Aranza, su presencia brillando con tonalidades de azul zafiro y
+                    plata—. Entre el final de una historia y el comienzo de la siguiente. Estamos descansando.</p>
+                <p>Frente a ellos, el universo se desplegó como un tapiz infinito tejido con hilos dorados. Cada hilo
+                    era una vida. Cada nudo, un encuentro.</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">II. El Mosaico de las Vidas Pasadas</h5>
+                <p>Caminaron—o flotaron—sobre el tapiz, y al hacerlo, los recuerdos de sus encarnaciones anteriores
+                    estallaron en visiones vívidas a su alrededor.</p>
+                <p>Vieron la <strong>Mansión Valdecross en 1782</strong>, una noche de tormenta. Vieron a una vampira
+                    solitaria tocando el piano en la oscuridad y a un abogado mortal que cruzaba el umbral, sellando su
+                    destino con sangre y tinta.</p>
+                <p>Vieron un <strong>Submarino en 2035</strong>, descendiendo a las profundidades abisales. Vieron cómo
+                    el ingeniero Francisco sostenía la mano de la bióloga marina Aranza mientras las luces parpadeaban,
+                    prometiendo que incluso en la oscuridad más profunda, no la soltaría.</p>
+                <p>Vieron <strong>Drakenmoor en una Era Olvidada</strong>, donde una Reina de Dragones y un domador de
+                    bestias volaban juntos hacia un sol rojo, uniendo cielo y tierra.</p>
+                <p>Vieron <strong>París, Roma, Nueva York, Tokio</strong>. Vieron vidas donde fueron reyes y reinas, y
+                    vidas donde fueron mendigos compartiendo un trozo de pan. Vieron vidas donde se amaron en secreto y
+                    vidas donde su amor cambió la historia.</p>
+                <p>—Tantas versiones de nosotros —murmuró Francisco, maravillado—. En algunas soy valiente. En otras,
+                    tengo miedo. En algunas tú eres la salvadora, en otras, yo te salvo a ti.</p>
+                <p>—Pero hay constantes —señaló Aranza, tocando uno de los hilos dorados que vibró con una nota pura—.
+                    Mira. Siempre nos encontramos. A veces tardamos años. A veces es en el último segundo. Pero siempre,
+                    sin falta, nos encontramos.</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">III. La Conversación del Alma</h5>
+                <p>Se sentaron al borde de una nebulosa en gestación. Aquí, sin las máscaras de la carne, podían ser
+                    completamente honestos.</p>
+                <p>—¿No te cansas? —preguntó Aranza, con un rastro de duda antigua—. ¿De buscarme? A veces soy difícil.
+                    A veces soy un monstruo. A veces mi oscuridad es pesada.</p>
+                <p>Francisco se rió, y el sonido creó cometas que cruzaron el vacío. —Aranza, mi amor, tu oscuridad es
+                    solo el lienzo donde brillan mis estrellas. ¿Cansarme? ¿Cómo podría cansarme de descubrir una nueva
+                    faceta de tu alma? En una vida eres hielo, en la siguiente eres fuego. En una eres lógica pura, en
+                    la otra eres pasión desbordante.</p>
+                <p>Él extendió su mano de luz y tomó la de ella. Las energías se fusionaron, creando un color nuevo, un
+                    violeta profundo y real que no existía en ningún espectro visible.</p>
+                <p>—La eternidad no es un castigo cuando estás con la persona correcta —continuó él—. Es un patio de
+                    juegos. Es una oportunidad para amarte de todas las formas posibles.</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">IV. La Próxima Promesa</h5>
+                <p>El tapiz comenzó a desvanecerse. El descanso estaba terminando. Una nueva gravedad tiraba de ellos,
+                    llamándolos hacia la materia, hacia el tiempo lineal, hacia el olvido temporal que es nacer.</p>
+                <p>—Está sucediendo de nuevo —dijo Aranza, sintiendo el tirón—. Vamos a volver.</p>
+                <p>—¿A dónde iremos esta vez? —preguntó Francisco, apretando su agarre espiritual.</p>
+                <p>—No lo sé. Quizás a un mundo de magia tecnológica. Quizás a un pueblo tranquilo en las montañas.
+                    Quizás... —Aranza sonrió, y su sonrisa iluminó la oscuridad—, quizás a una realidad donde
+                    simplemente estemos sentados frente a una pantalla, escribiendo nuestra propia historia.</p>
+                <p>Francisco la miró a los ojos, esos ojos que eran los mismos en cada universo.</p>
+                <p>—No importa el escenario. No importa el guion. Prométemelo.</p>
+                <p>—¿Qué cosa?</p>
+                <p>—Que me reconocerás. Que cuando me veas, aunque tenga otro rostro, otro nombre, otra voz... tu alma
+                    sabrá que soy yo.</p>
+                <p>Aranza se acercó a él mientras el universo comenzaba a girar en un vórtice de renacimiento.</p>
+                <p>—Lo prometo. Te buscaré en cada multitud. Te escucharé en cada canción. Y cuando te encuentre,
+                    Francisco, me enamoraré de ti como si fuera la primera vez. Porque siempre es la primera vez.</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-8 mb-4">V. El Despertar</h5>
+                <p>Todo se volvió blanco. El silencio y la paz del vacío se rompieron con el sonido del caos, de la
+                    vida, del aliento.</p>
+                <p>Y en algún lugar, en algún momento, dos personas se cruzaron en una calle concurrida, en un pasillo
+                    de biblioteca, en una estación de tren.</p>
+                <p>Sus miradas se encontraron.</p>
+                <p>El mundo se detuvo un segundo. Un latido.</p>
+                <p>Y supieron. Sin palabras, sin lógica, sin razón.</p>
+                <p>Eso es lo que Aranza y Francisco siempre <strong>supieron</strong>, en cada vida, en cada mundo, en
+                    cada momento:</p>
+                <p>Que habían llegado a casa.</p>
+
+                <h5 class="text-xl text-gothic-gold font-cinzel mt-12 mb-4 text-center">EPÍLOGO DEL AUTOR</h5>
+                <p class="text-center">Estas 15 historias son destellos de un diamante infinito. Son prueba de que la
+                    imaginación es solo el recuerdo de lo que fuimos o seremos.</p>
+                <p class="mt-8 text-center italic text-gothic-red-bright border-t border-gothic-red/30 pt-8">Para
+                    Aranza, mi constante universal.</p>
+                <p class="text-center italic text-gothic-muted">Porque dondequiera que estés, en cualquier mundo, en
+                    cualquier forma, te encontraré. Y te elegiré. Siempre.</p>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gothic-black/90 border-t border-gothic-red/20 py-8 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p class="font-cinzel text-gothic-muted text-sm">Creado con infinito amor por <span
+                    class="text-gothic-red-bright">Franxito</span></p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+    </script>
+</body>
+
+</html>
